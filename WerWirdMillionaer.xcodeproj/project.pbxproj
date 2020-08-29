@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */; };
+		61E7985F24FAB16D009F914E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7985E24FAB16D009F914E /* ContentView.swift */; };
+		61E7986124FAB16F009F914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E7986024FAB16F009F914E /* Assets.xcassets */; };
+		61E7986424FAB16F009F914E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E7986324FAB16F009F914E /* Preview Assets.xcassets */; };
+		61E7986F24FAB16F009F914E /* WerWirdMillionaerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7986E24FAB16F009F914E /* WerWirdMillionaerTests.swift */; };
+		61E7987A24FAB16F009F914E /* WerWirdMillionaerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7987924FAB16F009F914E /* WerWirdMillionaerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61E7986B24FAB16F009F914E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61E7985124FAB16D009F914E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61E7985824FAB16D009F914E;
+			remoteInfo = WerWirdMillionaer;
+		};
+		61E7987624FAB16F009F914E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61E7985124FAB16D009F914E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61E7985824FAB16D009F914E;
+			remoteInfo = WerWirdMillionaer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61E7985924FAB16D009F914E /* WerWirdMillionaer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerWirdMillionaer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerWirdMillionaerApp.swift; sourceTree = "<group>"; };
+		61E7985E24FAB16D009F914E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		61E7986024FAB16F009F914E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61E7986324FAB16F009F914E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		61E7986524FAB16F009F914E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61E7986A24FAB16F009F914E /* WerWirdMillionaerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WerWirdMillionaerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E7986E24FAB16F009F914E /* WerWirdMillionaerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerWirdMillionaerTests.swift; sourceTree = "<group>"; };
+		61E7987024FAB16F009F914E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61E7987524FAB16F009F914E /* WerWirdMillionaerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WerWirdMillionaerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61E7987924FAB16F009F914E /* WerWirdMillionaerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerWirdMillionaerUITests.swift; sourceTree = "<group>"; };
+		61E7987B24FAB16F009F914E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61E7985624FAB16D009F914E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E7986724FAB16F009F914E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E7987224FAB16F009F914E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61E7985024FAB16D009F914E = {
+			isa = PBXGroup;
+			children = (
+				61E7985B24FAB16D009F914E /* WerWirdMillionaer */,
+				61E7986D24FAB16F009F914E /* WerWirdMillionaerTests */,
+				61E7987824FAB16F009F914E /* WerWirdMillionaerUITests */,
+				61E7985A24FAB16D009F914E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61E7985A24FAB16D009F914E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61E7985924FAB16D009F914E /* WerWirdMillionaer.app */,
+				61E7986A24FAB16F009F914E /* WerWirdMillionaerTests.xctest */,
+				61E7987524FAB16F009F914E /* WerWirdMillionaerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61E7985B24FAB16D009F914E /* WerWirdMillionaer */ = {
+			isa = PBXGroup;
+			children = (
+				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
+				61E7985E24FAB16D009F914E /* ContentView.swift */,
+				61E7986024FAB16F009F914E /* Assets.xcassets */,
+				61E7986524FAB16F009F914E /* Info.plist */,
+				61E7986224FAB16F009F914E /* Preview Content */,
+			);
+			path = WerWirdMillionaer;
+			sourceTree = "<group>";
+		};
+		61E7986224FAB16F009F914E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				61E7986324FAB16F009F914E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		61E7986D24FAB16F009F914E /* WerWirdMillionaerTests */ = {
+			isa = PBXGroup;
+			children = (
+				61E7986E24FAB16F009F914E /* WerWirdMillionaerTests.swift */,
+				61E7987024FAB16F009F914E /* Info.plist */,
+			);
+			path = WerWirdMillionaerTests;
+			sourceTree = "<group>";
+		};
+		61E7987824FAB16F009F914E /* WerWirdMillionaerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				61E7987924FAB16F009F914E /* WerWirdMillionaerUITests.swift */,
+				61E7987B24FAB16F009F914E /* Info.plist */,
+			);
+			path = WerWirdMillionaerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61E7985824FAB16D009F914E /* WerWirdMillionaer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E7987E24FAB16F009F914E /* Build configuration list for PBXNativeTarget "WerWirdMillionaer" */;
+			buildPhases = (
+				61E7985524FAB16D009F914E /* Sources */,
+				61E7985624FAB16D009F914E /* Frameworks */,
+				61E7985724FAB16D009F914E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WerWirdMillionaer;
+			productName = WerWirdMillionaer;
+			productReference = 61E7985924FAB16D009F914E /* WerWirdMillionaer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61E7986924FAB16F009F914E /* WerWirdMillionaerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E7988124FAB16F009F914E /* Build configuration list for PBXNativeTarget "WerWirdMillionaerTests" */;
+			buildPhases = (
+				61E7986624FAB16F009F914E /* Sources */,
+				61E7986724FAB16F009F914E /* Frameworks */,
+				61E7986824FAB16F009F914E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61E7986C24FAB16F009F914E /* PBXTargetDependency */,
+			);
+			name = WerWirdMillionaerTests;
+			productName = WerWirdMillionaerTests;
+			productReference = 61E7986A24FAB16F009F914E /* WerWirdMillionaerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		61E7987424FAB16F009F914E /* WerWirdMillionaerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61E7988424FAB16F009F914E /* Build configuration list for PBXNativeTarget "WerWirdMillionaerUITests" */;
+			buildPhases = (
+				61E7987124FAB16F009F914E /* Sources */,
+				61E7987224FAB16F009F914E /* Frameworks */,
+				61E7987324FAB16F009F914E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61E7987724FAB16F009F914E /* PBXTargetDependency */,
+			);
+			name = WerWirdMillionaerUITests;
+			productName = WerWirdMillionaerUITests;
+			productReference = 61E7987524FAB16F009F914E /* WerWirdMillionaerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61E7985124FAB16D009F914E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					61E7985824FAB16D009F914E = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					61E7986924FAB16F009F914E = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 61E7985824FAB16D009F914E;
+					};
+					61E7987424FAB16F009F914E = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 61E7985824FAB16D009F914E;
+					};
+				};
+			};
+			buildConfigurationList = 61E7985424FAB16D009F914E /* Build configuration list for PBXProject "WerWirdMillionaer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61E7985024FAB16D009F914E;
+			productRefGroup = 61E7985A24FAB16D009F914E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61E7985824FAB16D009F914E /* WerWirdMillionaer */,
+				61E7986924FAB16F009F914E /* WerWirdMillionaerTests */,
+				61E7987424FAB16F009F914E /* WerWirdMillionaerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61E7985724FAB16D009F914E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E7986424FAB16F009F914E /* Preview Assets.xcassets in Resources */,
+				61E7986124FAB16F009F914E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E7986824FAB16F009F914E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E7987324FAB16F009F914E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61E7985524FAB16D009F914E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E7985F24FAB16D009F914E /* ContentView.swift in Sources */,
+				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E7986624FAB16F009F914E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E7986F24FAB16F009F914E /* WerWirdMillionaerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61E7987124FAB16F009F914E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61E7987A24FAB16F009F914E /* WerWirdMillionaerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61E7986C24FAB16F009F914E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61E7985824FAB16D009F914E /* WerWirdMillionaer */;
+			targetProxy = 61E7986B24FAB16F009F914E /* PBXContainerItemProxy */;
+		};
+		61E7987724FAB16F009F914E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61E7985824FAB16D009F914E /* WerWirdMillionaer */;
+			targetProxy = 61E7987624FAB16F009F914E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		61E7987C24FAB16F009F914E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		61E7987D24FAB16F009F914E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61E7987F24FAB16F009F914E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WerWirdMillionaer/Preview Content\"";
+				DEVELOPMENT_TEAM = JC4B7WF2UL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WerWirdMillionaer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61E7988024FAB16F009F914E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WerWirdMillionaer/Preview Content\"";
+				DEVELOPMENT_TEAM = JC4B7WF2UL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WerWirdMillionaer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		61E7988224FAB16F009F914E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JC4B7WF2UL;
+				INFOPLIST_FILE = WerWirdMillionaerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WerWirdMillionaer.app/WerWirdMillionaer";
+			};
+			name = Debug;
+		};
+		61E7988324FAB16F009F914E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JC4B7WF2UL;
+				INFOPLIST_FILE = WerWirdMillionaerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WerWirdMillionaer.app/WerWirdMillionaer";
+			};
+			name = Release;
+		};
+		61E7988524FAB16F009F914E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JC4B7WF2UL;
+				INFOPLIST_FILE = WerWirdMillionaerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WerWirdMillionaer;
+			};
+			name = Debug;
+		};
+		61E7988624FAB16F009F914E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JC4B7WF2UL;
+				INFOPLIST_FILE = WerWirdMillionaerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WerWirdMillionaer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61E7985424FAB16D009F914E /* Build configuration list for PBXProject "WerWirdMillionaer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E7987C24FAB16F009F914E /* Debug */,
+				61E7987D24FAB16F009F914E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61E7987E24FAB16F009F914E /* Build configuration list for PBXNativeTarget "WerWirdMillionaer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E7987F24FAB16F009F914E /* Debug */,
+				61E7988024FAB16F009F914E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61E7988124FAB16F009F914E /* Build configuration list for PBXNativeTarget "WerWirdMillionaerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E7988224FAB16F009F914E /* Debug */,
+				61E7988324FAB16F009F914E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61E7988424FAB16F009F914E /* Build configuration list for PBXNativeTarget "WerWirdMillionaerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61E7988524FAB16F009F914E /* Debug */,
+				61E7988624FAB16F009F914E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61E7985124FAB16D009F914E /* Project object */;
+}
