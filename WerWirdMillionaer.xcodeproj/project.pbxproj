@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0624FAC9020034CE11 /* ButtonShape.swift */; };
 		61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */; };
 		61E7985F24FAB16D009F914E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7985E24FAB16D009F914E /* ContentView.swift */; };
 		61E7986124FAB16F009F914E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61E7986024FAB16F009F914E /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61D11F0624FAC9020034CE11 /* ButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShape.swift; sourceTree = "<group>"; };
 		61E7985924FAB16D009F914E /* WerWirdMillionaer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerWirdMillionaer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WerWirdMillionaerApp.swift; sourceTree = "<group>"; };
 		61E7985E24FAB16D009F914E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
+				61D11F0624FAC9020034CE11 /* ButtonShape.swift */,
 				61E7986024FAB16F009F914E /* Assets.xcassets */,
 				61E7986524FAB16F009F914E /* Info.plist */,
 				61E7986224FAB16F009F914E /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				61E7985F24FAB16D009F914E /* ContentView.swift in Sources */,
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
+				61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
