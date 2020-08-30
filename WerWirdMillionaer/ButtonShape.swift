@@ -16,10 +16,11 @@ struct QuestionButtonStyle: ButtonStyle {
             .background(
                 ZStack {
                     ButtonShape()
-                        .fill(Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294))
+                        .fill(Color.black)
+//                        .fill(Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294))
                     
                     ButtonShape()
-                        .stroke(Color.black, lineWidth: 5)
+                        .stroke(Color.black, lineWidth: 3)
                 }
             )
     }

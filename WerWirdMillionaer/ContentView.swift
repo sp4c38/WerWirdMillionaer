@@ -11,42 +11,55 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 0) {
-                Text("Wirst du Millionär?")
-                    .bold()
-                    .foregroundColor(Color.white)
-                    .font(.system(size: 40))
-                    .padding(.top, 100)
-                    .padding(.bottom, 20)
+//                Text("Wer Wird Millionär?")
+//                    .bold()
+//                    .foregroundColor(Color.white)
+//                    .font(.system(size: 40))
+//                    .padding(.top, 100)
+//                    .padding(.bottom, 20)
 
                 Image("wwm_logo")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 350)
-                    .padding(.bottom, 50)
-
-                NavigationLink(destination: GameView()) {
-                    Text("Spiel starten")
-                        .foregroundColor(Color.white)
-                        .font(.system(size: 30, weight: .semibold))
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(
-                            ZStack {
-                                ButtonShape()
-                                    .fill(Color(hue: 0.6130, saturation: 1.0000, brightness: 0.4510))
-                                ButtonShape()
-                                    .stroke(Color.white, lineWidth: 3)
-                            }
-                        )
-                        .padding(.leading, 200)
-                        .padding(.trailing, 200)
+                    .frame(height: 500)
+                    .padding(.top, -30)
+                    .padding(.bottom, -130) // Remove some space because of the sunbeams aroung the wwm logo
+                
+                
+                HStack {
+                    Spacer()
                 }
-
-                Spacer()
+                
+                HStack(spacing: 50) {
+                    Image("guenter_jauch")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.leading, 40)
+                        .shadow(radius: 10)
+                    
+                    NavigationLink(destination: GameView()) {
+                        Text("Starten!")
+                            .foregroundColor(Color.white)
+                            .font(.system(size: 30, weight: .semibold))
+                            .fixedSize(horizontal: true, vertical: false)
+                            .lineLimit(1)
+                            .padding()
+                            .padding(.leading, 170)
+                            .padding(.trailing, 170)
+                            .background(
+                                ZStack {
+                                    ButtonShape()
+                                        .fill(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.6130, saturation: 1.0000, brightness: 0.4510), Color.blue]), startPoint: .top, endPoint: .bottom))
+                                    ButtonShape()
+                                        .stroke(Color.white, lineWidth: 3)
+                                }
+                            )
+                    }
+                }
             }
+            .frame(maxWidth: .infinity)
             .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .ignoresSafeArea()
-            .frame(maxWidth: .infinity)
             
         }.navigationViewStyle(StackNavigationViewStyle())
     }
