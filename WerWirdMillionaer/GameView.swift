@@ -11,17 +11,17 @@ struct GameView: View {
     
     var body: some View {
         VStack {
-            Text("Frage: ")
-            HStack {
-                Text("Antwort A: ")
-                Spacer()
-                Text("Antwort B: ")
-            }
-            HStack {
-                Text("Antwort C: ")
-                Spacer()
-                Text("Antwort D: ")
-            }
+            Text("Frage: \(prizesData!.prizeLevels[0].questions[0].question)")
+//            HStack {
+//                Text("Antwort A: \(questionData!.hello[0].answer_a)")
+//                Spacer()
+//                Text("Antwort C: \(questionData!.hello[0].answer_c)")
+//            }
+//            HStack {
+//                Text("Antwort B: \(questionData!.hello[0].answer_b)")
+//                Spacer()
+//                Text("Antwort D: \(questionData!.hello[0].answer_d)")
+//            }
         }
         .padding()
         .navigationBarHidden(true)

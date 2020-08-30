@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		617F3C7424FBAE0F0055930B /* questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7124FBAE0F0055930B /* questions.txt */; };
+		617F3C7524FBAE0F0055930B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7224FBAE0F0055930B /* questions.json */; };
+		617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7324FBAE0F0055930B /* convert_questions.py */; };
+		617F3C7924FBAE460055930B /* LoadQuestionsJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F3C7824FBAE460055930B /* LoadQuestionsJson.swift */; };
 		61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0624FAC9020034CE11 /* ButtonShape.swift */; };
 		61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0824FAE4C30034CE11 /* GameView.swift */; };
 		61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		617F3C7124FBAE0F0055930B /* questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = questions.txt; sourceTree = "<group>"; };
+		617F3C7224FBAE0F0055930B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		617F3C7324FBAE0F0055930B /* convert_questions.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_questions.py; sourceTree = "<group>"; };
+		617F3C7824FBAE460055930B /* LoadQuestionsJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadQuestionsJson.swift; sourceTree = "<group>"; };
 		61D11F0624FAC9020034CE11 /* ButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShape.swift; sourceTree = "<group>"; };
 		61D11F0824FAE4C30034CE11 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		61E7985924FAB16D009F914E /* WerWirdMillionaer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerWirdMillionaer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,9 +84,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		617F3C7024FBAE0F0055930B /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				617F3C7124FBAE0F0055930B /* questions.txt */,
+				617F3C7224FBAE0F0055930B /* questions.json */,
+				617F3C7324FBAE0F0055930B /* convert_questions.py */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		617F3C7724FBAE350055930B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				617F3C7824FBAE460055930B /* LoadQuestionsJson.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		61E7985024FAB16D009F914E = {
 			isa = PBXGroup;
 			children = (
+				617F3C7024FBAE0F0055930B /* Questions */,
 				61E7985B24FAB16D009F914E /* WerWirdMillionaer */,
 				61E7986D24FAB16F009F914E /* WerWirdMillionaerTests */,
 				61E7987824FAB16F009F914E /* WerWirdMillionaerUITests */,
@@ -99,6 +126,7 @@
 		61E7985B24FAB16D009F914E /* WerWirdMillionaer */ = {
 			isa = PBXGroup;
 			children = (
+				617F3C7724FBAE350055930B /* Data */,
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
 				61D11F0824FAE4C30034CE11 /* GameView.swift */,
@@ -240,6 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E7986424FAB16F009F914E /* Preview Assets.xcassets in Resources */,
+				617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */,
+				617F3C7524FBAE0F0055930B /* questions.json in Resources */,
+				617F3C7424FBAE0F0055930B /* questions.txt in Resources */,
 				61E7986124FAB16F009F914E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617F3C7924FBAE460055930B /* LoadQuestionsJson.swift in Sources */,
 				61E7985F24FAB16D009F914E /* ContentView.swift in Sources */,
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
 				61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */,

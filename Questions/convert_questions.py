@@ -16,19 +16,45 @@ def add_answer(section, answer_char, question):
     return question
 
 def main():
+    # btw: using swift variable name style
+
     text_file = open(os.path.join(os.getcwd(), "questions.txt"), "r") # File with the text to convert
     output_file = open(os.path.join(os.getcwd(), "questions.json"), "w")
 
-    output_json = {}
+    # prizeLevels are stored in a sorted list. The first item is the smallest prize level
+    # All prize levels are:
+    #  Index   |   Prize Money in €
+    #    0     |       50
+    #    1     |       100
+    #    2     |       200
+    #    3     |       300
+    #    4     |       500
+    #    5     |       1.000
+    #    6     |       2.000
+    #    7     |       4.000
+    #    8     |       8.000
+    #    9     |       16.000
+    #   10     |       32.000
+    #   11     |       64.000
+    #   12     |       125.000
+    #   13     |       500.000
+    #   14     |       1.000.000
 
-    current_prize_level = ""
+
+    output_json = {"prizeLevels": []}
+    current_prize_level = -1
+
     for line in text_file.readlines():
         line = line.replace("\n", "")
-        if "€" in line and ":" in line:
-            current_prize_level = line[:-2] # Removes the € and : characters
-            output_json[current_prize_level] = []
+        if "€" in line and ":" in line: # Don't include in output
+            current_prize_level += 1
+            prize_level = {"prizeLevelName": "", "questions": []}
+            prize_level["prizeLevelName"] = line
+            prize_level["questions"] = []
+            output_json["prizeLevels"].append(prize_level)
+            continue
 
-        if current_prize_level and not "€" in line and not ":" in line:
+        if not current_prize_level == -1:
             question = {"question": "", "answer_a": "", "answer_b": "", "answer_c": "", "answer_d": "", "correct_answer": ""}
             sections = line.split("<")
 
@@ -54,7 +80,7 @@ def main():
                         question = add_answer(section, "answer_d", question)
 
             if question["question"] and question["answer_a"] and question["answer_b"] and question["answer_c"] and question["answer_d"]:
-                output_json[current_prize_level].append(question)
+                output_json["prizeLevels"][current_prize_level]["questions"].append(question)
 
     output_file.write(json.dumps(output_json))
 
