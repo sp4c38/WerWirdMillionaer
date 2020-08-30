@@ -7,6 +7,24 @@
 
 import SwiftUI
 
+struct QuestionButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .padding(.trailing, 15)
+            .padding(.leading, 15)
+            .background(
+                ZStack {
+                    ButtonShape()
+                        .fill(Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294))
+                    
+                    ButtonShape()
+                        .stroke(Color.black, lineWidth: 5)
+                }
+            )
+    }
+}
+
 struct ButtonShape: Shape {
     func path(in rect: CGRect) -> Path {
         Path { path in
@@ -17,7 +35,7 @@ struct ButtonShape: Shape {
             if width > 500 {
                 button_width = width / 20
             } else {
-                button_width = width / 5
+                button_width = width / 9
             }
             
             path.move(to: CGPoint(x: 0, y: height / 2))
@@ -33,13 +51,16 @@ struct ButtonShape: Shape {
 
 struct ButtonShape_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            ZStack {
-                ButtonShape()
-                    .fill(Color.green)
-                ButtonShape()
-                    .stroke(Color.black, lineWidth: 2)
-            }
+        Group {
+//            ButtonShape()
+//                .fill(Color.green)
+//            ButtonShape()
+//                .stroke(Color.black, lineWidth: 2)
+            
+            Button(action: {}) {
+                Text("Antwort A: Irgendeine Antwort")
+                    .foregroundColor(Color.white)
+            }.buttonStyle(QuestionButtonStyle())
         }
     }
 }

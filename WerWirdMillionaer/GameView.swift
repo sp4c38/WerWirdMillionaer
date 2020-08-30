@@ -7,23 +7,77 @@
 
 import SwiftUI
 
+class CurrentPrizesLevel: ObservableObject {
+    var currentPrizeLevel: Int = 0
+    var randomQuestion = Question(question: "", answer_a: "", answer_b: "", answer_c: "", answer_d: "", correct_answer: "")
+    
+    func updateRandomQuestion() {
+        randomQuestion = getRandomQuestion(currentPrizeLevel: currentPrizeLevel)
+    }
+}
+
 struct GameView: View {
+    @ObservedObject var currentPrizesLevel = CurrentPrizesLevel()
+    var prizesLoadedSuccessful: Bool = false
+    
+    init() {
+        if prizesData != nil {
+            prizesLoadedSuccessful = true
+        } else {
+            prizesLoadedSuccessful = false
+        }
+        
+        currentPrizesLevel.updateRandomQuestion()
+    }
     
     var body: some View {
         VStack {
-            Text("Frage: \(prizesData!.prizeLevels[0].questions[0].question)")
-//            HStack {
-//                Text("Antwort A: \(questionData!.hello[0].answer_a)")
-//                Spacer()
-//                Text("Antwort C: \(questionData!.hello[0].answer_c)")
-//            }
-//            HStack {
-//                Text("Antwort B: \(questionData!.hello[0].answer_b)")
-//                Spacer()
-//                Text("Antwort D: \(questionData!.hello[0].answer_d)")
-//            }
+            if prizesLoadedSuccessful {
+                VStack {
+                    Spacer()
+                    
+                    Text("Frage: \(currentPrizesLevel.randomQuestion.question)")
+                    
+                    HStack(spacing: 100) {
+                        VStack(spacing: 40) {
+                            Button(action: {}) {
+                                Text("Antwort A: \(currentPrizesLevel.randomQuestion.answer_a)")
+                                    .foregroundColor(Color.white)
+                            }
+                            .buttonStyle(QuestionButtonStyle())
+                            
+                            sa
+                            Button(action: {}) {
+                                Text("Antwort B: \(currentPrizesLevel.randomQuestion.answer_b)")
+                                    .foregroundColor(Color.white)
+                            }
+                            .buttonStyle(QuestionButtonStyle())
+                            
+                        }
+                    
+                        
+                        VStack(spacing: 40) {
+                            Button(action: {}) {
+                                Text("Antwort C: \(currentPrizesLevel.randomQuestion.answer_c)")
+                                    .foregroundColor(Color.white)
+                            }
+                            .buttonStyle(QuestionButtonStyle())
+                            
+                            Button(action: {}) {
+                                Text("Antwort D: \(currentPrizesLevel.randomQuestion.answer_d)")
+                                    .foregroundColor(Color.white)
+                            }
+                            .buttonStyle(QuestionButtonStyle())
+                        }
+                    }
+                    .padding(.top, 50)
+                }
+            } else {
+                Text("Fragen konnten nicht geladen werden.")
+            }
         }
-        .padding()
+        .frame(maxWidth: .infinity)
+        .padding(50)
         .navigationBarHidden(true)
     }
 }
