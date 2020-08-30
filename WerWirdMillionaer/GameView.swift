@@ -12,11 +12,18 @@ struct GameView: View {
     var body: some View {
         VStack {
             Text("Frage: ")
-            Text("Antwort A: ")
-            Text("Antwort B: ")
-            Text("Antwort C: ")
-            Text("Antwort D: ")
+            HStack {
+                Text("Antwort A: ")
+                Spacer()
+                Text("Antwort B: ")
+            }
+            HStack {
+                Text("Antwort C: ")
+                Spacer()
+                Text("Antwort D: ")
+            }
         }
+        .padding()
         .navigationBarHidden(true)
     }
 }
@@ -24,5 +31,6 @@ struct GameView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
+            .previewLayout(.fixed(width: 1000, height: 761))
     }
 }
