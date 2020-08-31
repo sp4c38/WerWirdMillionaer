@@ -20,7 +20,7 @@ struct ContentView: View {
 
                 Image("wwm_logo")
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFit() 
                     .frame(height: 500)
                     .padding(.top, -30)
                     .padding(.bottom, -130) // Remove some space because of the sunbeams aroung the wwm logo

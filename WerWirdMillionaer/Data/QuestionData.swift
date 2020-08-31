@@ -55,8 +55,3 @@ func LoadQuestionsJson(fileName: String, fileExtension: String) -> QuestionData?
 }
 
 let questionData = LoadQuestionsJson(fileName: "questions", fileExtension: "json")
-
-func getRandomQuestion(currentPrizeLevel: Int) -> Question {
-    let randomFromList = questionData!.prizeLevels[currentPrizeLevel].questions
-    return randomFromList.randomElement()!
-}

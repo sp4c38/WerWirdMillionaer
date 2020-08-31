@@ -8,40 +8,49 @@
 import SwiftUI
 
 class CurrentPrizesLevel: ObservableObject {
-    var currentPrizeLevel: Int = 0
-    var randomQuestion = Question(question: "", answer_a: "", answer_b: "", answer_c: "", answer_d: "", correct_answer: "")
+    @Published var currentPrizeLevel: Int = 0
+    @Published var randomQuestion = Question(question: "", answer_a: "", answer_b: "", answer_c: "", answer_d: "", correct_answer: "")
+    
+    func nextPrizeLevel() {
+        self.currentPrizeLevel += 1
+    }
     
     func updateRandomQuestion() {
-        randomQuestion = getRandomQuestion(currentPrizeLevel: currentPrizeLevel)
+        self.randomQuestion = questionData!.prizeLevels[currentPrizeLevel].questions.randomElement()!
     }
 }
 
 struct AnswerButton: View {
-
     var answerName: String
     var showingAnswerIndex: Int // Index of the possible answer which is shown
-    var question: Question
+    var currentPrizesLevel: CurrentPrizesLevel
     var showingAnswer: String
     
-    init(answerName: String, showingIndex: Int, question: Question) {
+    init(answerName: String, showingIndex: Int, currentPrizesLevel: CurrentPrizesLevel) {
         self.answerName = answerName
         self.showingAnswerIndex = showingIndex
-        self.question = question
+        self.currentPrizesLevel = currentPrizesLevel
         
         if self.showingAnswerIndex == 0 {
-            self.showingAnswer = self.question.answer_a
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_a
         } else if self.showingAnswerIndex == 1 {
-            self.showingAnswer = self.question.answer_b
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_b
         } else if self.showingAnswerIndex == 2 {
-            self.showingAnswer = self.question.answer_c
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_c
         } else {
-            self.showingAnswer = self.question.answer_d
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_d
         }
     }
     
     var body: some View {
         Button(action: {
-            
+            if currentPrizesLevel.randomQuestion.correct_answer == showingAnswer {
+                print("Correct!")
+                currentPrizesLevel.nextPrizeLevel()
+                currentPrizesLevel.updateRandomQuestion()
+            } else {
+                print("Wrong!")
+            }
         }) {
             HStack(spacing: 20) {
                 Text(answerName)
@@ -83,15 +92,19 @@ struct GameView: View {
     
     var body: some View {
         VStack {
-            if prizesLoadedSuccessful {
+            if prizesLoadedSuccessful {                
+                Text(prizesData.prizeLevels[currentPrizesLevel.currentPrizeLevel].name)
+                    .frame(maxWidth: .infinity)
+                    .foregroundColor(Color.black)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                
                 VStack {
                     Spacer()
                     
                     VStack(spacing: 0) {
-                        HStack { () -> Text in 
-                            print(prizesData.prizeLevels[0]["name"])
-                            return Text("Frage")
-                        }
+                        Text("Frage")
                         .font(.title)
                         .padding(10)
                         .background(Color.white)
@@ -110,13 +123,13 @@ struct GameView: View {
                     
                     HStack(spacing: 100) {
                         VStack(spacing: 40) {
-                            AnswerButton(answerName: "Antwort A", showingIndex: 0, question: currentPrizesLevel.randomQuestion)
-                            AnswerButton(answerName: "Antwort B", showingIndex: 1, question: currentPrizesLevel.randomQuestion)
+                            AnswerButton(answerName: "Antwort A", showingIndex: 0, currentPrizesLevel: currentPrizesLevel)
+                            AnswerButton(answerName: "Antwort B", showingIndex: 1, currentPrizesLevel: currentPrizesLevel)
                         }
                         
                         VStack(spacing: 40) {
-                            AnswerButton(answerName: "Antwort C", showingIndex: 2, question: currentPrizesLevel.randomQuestion)
-                            AnswerButton(answerName: "Antwort D", showingIndex: 3, question: currentPrizesLevel.randomQuestion)
+                            AnswerButton(answerName: "Antwort C", showingIndex: 2, currentPrizesLevel: currentPrizesLevel)
+                            AnswerButton(answerName: "Antwort D", showingIndex: 3, currentPrizesLevel: currentPrizesLevel)
                         }
                     }
                     .padding(.top, 50)
@@ -130,6 +143,7 @@ struct GameView: View {
         .frame(maxWidth: .infinity)
         .padding(50)
         .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .ignoresSafeArea()
         .navigationBarHidden(true)
     }
 }

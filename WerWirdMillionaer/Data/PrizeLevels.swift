@@ -32,10 +32,10 @@ struct PrizesData {
                             Prize(name: "16.000€", amount: 16000.0, isSecurityLevel: true, isHighest: false),
                             Prize(name: "32.000€", amount: 32000.0, isSecurityLevel: false, isHighest: false),
                             Prize(name: "64.000€", amount: 64000.0, isSecurityLevel: false, isHighest: false),
-                            Prize(name: "125.000€", "amount": 125000.0, "isSecurityLevel": false, "isHighest": false),
-                            Prize(name: "500.000€", "amount": 500000.0, "isSecurityLevel": false, "isHighest": false),
-                            Prize(name: "1.000.000€", "amount": 1000000.0, "isSecurityLevel": false, "isHighest": true),
-                           }
+                            Prize(name: "125.000€", amount: 125000.0, isSecurityLevel: false, isHighest: false),
+                            Prize(name: "500.000€", amount: 500000.0, isSecurityLevel: false, isHighest: false),
+                            Prize(name: "1.000.000€", amount: 1000000.0, isSecurityLevel: false, isHighest: true),
+                           ]
     }
 }
 
