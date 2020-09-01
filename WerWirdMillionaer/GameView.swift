@@ -54,6 +54,8 @@ struct AnswerButton: View {
         }) {
             HStack(spacing: 20) {
                 Text(answerName)
+                    .lineLimit(1)
+                    .fixedSize(horizontal: true, vertical: true)
                     .font(.subheadline)
                     .padding(10)
                     .background(Color.white)
@@ -103,23 +105,54 @@ struct GameView: View {
                 VStack {
                     Spacer()
                     
-                    VStack(spacing: 0) {
-                        Text("Frage")
-                        .font(.title)
-                        .padding(10)
-                        .background(Color.white)
-                        .cornerRadius(10)
-                        .padding(.top, 16)
-                        .padding(.bottom, 16)
+                    HStack(spacing: 50) {
+                        VStack {
+                            Button(action: {
+                                
+                            }) {
+                                Image("audience")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100)
+                            }
+                            
+                            Button(action: {}
+                            ) {
+                                Image("telephone")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100)
+                            }
+                            
+                            Button(action: {
+                                
+                            }) {
+                                Image("50-50")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100)
+                            }
+                        }
                         
-                        Text(currentPrizesLevel.randomQuestion.question)
-                            .font(.title2)
-                            .shadow(radius: 5)
-                            .foregroundColor(Color.white)
-                            .padding()
+                        VStack(spacing: 0) {
+                            Text("Frage")
+                            .font(.title)
+                            .padding(10)
+                            .background(Color.white)
+                            .cornerRadius(10)
+                            .padding(.top, 16)
+                            .padding(.bottom, 16)
+                            
+                            Text(currentPrizesLevel.randomQuestion.question)
+                                .font(.title2)
+                                .shadow(radius: 5)
+                                .foregroundColor(Color.white)
+                                .padding()
+                        }
+                        .frame(maxWidth:. infinity)
+                        .background(Color.red)
+                        .cornerRadius(10)
                     }
-                    .background(Color.red)
-                    .cornerRadius(10)
                     
                     HStack(spacing: 100) {
                         VStack(spacing: 40) {
@@ -141,7 +174,7 @@ struct GameView: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .padding(50)
+        .padding(30)
         .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
         .ignoresSafeArea()
         .navigationBarHidden(true)
