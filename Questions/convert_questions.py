@@ -59,7 +59,7 @@ def main():
             sections = line.split("<")
 
             for section in sections:
-                if not section == "" and not section == " ":
+                if section.replace(" ", ""):
                     if not question["question"] and not question["answer_a"] and not question["answer_b"] and not question["answer_c"] and not question["answer_d"]:
                         question["question"] = section
 

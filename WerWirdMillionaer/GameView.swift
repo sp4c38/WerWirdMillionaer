@@ -15,7 +15,11 @@ class CurrentPrizesLevel: ObservableObject {
     @Published var fiftyfiftyJokerActive = true
     
     func nextPrizeLevel() {
-        self.currentPrizeLevel += 1
+        if currentPrizeLevel + 2 == prizesData.prizeLevels.count {
+            self.currentPrizeLevel += 1
+        } else {
+            print("Maximum prize level reached. Staying on \(currentPrizeLevel) prize level")
+        }
     }
     
     func updateRandomQuestion() {
@@ -102,6 +106,7 @@ struct GameView: View {
         .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
         .ignoresSafeArea()
         .navigationBarHidden(true)
+        .animation(.easeInOut(duration: 0.2))
     }
 }
 

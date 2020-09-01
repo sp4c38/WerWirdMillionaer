@@ -12,7 +12,7 @@ struct AnswerButton: View {
     var answerName: String
     var showingAnswerIndex: Int // Index of the possible answer which is shown
     var currentPrizesLevel: CurrentPrizesLevel
-    var showingAnswer: String
+    var showingAnswer: String?
     
     init(jokerGuess: Binding<String>, answerName: String, showingIndex: Int, currentPrizesLevel: CurrentPrizesLevel) {
         self._jokerGuess = jokerGuess
@@ -43,23 +43,25 @@ struct AnswerButton: View {
             }
         }) {
             HStack(spacing: 20) {
-                Text(answerName)
-                    .lineLimit(1)
-                    .fixedSize(horizontal: true, vertical: true)
-                    .font(.subheadline)
-                    .padding(10)
-                    .background(Color.white)
-                    .cornerRadius(10)
+                    Text(answerName)
+                        .lineLimit(1)
+                        .fixedSize(horizontal: true, vertical: true)
+                        .font(.subheadline)
+                        .padding(10)
+                        .background(Color.white)
+                        .cornerRadius(10)
+                    
+                    Spacer()
                 
-                Spacer()
-                
-                Text(showingAnswer)
-                    .fixedSize(horizontal: true, vertical: true)
-                    .lineLimit(2)
-                    .font(.headline)
-                    .foregroundColor(Color.white)
-                
-                Spacer()
+                if (showingAnswer != nil) {
+                    Text(showingAnswer!)
+                        .fixedSize(horizontal: true, vertical: true)
+                        .lineLimit(2)
+                        .font(.headline)
+                        .foregroundColor(Color.white)
+                    
+                    Spacer()
+                }
             }
             .padding(.leading, 20)
             .padding(.trailing, 20)

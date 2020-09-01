@@ -9,10 +9,10 @@ import Foundation
 
 struct Question: Codable {
     var question: String // Question
-    var answer_a: String // Answer possibility A
-    var answer_b: String // Answer possibility B
-    var answer_c: String // Answer possibility C
-    var answer_d: String // Answer possibility D
+    var answer_a: String? // Answer possibility A
+    var answer_b: String? // Answer possibility B
+    var answer_c: String? // Answer possibility C
+    var answer_d: String? // Answer possibility D
     var correct_answer: String // Name of the answer possibility variable which holds the correct answer
 }
 
