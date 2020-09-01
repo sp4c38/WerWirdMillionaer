@@ -10,6 +10,9 @@ import SwiftUI
 class CurrentPrizesLevel: ObservableObject {
     @Published var currentPrizeLevel: Int = 0
     @Published var randomQuestion = Question(question: "", answer_a: "", answer_b: "", answer_c: "", answer_d: "", correct_answer: "")
+    @Published var telephoneJokerActive = true
+    @Published var audienceJokerActive = true
+    @Published var fiftyfiftyJokerActive = true
     
     func nextPrizeLevel() {
         self.currentPrizeLevel += 1
@@ -20,65 +23,8 @@ class CurrentPrizesLevel: ObservableObject {
     }
 }
 
-struct AnswerButton: View {
-    var answerName: String
-    var showingAnswerIndex: Int // Index of the possible answer which is shown
-    var currentPrizesLevel: CurrentPrizesLevel
-    var showingAnswer: String
-    
-    init(answerName: String, showingIndex: Int, currentPrizesLevel: CurrentPrizesLevel) {
-        self.answerName = answerName
-        self.showingAnswerIndex = showingIndex
-        self.currentPrizesLevel = currentPrizesLevel
-        
-        if self.showingAnswerIndex == 0 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_a
-        } else if self.showingAnswerIndex == 1 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_b
-        } else if self.showingAnswerIndex == 2 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_c
-        } else {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_d
-        }
-    }
-    
-    var body: some View {
-        Button(action: {
-            if currentPrizesLevel.randomQuestion.correct_answer == showingAnswer {
-                print("Correct!")
-                currentPrizesLevel.nextPrizeLevel()
-                currentPrizesLevel.updateRandomQuestion()
-            } else {
-                print("Wrong!")
-            }
-        }) {
-            HStack(spacing: 20) {
-                Text(answerName)
-                    .lineLimit(1)
-                    .fixedSize(horizontal: true, vertical: true)
-                    .font(.subheadline)
-                    .padding(10)
-                    .background(Color.white)
-                    .cornerRadius(10)
-                
-                Spacer()
-                
-                Text(showingAnswer)
-                    .fixedSize(horizontal: true, vertical: true)
-                    .lineLimit(2)
-                    .font(.headline)
-                    .foregroundColor(Color.white)
-                
-                Spacer()
-            }
-            .padding(.leading, 20)
-            .padding(.trailing, 20)
-        }
-        .buttonStyle(QuestionButtonStyle())
-    }
-}
-
 struct GameView: View {
+    @State var jokerGuess: String = ""
     @ObservedObject var currentPrizesLevel = CurrentPrizesLevel()
     var prizesLoadedSuccessful: Bool = false
     
@@ -106,33 +52,7 @@ struct GameView: View {
                     Spacer()
                     
                     HStack(spacing: 50) {
-                        VStack {
-                            Button(action: {
-                                
-                            }) {
-                                Image("audience")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100)
-                            }
-                            
-                            Button(action: {}
-                            ) {
-                                Image("telephone")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100)
-                            }
-                            
-                            Button(action: {
-                                
-                            }) {
-                                Image("50-50")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100)
-                            }
-                        }
+                        JokerButtonsView(jokerGuess: $jokerGuess, currentPrizesLevel: currentPrizesLevel)
                         
                         VStack(spacing: 0) {
                             Text("Frage")
@@ -154,15 +74,19 @@ struct GameView: View {
                         .cornerRadius(10)
                     }
                     
+                    if jokerGuess != "" {
+                        Text(jokerGuess)
+                    }
+                    
                     HStack(spacing: 100) {
                         VStack(spacing: 40) {
-                            AnswerButton(answerName: "Antwort A", showingIndex: 0, currentPrizesLevel: currentPrizesLevel)
-                            AnswerButton(answerName: "Antwort B", showingIndex: 1, currentPrizesLevel: currentPrizesLevel)
+                            AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort A", showingIndex: 0, currentPrizesLevel: currentPrizesLevel)
+                            AnswerButton(jokerGuess: $jokerGuess,answerName: "Antwort B", showingIndex: 1, currentPrizesLevel: currentPrizesLevel)
                         }
                         
                         VStack(spacing: 40) {
-                            AnswerButton(answerName: "Antwort C", showingIndex: 2, currentPrizesLevel: currentPrizesLevel)
-                            AnswerButton(answerName: "Antwort D", showingIndex: 3, currentPrizesLevel: currentPrizesLevel)
+                            AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort C", showingIndex: 2, currentPrizesLevel: currentPrizesLevel)
+                            AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort D", showingIndex: 3, currentPrizesLevel: currentPrizesLevel)
                         }
                     }
                     .padding(.top, 50)

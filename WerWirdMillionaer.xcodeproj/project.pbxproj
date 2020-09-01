@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D061924FC2D1600C4B6EB /* PrizeLevels.swift */; };
+		614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */; };
+		614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FD24FEA825005FE41B /* AnswerButton.swift */; };
+		6174DD3624FE956F007909FA /* Joker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6174DD3524FE956F007909FA /* Joker.swift */; };
 		617F3C7424FBAE0F0055930B /* questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7124FBAE0F0055930B /* questions.txt */; };
 		617F3C7524FBAE0F0055930B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7224FBAE0F0055930B /* questions.json */; };
 		617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7324FBAE0F0055930B /* convert_questions.py */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		612D061924FC2D1600C4B6EB /* PrizeLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeLevels.swift; sourceTree = "<group>"; };
+		614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokerButtonsView.swift; sourceTree = "<group>"; };
+		614FE8FD24FEA825005FE41B /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		6174DD3524FE956F007909FA /* Joker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joker.swift; sourceTree = "<group>"; };
 		617F3C7124FBAE0F0055930B /* questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = questions.txt; sourceTree = "<group>"; };
 		617F3C7224FBAE0F0055930B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		617F3C7324FBAE0F0055930B /* convert_questions.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_questions.py; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			children = (
 				617F3C7824FBAE460055930B /* QuestionData.swift */,
 				612D061924FC2D1600C4B6EB /* PrizeLevels.swift */,
+				6174DD3524FE956F007909FA /* Joker.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -108,6 +115,7 @@
 		61E7985024FAB16D009F914E = {
 			isa = PBXGroup;
 			children = (
+				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				617F3C7024FBAE0F0055930B /* Questions */,
 				61E7985B24FAB16D009F914E /* WerWirdMillionaer */,
 				61E7986D24FAB16F009F914E /* WerWirdMillionaerTests */,
@@ -133,6 +141,7 @@
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
 				61D11F0824FAE4C30034CE11 /* GameView.swift */,
+				614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */,
 				61D11F0624FAC9020034CE11 /* ButtonShape.swift */,
 				61E7986024FAB16F009F914E /* Assets.xcassets */,
 				61E7986524FAB16F009F914E /* Info.plist */,
@@ -304,6 +313,9 @@
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
 				612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */,
 				61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */,
+				614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */,
+				6174DD3624FE956F007909FA /* Joker.swift in Sources */,
+				614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */,
 				61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

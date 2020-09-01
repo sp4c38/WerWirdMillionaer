@@ -11,20 +11,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center, spacing: 0) {
-//                Text("Wer Wird Millionär?")
-//                    .bold()
-//                    .foregroundColor(Color.white)
-//                    .font(.system(size: 40))
-//                    .padding(.top, 100)
-//                    .padding(.bottom, 20)
-
                 Image("wwm_logo")
                     .resizable()
                     .scaledToFit() 
                     .frame(height: 500)
                     .padding(.top, -30)
                     .padding(.bottom, -130) // Remove some space because of the sunbeams aroung the wwm logo
-                
                 
                 HStack {
                     Spacer()
