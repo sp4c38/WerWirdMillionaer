@@ -16,7 +16,7 @@ def add_answer(section, answer_char, question):
     return question
 
 def main():
-    # btw: using swift variable name style
+    # using swift variable name style
 
     text_file = open(os.path.join(os.getcwd(), "questions.txt"), "r") # File with the text to convert
     output_file = open(os.path.join(os.getcwd(), "questions.json"), "w")
@@ -39,7 +39,6 @@ def main():
     #   12     |       125.000
     #   13     |       500.000
     #   14     |       1.000.000
-
 
     output_json = {"prizeLevels": []}
     current_prize_level = -1

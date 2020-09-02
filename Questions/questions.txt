@@ -22,3 +22,21 @@
 <In welcher Stadt ist der Fußball-Verein Hertha BSC beheimatet?< <Braunschweig< <Bethel< <1Berlin< <Böklund<
 <Wie lautet der Name Gottes bei den Muslimen?< <Koran< <1Allah< <Mohammed< <Buddha<
 <In welchem Behältnis wird die Achse eines Verstorbenen beigesetzt?< <Vase< <Terrarium< <Wabe< <1Urne<
+
+300€:
+<Was ist Voodoo?< <Kampfsport< <Videotechnik< <1afroamerikanische Religion< <Telefongesellschaft<
+<Was steckt sich der Hausarzt bei Bedarf in die Ohren?< <1Stethoskop< <Horoskop< <Kaleidoskop< <Teleskop<
+<Welches dieser Tiere ist in Deutschland heimisch?< <Hängebauchschwein< <Warzenschwein< <1Wildschwein< <Wasserschwein<
+<Welcher Begriff wird vor Gericht für ein Beweisstück verwendet?< <Corporate Identity< <Cordon bleu< <1Corpus Delicti< <Con Carne< 
+<Was du heute kannst besorgen, das …< <hat Zeit bis übermorgen< <sollst du klauen oder borgen< <1verschiebe nicht auf morgen< <ist am Abend längst verdorben<
+<Was sucht man in einer Cola Light vergeblich?< <Koffein <Wasser< <Kalorien< <1Kristallzucker<
+<Zu ihrem ganzen Glück brauchten die Comedian Harmonists nichts als “Wochenende und …“? <Apfelwein< <Dollarschein< <Herzilein< <1Sonnenschein<
+<Durch welches Vergehen macht man sich in Deutschland strafbar?< <Bibliphilie< <1Bigamie< <Bijouterie< <Biochemie<
+<Welchen Beinamen hatte Edith Piaf?< <Geier von Nantes< <1Spatz von Paris< <Fink von Verdun< <Rabe von Reims<
+<Wie wird die Flagge der Vereinigten Staaten von Amerika genannt?< <Fish and Chips< <Earth, Wind and Fire< <Park and Ride< <1Stars and Stripes<
+
+500€:
+<Wer entsandte 1983 erstmals Abgeordnete in den Deutschen Bundestag?< <1Die Grünen< <SPD< <PDS< <SED<
+<Ein Schwager ist entweder der Bruder des Ehepartners oder der ..?< <Sohn der Tante< <1Mann der Schwester< <Bruder des Vaters< Sohn des Bruders<
+<In welchem Abstand findet eine Biennale statt?< <einmal im Jahr< <1alle zwei Jahre< <alle drei Jahre< <alle vier Jahre<
+<Wie nennt man die Blutgefäße, in denen der Stoff- und Gasaustausch mit den Körperzellen erfolgt?< <Balearen< <1Kapillaren< <Balustraden< <Myriaden<

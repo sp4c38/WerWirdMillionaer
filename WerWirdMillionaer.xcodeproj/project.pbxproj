@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D061924FC2D1600C4B6EB /* PrizeLevels.swift */; };
+		6144FC6F24FFDA6300781D9E /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 6144FC6E24FFDA6300781D9E /* Sounds */; };
 		614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */; };
 		614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FD24FEA825005FE41B /* AnswerButton.swift */; };
 		6174DD3624FE956F007909FA /* Joker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6174DD3524FE956F007909FA /* Joker.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		612D061924FC2D1600C4B6EB /* PrizeLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeLevels.swift; sourceTree = "<group>"; };
+		6144FC6E24FFDA6300781D9E /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = Assets/Sounds; sourceTree = "<group>"; };
 		614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokerButtonsView.swift; sourceTree = "<group>"; };
 		614FE8FD24FEA825005FE41B /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		6174DD3524FE956F007909FA /* Joker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joker.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		61E7985024FAB16D009F914E = {
 			isa = PBXGroup;
 			children = (
+				6144FC6E24FFDA6300781D9E /* Sounds */,
 				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				617F3C7024FBAE0F0055930B /* Questions */,
 				61E7985B24FAB16D009F914E /* WerWirdMillionaer */,
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6144FC6F24FFDA6300781D9E /* Sounds in Resources */,
 				61E7986424FAB16F009F914E /* Preview Assets.xcassets in Resources */,
 				617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */,
 				617F3C7524FBAE0F0055930B /* questions.json in Resources */,

@@ -36,7 +36,7 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }
+                }.disabled(currentPrizesLevel.fiftyfiftyJokerActive ? false : true )
             }
             
             ZStack {
@@ -57,7 +57,7 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }
+                }.disabled(currentPrizesLevel.fiftyfiftyJokerActive ? false : true )
             }
             
             ZStack {
@@ -86,7 +86,7 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }
+                }.disabled(currentPrizesLevel.fiftyfiftyJokerActive ? false : true )
             }
         }
     }

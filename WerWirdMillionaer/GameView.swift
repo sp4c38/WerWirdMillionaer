@@ -15,7 +15,7 @@ class CurrentPrizesLevel: ObservableObject {
     @Published var fiftyfiftyJokerActive = true
     
     func nextPrizeLevel() {
-        if currentPrizeLevel + 2 == prizesData.prizeLevels.count {
+        if currentPrizeLevel + 2 <= questionData!.prizeLevels.count {
             self.currentPrizeLevel += 1
         } else {
             print("Maximum prize level reached. Staying on \(currentPrizeLevel) prize level")
