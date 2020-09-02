@@ -5,6 +5,7 @@
 //  Created by Léon Becker on 01.09.20.
 //
 
+import AVFoundation
 import SwiftUI
 
 struct AnswerButton: View {

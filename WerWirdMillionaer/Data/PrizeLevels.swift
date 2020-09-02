@@ -21,6 +21,7 @@ struct PrizesData {
         
     init() {
         self.prizeLevels = [
+                            Prize(name: "50€", amount: 50.0, isSecurityLevel: false, isHighest: false),
                             Prize(name: "100€", amount: 100.0, isSecurityLevel: false, isHighest: false),
                             Prize(name: "200€", amount: 200.0,  isSecurityLevel: false, isHighest: false),
                             Prize(name: "300€", amount: 300.0, isSecurityLevel: false, isHighest: false),
