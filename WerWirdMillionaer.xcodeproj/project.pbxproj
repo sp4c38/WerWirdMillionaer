@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D061924FC2D1600C4B6EB /* PrizeLevels.swift */; };
-		6144FC6F24FFDA6300781D9E /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 6144FC6E24FFDA6300781D9E /* Sounds */; };
-		6144FC7124FFDAC900781D9E /* GetQuestionAudioName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144FC7024FFDAC900781D9E /* GetQuestionAudioName.swift */; };
+		6144FC7124FFDAC900781D9E /* GetAudioUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */; };
 		614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */; };
 		614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FD24FEA825005FE41B /* AnswerButton.swift */; };
 		6174DD3624FE956F007909FA /* Joker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6174DD3524FE956F007909FA /* Joker.swift */; };
@@ -17,6 +16,29 @@
 		617F3C7524FBAE0F0055930B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7224FBAE0F0055930B /* questions.json */; };
 		617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7324FBAE0F0055930B /* convert_questions.py */; };
 		617F3C7924FBAE460055930B /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F3C7824FBAE460055930B /* QuestionData.swift */; };
+		619C335C25013ECB00E82084 /* 50-500_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334525013ECB00E82084 /* 50-500_intro_sound.mp3 */; };
+		619C335D25013ECB00E82084 /* audience_joker_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334625013ECB00E82084 /* audience_joker_sound.mp3 */; };
+		619C335E25013ECB00E82084 /* 1000-16000_answer_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */; };
+		619C335F25013ECB00E82084 /* submit_answer_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334825013ECB00E82084 /* submit_answer_sound.mp3 */; };
+		619C336025013ECB00E82084 /* correct_answer_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334925013ECB00E82084 /* correct_answer_sound.mp3 */; };
+		619C336125013ECB00E82084 /* 1000-16000_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */; };
+		619C336225013ECB00E82084 /* game_won_sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334B25013ECB00E82084 /* game_won_sound2.mp3 */; };
+		619C336325013ECC00E82084 /* 32000-5000000_intro_song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */; };
+		619C336425013ECC00E82084 /* outro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334D25013ECB00E82084 /* outro_sound.mp3 */; };
+		619C336525013ECC00E82084 /* 16000_security_level.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334E25013ECB00E82084 /* 16000_security_level.mp3 */; };
+		619C336625013ECC00E82084 /* 1000000_answer_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334F25013ECB00E82084 /* 1000000_answer_wrong.mp3 */; };
+		619C336725013ECC00E82084 /* 32000-500000_answer_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335025013ECB00E82084 /* 32000-500000_answer_wrong.mp3 */; };
+		619C336825013ECC00E82084 /* 1000000_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335125013ECB00E82084 /* 1000000_intro_sound.mp3 */; };
+		619C336925013ECC00E82084 /* 50-500_answer_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335225013ECB00E82084 /* 50-500_answer_correct.mp3 */; };
+		619C336A25013ECC00E82084 /* 50-50_joker_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335325013ECB00E82084 /* 50-50_joker_sound.mp3 */; };
+		619C336B25013ECC00E82084 /* 32000-500000_answer_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335425013ECB00E82084 /* 32000-500000_answer_correct.mp3 */; };
+		619C336C25013ECC00E82084 /* game_won_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335525013ECB00E82084 /* game_won_sound.mp3 */; };
+		619C336D25013ECC00E82084 /* 50-500_answer_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335625013ECB00E82084 /* 50-500_answer_wrong.mp3 */; };
+		619C336E25013ECC00E82084 /* 1000-16000_answer_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335725013ECB00E82084 /* 1000-16000_answer_correct.mp3 */; };
+		619C336F25013ECC00E82084 /* telephone_joker_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335825013ECB00E82084 /* telephone_joker_sound.mp3 */; };
+		619C337025013ECC00E82084 /* general_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335925013ECB00E82084 /* general_intro_sound.mp3 */; };
+		619C337125013ECC00E82084 /* 1000000_answer_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335A25013ECB00E82084 /* 1000000_answer_correct.mp3 */; };
+		619C337225013ECC00E82084 /* 500_security_level.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335B25013ECB00E82084 /* 500_security_level.mp3 */; };
 		61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0624FAC9020034CE11 /* ButtonShape.swift */; };
 		61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0824FAE4C30034CE11 /* GameView.swift */; };
 		61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */; };
@@ -46,8 +68,7 @@
 
 /* Begin PBXFileReference section */
 		612D061924FC2D1600C4B6EB /* PrizeLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeLevels.swift; sourceTree = "<group>"; };
-		6144FC6E24FFDA6300781D9E /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = Assets/Sounds; sourceTree = "<group>"; };
-		6144FC7024FFDAC900781D9E /* GetQuestionAudioName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuestionAudioName.swift; sourceTree = "<group>"; };
+		6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAudioUrl.swift; sourceTree = "<group>"; };
 		614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokerButtonsView.swift; sourceTree = "<group>"; };
 		614FE8FD24FEA825005FE41B /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		6174DD3524FE956F007909FA /* Joker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joker.swift; sourceTree = "<group>"; };
@@ -55,6 +76,29 @@
 		617F3C7224FBAE0F0055930B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		617F3C7324FBAE0F0055930B /* convert_questions.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_questions.py; sourceTree = "<group>"; };
 		617F3C7824FBAE460055930B /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		619C334525013ECB00E82084 /* 50-500_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "50-500_intro_sound.mp3"; sourceTree = "<group>"; };
+		619C334625013ECB00E82084 /* audience_joker_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audience_joker_sound.mp3; sourceTree = "<group>"; };
+		619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1000-16000_answer_wrong.mp3"; sourceTree = "<group>"; };
+		619C334825013ECB00E82084 /* submit_answer_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = submit_answer_sound.mp3; sourceTree = "<group>"; };
+		619C334925013ECB00E82084 /* correct_answer_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct_answer_sound.mp3; sourceTree = "<group>"; };
+		619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1000-16000_intro_sound.mp3"; sourceTree = "<group>"; };
+		619C334B25013ECB00E82084 /* game_won_sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_won_sound2.mp3; sourceTree = "<group>"; };
+		619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "32000-5000000_intro_song.mp3"; sourceTree = "<group>"; };
+		619C334D25013ECB00E82084 /* outro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = outro_sound.mp3; sourceTree = "<group>"; };
+		619C334E25013ECB00E82084 /* 16000_security_level.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 16000_security_level.mp3; sourceTree = "<group>"; };
+		619C334F25013ECB00E82084 /* 1000000_answer_wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000000_answer_wrong.mp3; sourceTree = "<group>"; };
+		619C335025013ECB00E82084 /* 32000-500000_answer_wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "32000-500000_answer_wrong.mp3"; sourceTree = "<group>"; };
+		619C335125013ECB00E82084 /* 1000000_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000000_intro_sound.mp3; sourceTree = "<group>"; };
+		619C335225013ECB00E82084 /* 50-500_answer_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "50-500_answer_correct.mp3"; sourceTree = "<group>"; };
+		619C335325013ECB00E82084 /* 50-50_joker_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "50-50_joker_sound.mp3"; sourceTree = "<group>"; };
+		619C335425013ECB00E82084 /* 32000-500000_answer_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "32000-500000_answer_correct.mp3"; sourceTree = "<group>"; };
+		619C335525013ECB00E82084 /* game_won_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_won_sound.mp3; sourceTree = "<group>"; };
+		619C335625013ECB00E82084 /* 50-500_answer_wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "50-500_answer_wrong.mp3"; sourceTree = "<group>"; };
+		619C335725013ECB00E82084 /* 1000-16000_answer_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1000-16000_answer_correct.mp3"; sourceTree = "<group>"; };
+		619C335825013ECB00E82084 /* telephone_joker_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = telephone_joker_sound.mp3; sourceTree = "<group>"; };
+		619C335925013ECB00E82084 /* general_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = general_intro_sound.mp3; sourceTree = "<group>"; };
+		619C335A25013ECB00E82084 /* 1000000_answer_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000000_answer_correct.mp3; sourceTree = "<group>"; };
+		619C335B25013ECB00E82084 /* 500_security_level.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 500_security_level.mp3; sourceTree = "<group>"; };
 		61D11F0624FAC9020034CE11 /* ButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShape.swift; sourceTree = "<group>"; };
 		61D11F0824FAE4C30034CE11 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		61E7985924FAB16D009F914E /* WerWirdMillionaer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerWirdMillionaer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,15 +156,45 @@
 				617F3C7824FBAE460055930B /* QuestionData.swift */,
 				612D061924FC2D1600C4B6EB /* PrizeLevels.swift */,
 				6174DD3524FE956F007909FA /* Joker.swift */,
-				6144FC7024FFDAC900781D9E /* GetQuestionAudioName.swift */,
+				6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
+		619C334425013ECB00E82084 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				619C334525013ECB00E82084 /* 50-500_intro_sound.mp3 */,
+				619C334625013ECB00E82084 /* audience_joker_sound.mp3 */,
+				619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */,
+				619C334825013ECB00E82084 /* submit_answer_sound.mp3 */,
+				619C334925013ECB00E82084 /* correct_answer_sound.mp3 */,
+				619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */,
+				619C334B25013ECB00E82084 /* game_won_sound2.mp3 */,
+				619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */,
+				619C334D25013ECB00E82084 /* outro_sound.mp3 */,
+				619C334E25013ECB00E82084 /* 16000_security_level.mp3 */,
+				619C334F25013ECB00E82084 /* 1000000_answer_wrong.mp3 */,
+				619C335025013ECB00E82084 /* 32000-500000_answer_wrong.mp3 */,
+				619C335125013ECB00E82084 /* 1000000_intro_sound.mp3 */,
+				619C335225013ECB00E82084 /* 50-500_answer_correct.mp3 */,
+				619C335325013ECB00E82084 /* 50-50_joker_sound.mp3 */,
+				619C335425013ECB00E82084 /* 32000-500000_answer_correct.mp3 */,
+				619C335525013ECB00E82084 /* game_won_sound.mp3 */,
+				619C335625013ECB00E82084 /* 50-500_answer_wrong.mp3 */,
+				619C335725013ECB00E82084 /* 1000-16000_answer_correct.mp3 */,
+				619C335825013ECB00E82084 /* telephone_joker_sound.mp3 */,
+				619C335925013ECB00E82084 /* general_intro_sound.mp3 */,
+				619C335A25013ECB00E82084 /* 1000000_answer_correct.mp3 */,
+				619C335B25013ECB00E82084 /* 500_security_level.mp3 */,
+			);
+			name = Sounds;
+			path = Assets/Sounds;
+			sourceTree = SOURCE_ROOT;
+		};
 		61E7985024FAB16D009F914E = {
 			isa = PBXGroup;
 			children = (
-				6144FC6E24FFDA6300781D9E /* Sounds */,
 				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				617F3C7024FBAE0F0055930B /* Questions */,
 				61E7985B24FAB16D009F914E /* WerWirdMillionaer */,
@@ -143,6 +217,7 @@
 		61E7985B24FAB16D009F914E /* WerWirdMillionaer */ = {
 			isa = PBXGroup;
 			children = (
+				619C334425013ECB00E82084 /* Sounds */,
 				617F3C7724FBAE350055930B /* Data */,
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
@@ -285,11 +360,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6144FC6F24FFDA6300781D9E /* Sounds in Resources */,
 				61E7986424FAB16F009F914E /* Preview Assets.xcassets in Resources */,
+				619C336025013ECB00E82084 /* correct_answer_sound.mp3 in Resources */,
+				619C336625013ECC00E82084 /* 1000000_answer_wrong.mp3 in Resources */,
+				619C336825013ECC00E82084 /* 1000000_intro_sound.mp3 in Resources */,
+				619C336A25013ECC00E82084 /* 50-50_joker_sound.mp3 in Resources */,
+				619C336C25013ECC00E82084 /* game_won_sound.mp3 in Resources */,
+				619C335E25013ECB00E82084 /* 1000-16000_answer_wrong.mp3 in Resources */,
+				619C335F25013ECB00E82084 /* submit_answer_sound.mp3 in Resources */,
+				619C336225013ECB00E82084 /* game_won_sound2.mp3 in Resources */,
 				617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */,
+				619C336F25013ECC00E82084 /* telephone_joker_sound.mp3 in Resources */,
+				619C336B25013ECC00E82084 /* 32000-500000_answer_correct.mp3 in Resources */,
+				619C336325013ECC00E82084 /* 32000-5000000_intro_song.mp3 in Resources */,
+				619C336525013ECC00E82084 /* 16000_security_level.mp3 in Resources */,
+				619C335D25013ECB00E82084 /* audience_joker_sound.mp3 in Resources */,
+				619C337225013ECC00E82084 /* 500_security_level.mp3 in Resources */,
+				619C336425013ECC00E82084 /* outro_sound.mp3 in Resources */,
 				617F3C7524FBAE0F0055930B /* questions.json in Resources */,
+				619C337125013ECC00E82084 /* 1000000_answer_correct.mp3 in Resources */,
+				619C336E25013ECC00E82084 /* 1000-16000_answer_correct.mp3 in Resources */,
 				617F3C7424FBAE0F0055930B /* questions.txt in Resources */,
+				619C336D25013ECC00E82084 /* 50-500_answer_wrong.mp3 in Resources */,
+				619C337025013ECC00E82084 /* general_intro_sound.mp3 in Resources */,
+				619C336725013ECC00E82084 /* 32000-500000_answer_wrong.mp3 in Resources */,
+				619C335C25013ECB00E82084 /* 50-500_intro_sound.mp3 in Resources */,
+				619C336125013ECB00E82084 /* 1000-16000_intro_sound.mp3 in Resources */,
+				619C336925013ECC00E82084 /* 50-500_answer_correct.mp3 in Resources */,
 				61E7986124FAB16F009F914E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,7 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6144FC7124FFDAC900781D9E /* GetQuestionAudioName.swift in Sources */,
+				6144FC7124FFDAC900781D9E /* GetAudioUrl.swift in Sources */,
 				617F3C7924FBAE460055930B /* QuestionData.swift in Sources */,
 				61E7985F24FAB16D009F914E /* ContentView.swift in Sources */,
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,

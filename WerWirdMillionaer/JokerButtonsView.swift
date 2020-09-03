@@ -9,6 +9,8 @@ import AVFoundation
 import SwiftUI
 
 struct JokerButtonsView: View {
+    @EnvironmentObject var soundPlayer: SoundPlayer
+    
     @Binding var jokerGuess: String
     var currentPrizesLevel: CurrentPrizesLevel
     let speech = AVSpeechSynthesizer()

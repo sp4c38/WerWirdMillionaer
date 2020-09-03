@@ -9,6 +9,7 @@ import SwiftUI
 
 class CurrentPrizesLevel: ObservableObject {
     @Published var currentPrizeLevel: Int = 0
+    @Published var changePrizeLevelIndicator = false
     @Published var randomQuestion = Question(question: "", answer_a: "", answer_b: "", answer_c: "", answer_d: "", correct_answer: "")
     @Published var telephoneJokerActive = true
     @Published var audienceJokerActive = true
@@ -43,70 +44,96 @@ struct GameView: View {
     }
     
     var body: some View {
-        VStack {
-            if prizesLoadedSuccessful {                
-                Text(prizesData.prizeLevels[currentPrizesLevel.currentPrizeLevel].name)
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(Color.black)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(10)
-                
-                VStack {
-                    Spacer()
-                    
-                    HStack(spacing: 50) {
-                        JokerButtonsView(jokerGuess: $jokerGuess, currentPrizesLevel: currentPrizesLevel)
+        ZStack {
+            VStack {
+                if prizesLoadedSuccessful {
+                    HStack(spacing: 40) {
+                        Spacer()
                         
-                        VStack(spacing: 0) {
-                            Text("Frage")
-                            .font(.title)
-                            .padding(10)
-                            .background(Color.white)
-                            .cornerRadius(10)
-                            .padding(.top, 16)
-                            .padding(.bottom, 16)
-                            
-                            Text(currentPrizesLevel.randomQuestion.question)
-                                .font(.title2)
-                                .shadow(radius: 5)
+                        if currentPrizesLevel.changePrizeLevelIndicator {
+                            Image(systemName: "checkmark")
+                                .resizable()
+                                .scaledToFit()
                                 .foregroundColor(Color.white)
-                                .padding()
-                        }
-                        .frame(maxWidth:. infinity)
-                        .background(Color.red)
-                        .cornerRadius(10)
-                    }
-                    
-                    if jokerGuess != "" {
-                        Text(jokerGuess)
-                    }
-                    
-                    HStack(spacing: 100) {
-                        VStack(spacing: 40) {
-                            AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort A", showingIndex: 0, currentPrizesLevel: currentPrizesLevel)
-                            AnswerButton(jokerGuess: $jokerGuess,answerName: "Antwort B", showingIndex: 1, currentPrizesLevel: currentPrizesLevel)
+                                .frame(width: 40)
+                                .onAppear {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+                                        currentPrizesLevel.nextPrizeLevel()
+                                        currentPrizesLevel.updateRandomQuestion()
+                                        currentPrizesLevel.changePrizeLevelIndicator = false
+                                    }
+                                }
                         }
                         
-                        VStack(spacing: 40) {
-                            AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort C", showingIndex: 2, currentPrizesLevel: currentPrizesLevel)
-                            AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort D", showingIndex: 3, currentPrizesLevel: currentPrizesLevel)
-                        }
+                        Text(prizesData.prizeLevels[currentPrizesLevel.currentPrizeLevel].name)
+                            .font(.largeTitle)
+                            .foregroundColor(currentPrizesLevel.changePrizeLevelIndicator ? Color.white : Color.black)
+                        
+                        Spacer()
                     }
-                    .padding(.top, 50)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(currentPrizesLevel.changePrizeLevelIndicator ? Color(hue: 0.0814, saturation: 0.8821, brightness: 0.9647) : Color.white)
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
+                    .transition(.opacity)
                     
-                    Spacer()
+                    VStack {
+                        Spacer()
+                        
+                        HStack(spacing: 50) {
+                            JokerButtonsView(jokerGuess: $jokerGuess, currentPrizesLevel: currentPrizesLevel)
+                            
+                            VStack(spacing: 0) {
+                                Text("Frage")
+                                .font(.title)
+                                .padding(10)
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .padding(.top, 16)
+                                .padding(.bottom, 16)
+                                
+                                Text(currentPrizesLevel.randomQuestion.question)
+                                    .font(.title2)
+                                    .shadow(radius: 5)
+                                    .foregroundColor(Color.white)
+                                    .padding()
+                            }
+                            .frame(maxWidth:. infinity)
+                            .background(Color.red)
+                            .cornerRadius(10)
+                        }
+                        
+                        if jokerGuess != "" {
+                            Text(jokerGuess)
+                        }
+                        
+                        HStack(spacing: 100) {
+                            VStack(spacing: 40) {
+                                AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort A", showingIndex: 0, currentPrizesLevel: currentPrizesLevel)
+                                AnswerButton(jokerGuess: $jokerGuess,answerName: "Antwort B", showingIndex: 1, currentPrizesLevel: currentPrizesLevel)
+                            }
+                            
+                            VStack(spacing: 40) {
+                                AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort C", showingIndex: 2, currentPrizesLevel: currentPrizesLevel)
+                                AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort D", showingIndex: 3, currentPrizesLevel: currentPrizesLevel)
+                            }
+                        }
+                        .padding(.top, 50)
+                        
+                        Spacer()
+                    }
+                } else {
+                    Text("Fragen konnten nicht geladen werden.")
                 }
-            } else {
-                Text("Fragen konnten nicht geladen werden.")
             }
+            .frame(maxWidth: .infinity)
+            .padding(30)
+            .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .ignoresSafeArea()
+            .navigationBarHidden(true)
+            .animation(.easeInOut(duration: 0.2))
         }
-        .frame(maxWidth: .infinity)
-        .padding(30)
-        .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
-        .ignoresSafeArea()
-        .navigationBarHidden(true)
-        .animation(.easeInOut(duration: 0.2))
     }
 }
 

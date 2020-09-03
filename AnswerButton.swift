@@ -9,6 +9,8 @@ import AVFoundation
 import SwiftUI
 
 struct AnswerButton: View {
+    @EnvironmentObject var soundPlayer: SoundPlayer
+    
     @Binding var jokerGuess: String
     var answerName: String
     var showingAnswerIndex: Int // Index of the possible answer which is shown
@@ -34,14 +36,18 @@ struct AnswerButton: View {
     
     var body: some View {
         Button(action: {
+            var questionCorrect = false
             if currentPrizesLevel.randomQuestion.correct_answer == showingAnswer {
                 print("Correct!")
-                currentPrizesLevel.nextPrizeLevel()
-                currentPrizesLevel.updateRandomQuestion()
-                jokerGuess = ""
+                currentPrizesLevel.changePrizeLevelIndicator = true
+                questionCorrect = true
             } else {
                 print("Wrong!")
             }
+            
+            // Play sound
+            let soundUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: questionCorrect)
+            soundPlayer.playSound(soundUrl: soundUrl)
         }) {
             HStack(spacing: 20) {
                     Text(answerName)
