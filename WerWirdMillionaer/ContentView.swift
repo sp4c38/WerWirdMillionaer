@@ -41,9 +41,9 @@ struct ContentView: View {
                             .padding(.trailing, 170)
                             .background(
                                 ZStack {
-                                    ButtonShape()
+                                    AnswerButtonShape()
                                         .fill(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.6130, saturation: 1.0000, brightness: 0.4510), Color.blue]), startPoint: .top, endPoint: .bottom))
-                                    ButtonShape()
+                                    AnswerButtonShape()
                                         .stroke(Color.white, lineWidth: 3)
                                 }
                             )

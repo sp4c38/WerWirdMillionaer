@@ -50,22 +50,24 @@ struct AnswerButton: View {
             soundPlayer.playSound(soundUrl: soundUrl)
         }) {
             HStack(spacing: 20) {
-                    Text(answerName)
-                        .lineLimit(1)
-                        .fixedSize(horizontal: true, vertical: true)
-                        .font(.subheadline)
-                        .padding(10)
-                        .background(Color.white)
-                        .cornerRadius(10)
+                Text(answerName)
+                    .lineLimit(1)
+                    .fixedSize(horizontal: true, vertical: true)
+                    .font(.subheadline)
+                    .padding(10)
+                    .background(Color.white)
+                    .cornerRadius(10)
                     
-                    Spacer()
+                Spacer()
                 
-                if (showingAnswer != nil) {
-                    Text(showingAnswer!)
-                        .fixedSize(horizontal: true, vertical: true)
-                        .lineLimit(2)
-                        .font(.headline)
-                        .foregroundColor(Color.white)
+                if showingAnswer != nil {
+                    HStack(spacing: 0) {
+                        Text(showingAnswer!)
+                            .foregroundColor(Color.white)
+                            .lineLimit(2)
+                            .font(.headline)
+                    }
+                    .fixedSize(horizontal: true, vertical: true)
                     
                     Spacer()
                 }
@@ -73,6 +75,6 @@ struct AnswerButton: View {
             .padding(.leading, 20)
             .padding(.trailing, 20)
         }
-        .buttonStyle(QuestionButtonStyle())
+        .buttonStyle(AnswerButtonStyle())
     }
 }

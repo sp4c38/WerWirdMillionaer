@@ -22,6 +22,8 @@ struct JokerButtonsView: View {
                     if currentPrizesLevel.fiftyfiftyJokerActive {
                         fifthfiftyJoker(currentPrizesLevel: currentPrizesLevel)
                         currentPrizesLevel.fiftyfiftyJokerActive = false
+                        let soundUrl = getJokerAudioUrl(jokerName: "50-50")
+                        soundPlayer.playSound(soundUrl: soundUrl)
                     }
                 }) {
                     ZStack {
@@ -43,7 +45,8 @@ struct JokerButtonsView: View {
             
             ZStack {
                 Button (action: {
-
+                    let soundUrl = getJokerAudioUrl(jokerName: "audience")
+                    soundPlayer.playSound(soundUrl: soundUrl)
                 }) {
                     ZStack {
                         Image("audience")
@@ -88,7 +91,7 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }.disabled(currentPrizesLevel.fiftyfiftyJokerActive ? false : true )
+                }.disabled(currentPrizesLevel.telephoneJokerActive ? false : true )
             }
         }
     }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuestionButtonStyle: ButtonStyle {
+struct AnswerButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
@@ -15,52 +15,72 @@ struct QuestionButtonStyle: ButtonStyle {
             .padding(.leading, 15)
             .background(
                 ZStack {
-                    ButtonShape()
+                    AnswerButtonShape()
                         .fill(Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294))
                     
-                    ButtonShape()
-                        .stroke(Color.black, lineWidth: 3)
+                    AnswerButtonShape()
+                        .stroke(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451), lineWidth: 3)
                 }
             )
     }
 }
 
-struct ButtonShape: Shape {
+struct AnswerButtonShape: Shape {
     func path(in rect: CGRect) -> Path {
         Path { path in
             let width = rect.size.width
             let height = rect.size.height
+            let buttonWidth = width
             
-            let button_width: CGFloat
-            if width > 500 {
-                button_width = width / 20
+            let buttonEdgeWidth: CGFloat
+            if buttonWidth > 500 {
+                buttonEdgeWidth = buttonWidth / 18
             } else {
-                button_width = width / 9
+                buttonEdgeWidth = buttonWidth / 9
             }
             
             path.move(to: CGPoint(x: 0, y: height / 2))
-            path.addLine(to: CGPoint(x: button_width, y: 0))
-            path.addLine(to: CGPoint(x: width - button_width, y: 0))
-            path.addLine(to: CGPoint(x: width, y: height / 2))
-            path.addLine(to: CGPoint(x: width - button_width, y: height))
-            path.addLine(to: CGPoint(x: button_width, y: height))
+            path.addLine(to: CGPoint(x: buttonEdgeWidth, y: 0))
+            path.addLine(to: CGPoint(x: buttonWidth - buttonEdgeWidth, y: 0))
+            path.addLine(to: CGPoint(x: buttonWidth, y: height / 2))
+            path.addLine(to: CGPoint(x: buttonWidth - buttonEdgeWidth, y: height))
+            path.addLine(to: CGPoint(x: buttonEdgeWidth, y: height))
             path.addLine(to: CGPoint(x: 0, y: height / 2))
+        }
+    }
+}
+
+struct AnswerButtonShapeDividerLine: Shape {
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            let width = rect.size.width
+            let height = rect.size.height
+            let lineHeight = height / 250
+            let startHeight = (height / 2) - (lineHeight / 2)
+
+            path.move(to: CGPoint(x: 0, y: startHeight))
+            path.addRect(CGRect(x: 0, y: startHeight, width: width, height: lineHeight))
         }
     }
 }
 
 struct ButtonShape_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-//            ButtonShape()
-//                .fill(Color.green)
-//            ButtonShape()
-//                .stroke(Color.black, lineWidth: 2)
+        VStack(spacing: 40) {
+            HStack(spacing: -1) {
+                Button(action: {}) {
+                    Text("Antwort A: Irgendeine Antwort")
+                        .foregroundColor(Color.white)
+                }.buttonStyle(AnswerButtonStyle())
+                
+//                AnswerButtonShapeDividerLine()
+//                    .fill(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451))
+            }
             
             Button(action: {}) {
                 Text("Antwort A: Irgendeine Antwort")
                     .foregroundColor(Color.white)
-            }.buttonStyle(QuestionButtonStyle())
+            }.buttonStyle(AnswerButtonStyle())
         }
     }
 }

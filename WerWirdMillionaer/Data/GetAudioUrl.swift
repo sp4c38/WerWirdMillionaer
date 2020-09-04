@@ -8,15 +8,15 @@
 import AVFoundation
 import Foundation
 
-func getJokerAudioUrl(prizeLevel: Int, isCorrect: Bool) -> URL? {
+func getJokerAudioUrl(jokerName: String) -> URL? {
     var audioFileUrl: URL? = nil
     
-    if prizeLevel <= 4 { // 50-, 100-, 200-, 300- and 500-Questions / 0-indexed
-        if isCorrect {
-            audioFileUrl = Bundle.main.url(forResource: "50-500_answer_correct.mp3", withExtension: nil)
-        } else {
-            audioFileUrl = Bundle.main.url(forResource: "50-500_answer_wrong.mp3", withExtension: nil)
-        }
+    if jokerName == "50-50" { // 50:50 joker
+        audioFileUrl = Bundle.main.url(forResource: "50-50_joker_sound.mp3", withExtension: nil)
+    } else if jokerName == "audience" {
+        audioFileUrl = Bundle.main.url(forResource: "audience_joker_sound.mp3", withExtension: nil)
+    } else if jokerName == "telephone" {
+        audioFileUrl = Bundle.main.url(forResource: "telephone_joker_sound.mp3", withExtension: nil)
     }
     
     if audioFileUrl == nil {
