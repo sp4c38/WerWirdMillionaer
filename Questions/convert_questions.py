@@ -11,12 +11,12 @@ def add_answer(section, answer_char, question):
         question[answer_char] = section[0]
     if len(section) == 2:
         question[answer_char] = section[1]
-        question["correct_answer"] = section[1]
+        question["correctAnswer"] = section[1]
 
     return question
 
 def main():
-    # using swift variable name style
+    # using swift variable name style in json
 
     text_file = open(os.path.join(os.getcwd(), "questions.txt"), "r") # File with the text to convert
     output_file = open(os.path.join(os.getcwd(), "questions.json"), "w")
@@ -54,31 +54,31 @@ def main():
             continue
 
         if not current_prize_level == -1:
-            question = {"question": "", "answer_a": "", "answer_b": "", "answer_c": "", "answer_d": "", "correct_answer": ""}
+            question = {"question": "", "answerA": "", "answerB": "", "answerC": "", "answerD": "", "correctAnswer": ""}
             sections = line.split("<")
 
             for section in sections:
                 if section.replace(" ", ""):
-                    if not question["question"] and not question["answer_a"] and not question["answer_b"] and not question["answer_c"] and not question["answer_d"]:
+                    if not question["question"] and not question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
                         question["question"] = section
 
-                    elif question["question"] and not question["answer_a"] and not question["answer_b"] and not question["answer_c"] and not question["answer_d"]:
+                    elif question["question"] and not question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
                         section = section.split("1")
-                        question = add_answer(section, "answer_a", question)
+                        question = add_answer(section, "answerA", question)
 
-                    elif question["question"] and question["answer_a"] and not question["answer_b"] and not question["answer_c"] and not question["answer_d"]:
+                    elif question["question"] and question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
                         section = section.split("1")
-                        question = add_answer(section, "answer_b", question)
+                        question = add_answer(section, "answerB", question)
 
-                    elif question["question"] and question["answer_a"] and question["answer_b"] and not question["answer_c"] and not question["answer_d"]:
+                    elif question["question"] and question["answerA"] and question["answerB"] and not question["answerC"] and not question["answerD"]:
                         section = section.split("1")
-                        question = add_answer(section, "answer_c", question)
+                        question = add_answer(section, "answerC", question)
 
-                    elif question["question"] and question["answer_a"] and question["answer_b"] and question["answer_c"] and not question["answer_d"]:
+                    elif question["question"] and question["answerA"] and question["answerB"] and question["answerC"] and not question["answerD"]:
                         section = section.split("1")
-                        question = add_answer(section, "answer_d", question)
+                        question = add_answer(section, "answerD", question)
 
-            if question["question"] and question["answer_a"] and question["answer_b"] and question["answer_c"] and question["answer_d"]:
+            if question["question"] and question["answerA"] and question["answerB"] and question["answerC"] and question["answerD"]:
                 output_json["prizeLevels"][current_prize_level]["questions"].append(question)
 
     output_file.write(json.dumps(output_json))

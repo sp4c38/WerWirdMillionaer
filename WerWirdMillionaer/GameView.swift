@@ -10,11 +10,13 @@ import SwiftUI
 class CurrentPrizesLevel: ObservableObject {
     @Published var currentPrizeLevel: Int = 0
     @Published var changePrizeLevelIndicator = false
-    @Published var randomQuestion = Question(question: "", answer_a: "", answer_b: "", answer_c: "", answer_d: "", correct_answer: "")
+    @Published var randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
     @Published var longestAnswer: Int = 0 // Used to correctly use the exact amount of space for each answer
     
     @Published var telephoneJokerActive = true
     @Published var audienceJokerActive = true
+    @Published var showAudienceJokerData = false
+    @Published var audienceJokerData = AudiencePollCollection()
     @Published var fiftyfiftyJokerActive = true
     
     func nextPrizeLevel() {
@@ -35,6 +37,13 @@ struct GameView: View {
     @ObservedObject var currentPrizesLevel = CurrentPrizesLevel()
     var prizesLoadedSuccessful: Bool = false
     
+    var numberFormatter: NumberFormatter {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .percent
+        numberFormatter.locale = Locale(identifier: "de_De")
+        return numberFormatter
+    }
+    
     init() {
         if questionData != nil {
             prizesLoadedSuccessful = true
@@ -46,7 +55,7 @@ struct GameView: View {
     }
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             VStack {
                 if prizesLoadedSuccessful {
                     HStack(spacing: 40) {
@@ -60,9 +69,17 @@ struct GameView: View {
                                 .frame(width: 40)
                                 .onAppear {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+                                        for each in currentPrizesLevel.audienceJokerData.votingVariant {
+                                            print(each.name)
+                                            print(each.height)
+                                            print(each.probability)
+                                        }
+                                        currentPrizesLevel.changePrizeLevelIndicator = false
+                                        currentPrizesLevel.showAudienceJokerData = false
+                                        currentPrizesLevel.audienceJokerData = AudiencePollCollection()
+                                        jokerGuess = ""
                                         currentPrizesLevel.nextPrizeLevel()
                                         currentPrizesLevel.updateRandomQuestion()
-                                        currentPrizesLevel.changePrizeLevelIndicator = false
                                     }
                                 }
                         }
@@ -137,6 +154,36 @@ struct GameView: View {
             .ignoresSafeArea()
             .navigationBarHidden(true)
             .animation(.easeInOut(duration: 0.2))
+            
+            if currentPrizesLevel.showAudienceJokerData {
+                HStack(alignment: .bottom, spacing: 20) {
+                    ForEach(currentPrizesLevel.audienceJokerData.votingVariant, id: \.self) { pollSection in
+                        VStack {
+                            Text((numberFormatter.string(from: pollSection.probability) != nil) ? numberFormatter.string(from: pollSection.probability)! : "")
+                                .foregroundColor(Color.white)
+                            
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .bottom, endPoint: .top))
+                                .frame(width: currentPrizesLevel.audienceJokerData.width, height: pollSection.height)
+                            
+                            Text(pollSection.name)
+                                .font(.title)
+                                .bold()
+                                .foregroundColor(Color(hue: 0.0764, saturation: 0.8571, brightness: 0.9882))
+                        }
+                    }
+                }
+                .padding()
+                .background(Color.black.opacity(0.87))
+                .cornerRadius(10)
+                .padding(.top, 220)
+//                .onAppear {
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+//                        currentPrizesLevel.showAudienceJokerData = false
+//                        currentPrizesLevel.audienceJokerData = AudiencePollCollection()
+//                    }
+//                }
+            }
         }
     }
 }

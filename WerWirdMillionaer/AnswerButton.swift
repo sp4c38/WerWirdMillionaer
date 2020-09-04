@@ -24,20 +24,20 @@ struct AnswerButton: View {
         self.currentPrizesLevel = currentPrizesLevel
         
         if self.showingAnswerIndex == 0 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_a
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerA
         } else if self.showingAnswerIndex == 1 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_b
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerB
         } else if self.showingAnswerIndex == 2 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_c
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerC
         } else {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answer_d
+            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerD
         }
     }
     
     var body: some View {
         Button(action: {
             var questionCorrect = false
-            if currentPrizesLevel.randomQuestion.correct_answer == showingAnswer {
+            if currentPrizesLevel.randomQuestion.correctAnswer == showingAnswer {
                 print("Correct!")
                 currentPrizesLevel.changePrizeLevelIndicator = true
                 questionCorrect = true

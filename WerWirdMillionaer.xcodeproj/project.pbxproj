@@ -195,7 +195,6 @@
 		61E7985024FAB16D009F914E = {
 			isa = PBXGroup;
 			children = (
-				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				617F3C7024FBAE0F0055930B /* Questions */,
 				61E7985B24FAB16D009F914E /* WerWirdMillionaer */,
 				61E7986D24FAB16F009F914E /* WerWirdMillionaerTests */,
@@ -220,6 +219,7 @@
 				619C334425013ECB00E82084 /* Sounds */,
 				617F3C7724FBAE350055930B /* Data */,
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
+				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
 				61D11F0824FAE4C30034CE11 /* GameView.swift */,
 				614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */,

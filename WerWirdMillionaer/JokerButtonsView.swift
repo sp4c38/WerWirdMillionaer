@@ -45,8 +45,13 @@ struct JokerButtonsView: View {
             
             ZStack {
                 Button (action: {
-                    let soundUrl = getJokerAudioUrl(jokerName: "audience")
-                    soundPlayer.playSound(soundUrl: soundUrl)
+                    if currentPrizesLevel.audienceJokerActive {
+                        currentPrizesLevel.audienceJokerData =  audienceJoker(currentPrizesLevel: currentPrizesLevel)
+                        currentPrizesLevel.audienceJokerActive = false
+                        currentPrizesLevel.showAudienceJokerData = true
+                        let soundUrl = getJokerAudioUrl(jokerName: "audience")
+                        soundPlayer.playSound(soundUrl: soundUrl)
+                    }
                 }) {
                     ZStack {
                         Image("audience")
