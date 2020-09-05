@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D061924FC2D1600C4B6EB /* PrizeLevels.swift */; };
+		6144455D2503B16C003D0254 /* TimeRemainingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144455C2503B16C003D0254 /* TimeRemainingCircleView.swift */; };
 		6144FC7124FFDAC900781D9E /* GetAudioUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */; };
 		614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */; };
 		614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FD24FEA825005FE41B /* AnswerButton.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		612D061924FC2D1600C4B6EB /* PrizeLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeLevels.swift; sourceTree = "<group>"; };
+		6144455C2503B16C003D0254 /* TimeRemainingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRemainingCircleView.swift; sourceTree = "<group>"; };
 		6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAudioUrl.swift; sourceTree = "<group>"; };
 		614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokerButtonsView.swift; sourceTree = "<group>"; };
 		614FE8FD24FEA825005FE41B /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
@@ -140,6 +142,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6144455E2503C053003D0254 /* SubContent */ = {
+			isa = PBXGroup;
+			children = (
+				6144455C2503B16C003D0254 /* TimeRemainingCircleView.swift */,
+				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
+				614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */,
+				61D11F0624FAC9020034CE11 /* ButtonShape.swift */,
+			);
+			path = SubContent;
+			sourceTree = "<group>";
+		};
 		617F3C7024FBAE0F0055930B /* Questions */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,12 +231,10 @@
 			children = (
 				619C334425013ECB00E82084 /* Sounds */,
 				617F3C7724FBAE350055930B /* Data */,
+				6144455E2503C053003D0254 /* SubContent */,
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
-				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
 				61D11F0824FAE4C30034CE11 /* GameView.swift */,
-				614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */,
-				61D11F0624FAC9020034CE11 /* ButtonShape.swift */,
 				61E7986024FAB16F009F914E /* Assets.xcassets */,
 				61E7986524FAB16F009F914E /* Info.plist */,
 				61E7986224FAB16F009F914E /* Preview Content */,
@@ -418,6 +429,7 @@
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
 				612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */,
 				61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */,
+				6144455D2503B16C003D0254 /* TimeRemainingCircleView.swift in Sources */,
 				614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */,
 				6174DD3624FE956F007909FA /* Joker.swift in Sources */,
 				614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */,

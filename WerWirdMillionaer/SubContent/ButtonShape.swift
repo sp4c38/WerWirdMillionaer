@@ -10,6 +10,7 @@ import SwiftUI
 struct AnswerButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .frame(maxWidth: .infinity)
             .padding()
             .padding(.trailing, 15)
             .padding(.leading, 15)

@@ -8,6 +8,30 @@
 import AVFoundation
 import SwiftUI
 
+struct QuestionTextView: View {
+    var currentPrizesLevel: CurrentPrizesLevel
+    
+    init(currentPrizesLevel: CurrentPrizesLevel) {
+        self.currentPrizesLevel = currentPrizesLevel
+    }
+    
+    var body: some View {
+        Button(action: {}) {
+            Text(currentPrizesLevel.randomQuestion.question)
+                .foregroundColor(Color.white)
+                .lineLimit(2)
+                .fixedSize(horizontal: true, vertical: true)
+                .font(.headline)
+                .padding(10)
+                .padding(.leading, 20)
+                .padding(.trailing, 20)
+        }
+        .buttonStyle(AnswerButtonStyle())
+        .disabled(true)
+    }
+}
+
+
 struct AnswerButton: View {
     @EnvironmentObject var soundManager: SoundManager
     
@@ -39,10 +63,13 @@ struct AnswerButton: View {
             var questionCorrect = false
             if currentPrizesLevel.randomQuestion.correctAnswer == showingAnswer {
                 print("Correct!")
-                currentPrizesLevel.changePrizeLevelIndicator = true
+                currentPrizesLevel.timeKeepCounting = false
+                currentPrizesLevel.questionAnsweredCorrectly = true
                 questionCorrect = true
             } else {
                 print("Wrong!")
+                currentPrizesLevel.timeKeepCounting = false
+                currentPrizesLevel.questionAnsweredCorrectly = false
             }
             
             // Play sound

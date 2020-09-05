@@ -16,7 +16,7 @@ struct JokerButtonsView: View {
     let speech = AVSpeechSynthesizer()
     
     var body: some View {
-        VStack {
+        VStack(spacing: 30) {
             ZStack {
                 Button (action: {
                     if currentPrizesLevel.fiftyfiftyJokerActive {

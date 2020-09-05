@@ -11,9 +11,14 @@ import SwiftUI
 class CurrentPrizesLevel: ObservableObject {
     @Published var currentPrizeLevel: Int = 0
     @Published var oldCurrentPrizeLevel: Int = -1
-    @Published var changePrizeLevelIndicator = false
+    
+    @Published var questionAnsweredCorrectly: Bool? = nil
+    
     @Published var randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
-    @Published var longestAnswer: Int = 0 // Used to correctly use the exact amount of space for each answer
+    
+    @Published var timeRemaining = 30 // Remaining time in seconds
+    @Published var timeKeepCounting = true // Indicates if the timer counts
+    @Published var timeOver = false // Set to true if the time is over
     
     @Published var telephoneJokerActive = true
     @Published var audienceJokerActive = true
@@ -42,7 +47,7 @@ struct GameView: View {
     @ObservedObject var currentPrizesLevel = CurrentPrizesLevel()
     
     var prizesLoadedSuccessful: Bool = false
-
+    
     var numberFormatter: NumberFormatter {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
@@ -67,7 +72,7 @@ struct GameView: View {
                     HStack(spacing: 40) {
                         Spacer()
                         
-                        if currentPrizesLevel.changePrizeLevelIndicator {
+                        if currentPrizesLevel.questionAnsweredCorrectly == true {
                             Image(systemName: "checkmark")
                                 .resizable()
                                 .scaledToFit()
@@ -75,62 +80,59 @@ struct GameView: View {
                                 .frame(width: 40)
                                 .onAppear {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                        currentPrizesLevel.changePrizeLevelIndicator = false
+                                        currentPrizesLevel.questionAnsweredCorrectly = nil
                                         currentPrizesLevel.showAudienceJokerData = false
                                         currentPrizesLevel.audienceJokerData = AudiencePollCollection()
                                         jokerGuess = ""
+                                        currentPrizesLevel.timeOver = false
+                                        currentPrizesLevel.timeKeepCounting = true
+                                        currentPrizesLevel.timeRemaining = 30
                                         currentPrizesLevel.nextPrizeLevel()
                                         currentPrizesLevel.updateRandomQuestion()
                                         let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
                                         soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
                                     }
                                 }
+                        } else if currentPrizesLevel.timeOver == true || currentPrizesLevel.questionAnsweredCorrectly == false {
+                            Image(systemName: "multiply")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(Color.white)
+                                .frame(width: 40)
                         }
                         
                         Text(prizesData.prizeLevels[currentPrizesLevel.currentPrizeLevel].name)
                             .font(.largeTitle)
-                            .foregroundColor(currentPrizesLevel.changePrizeLevelIndicator ? Color.white : Color.black)
+                            .foregroundColor((currentPrizesLevel.questionAnsweredCorrectly != nil) ? Color.white : Color.black)
                         
                         Spacer()
                     }
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(currentPrizesLevel.changePrizeLevelIndicator ? Color(hue: 0.0814, saturation: 0.8821, brightness: 0.9647) : Color.white)
+                    .background((currentPrizesLevel.questionAnsweredCorrectly != nil) ? Color(hue: 0.0814, saturation: 0.8821, brightness: 0.9647) : Color.white)
                     .cornerRadius(10)
                     .shadow(radius: 5)
-                    .transition(.opacity)
-                    
+                    .padding(.bottom, 30)
+            
                     VStack {
-                        Spacer()
-                        
-                        HStack(spacing: 50) {
+                        HStack {
                             JokerButtonsView(jokerGuess: $jokerGuess, currentPrizesLevel: currentPrizesLevel)
                             
-                            VStack(spacing: 0) {
-                                Text("Frage")
-                                    .font(.title)
-                                    .padding(10)
-                                    .background(Color.white)
-                                    .cornerRadius(10)
-                                    .padding(.top, 16)
-                                    .padding(.bottom, 16)
-                                
-                                Text(currentPrizesLevel.randomQuestion.question)
-                                    .font(.title2)
-                                    .shadow(radius: 5)
-                                    .foregroundColor(Color.white)
-                                    .padding()
-                            }
-                            .frame(maxWidth:. infinity)
-                            .background(Color.red)
-                            .cornerRadius(10)
+                            Spacer()
+                            
+                            TimeRemainingCircleView(currentPrizesLevel: currentPrizesLevel)
+                            
+                            Spacer()
                         }
                         
                         if jokerGuess != "" {
                             Text(jokerGuess)
                         }
                         
-                        HStack {
+                        VStack {
+                            QuestionTextView(currentPrizesLevel: currentPrizesLevel)
+                                .padding(.bottom, 20)
+                            
                             HStack(spacing: 0) {
                                 VStack(spacing: 40) {
                                     AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort A", showingIndex: 0, currentPrizesLevel: currentPrizesLevel)
@@ -152,6 +154,7 @@ struct GameView: View {
                     Text("Fragen konnten nicht geladen werden.")
                 }
             }
+            .padding(40)
             .frame(maxWidth: .infinity)
             .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .ignoresSafeArea()
@@ -176,16 +179,16 @@ struct GameView: View {
                         }
                     }
                 }
-                .padding()
+                .padding(50)
                 .background(Color.black.opacity(0.87))
                 .cornerRadius(10)
                 .padding(.top, 220)
             }
         }
-        .onAppear {
-            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
-            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
-        }
+//        .onAppear {
+//            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
+//            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+//        }
     }
 }
 
