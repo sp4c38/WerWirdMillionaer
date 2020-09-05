@@ -11,8 +11,6 @@ import Foundation
 func getBackgroundAudioUrl(currentPrizesLevel: Int, oldCurrentPrizeLevel: Int) -> URL? {
     var audioFileUrl: URL? = nil
     
-    print(oldCurrentPrizeLevel)
-    print(currentPrizesLevel)
     if currentPrizesLevel <= 3 && (!(oldCurrentPrizeLevel <= 3) || oldCurrentPrizeLevel == -1) {
         audioFileUrl = Bundle.main.url(forResource: "50-500_intro_sound.mp3", withExtension: nil)
     } else if currentPrizesLevel > 3 && currentPrizesLevel <= 9  && !(oldCurrentPrizeLevel > 3) {

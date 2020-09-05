@@ -23,7 +23,7 @@ struct JokerButtonsView: View {
                         fifthfiftyJoker(currentPrizesLevel: currentPrizesLevel)
                         currentPrizesLevel.fiftyfiftyJokerActive = false
                         let soundUrl = getJokerAudioUrl(jokerName: "50-50")
-                        soundManager.playSound(soundUrl: soundUrl, loops: 0)
+                        soundManager.playSoundEffect(soundUrl: soundUrl)
                     }
                 }) {
                     ZStack {
@@ -50,7 +50,7 @@ struct JokerButtonsView: View {
                         currentPrizesLevel.audienceJokerActive = false
                         currentPrizesLevel.showAudienceJokerData = true
                         let soundUrl = getJokerAudioUrl(jokerName: "audience")
-                        soundManager.playSound(soundUrl: soundUrl, loops: 0)
+                        soundManager.playSoundEffect(soundUrl: soundUrl)
                     }
                 }) {
                     ZStack {

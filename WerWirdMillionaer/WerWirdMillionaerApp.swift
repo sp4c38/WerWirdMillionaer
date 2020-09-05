@@ -9,25 +9,39 @@ import AVFoundation
 import SwiftUI
 
 class SoundManager: NSObject, AVAudioPlayerDelegate, ObservableObject {
-    var soundPlayers = [URL: AVAudioPlayer]()
+    var soundEffectsPlayers = [URL: AVAudioPlayer]()
+    var backgroundMusicPlayer = AVAudioPlayer()
     
-    func playSound(soundUrl: URL?, loops: Int) {
+    func playSoundEffect(soundUrl: URL?) {
         if let soundUrl = soundUrl {
-            if let currentPlayer = soundPlayers[soundUrl] { // Player is already stored and not in use
+            if let currentPlayer = soundEffectsPlayers[soundUrl] { // Player is already stored and not in use
                 if !currentPlayer.isPlaying {
-                    soundPlayers[soundUrl]!.prepareToPlay()
-                    soundPlayers[soundUrl]!.play()
+                    soundEffectsPlayers[soundUrl]!.prepareToPlay()
+                    soundEffectsPlayers[soundUrl]!.play()
                 } else { // Player is already stored but currently in use
                 }
             } else {
                 do {
                     let currentPlayer = try AVAudioPlayer(contentsOf: soundUrl)
-                    soundPlayers[soundUrl] = currentPlayer
-                    soundPlayers[soundUrl]!.prepareToPlay()
-                    soundPlayers[soundUrl]!.play()
+                    soundEffectsPlayers[soundUrl] = currentPlayer
+                    soundEffectsPlayers[soundUrl]!.prepareToPlay()
+                    soundEffectsPlayers[soundUrl]!.play()
                 } catch {
                     print("Couldn't play sound file at \(soundUrl). Exited with \(error)")
                 }
+            }
+        }
+    }
+    
+    func playBackgroundMusic(soundUrl: URL?) {
+        if let soundUrl = soundUrl {
+            do {
+                backgroundMusicPlayer = try AVAudioPlayer(contentsOf: soundUrl)
+                backgroundMusicPlayer.numberOfLoops = -1
+                backgroundMusicPlayer.prepareToPlay()
+                backgroundMusicPlayer.play()
+            } catch {
+                print("Couldn't play sound file at \(soundUrl). Exited with \(error)")
             }
         }
     }

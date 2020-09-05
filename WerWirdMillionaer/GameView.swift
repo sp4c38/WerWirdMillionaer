@@ -82,8 +82,7 @@ struct GameView: View {
                                         currentPrizesLevel.nextPrizeLevel()
                                         currentPrizesLevel.updateRandomQuestion()
                                         let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
-                                        print(backgroundSoundUrl)
-                                        soundManager.playSound(soundUrl: backgroundSoundUrl, loops: -1)
+                                        soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
                                     }
                                 }
                         }
@@ -185,7 +184,7 @@ struct GameView: View {
         }
         .onAppear {
             let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
-            soundManager.playSound(soundUrl: backgroundSoundUrl, loops: -1)
+            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
         }
     }
 }

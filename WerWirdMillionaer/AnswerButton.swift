@@ -47,7 +47,7 @@ struct AnswerButton: View {
             
             // Play sound
             let soundUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: questionCorrect)
-            soundManager.playSound(soundUrl: soundUrl, loops: 0)
+            soundManager.playSoundEffect(soundUrl: soundUrl)
         }) {
             HStack(spacing: 20) {
                 Text(answerName)
