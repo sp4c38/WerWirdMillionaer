@@ -16,7 +16,8 @@ class CurrentPrizesLevel: ObservableObject {
     
     @Published var randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
     
-    @Published var timeRemaining = 30 // Remaining time in seconds
+    @Published var timeAllAvailable = 30 // Time altogether avaliable to answer a question
+    @Published var timeRemaining = 30 // Remaining time in seconds (must be same as timeAllAvailable)
     @Published var timeKeepCounting = true // Indicates if the timer counts
     @Published var timeOver = false // Set to true if the time is over
     
@@ -93,7 +94,7 @@ struct GameView: View {
                                         
                                         currentPrizesLevel.timeOver = false
                                         currentPrizesLevel.timeKeepCounting = true
-                                        currentPrizesLevel.timeRemaining = 30
+                                        currentPrizesLevel.timeRemaining = currentPrizesLevel.timeAllAvailable
                                         
                                         currentPrizesLevel.nextPrizeLevel()
                                         currentPrizesLevel.updateRandomQuestion()
@@ -109,8 +110,6 @@ struct GameView: View {
                                 .foregroundColor(Color.white)
                                 .frame(width: 40)
                                 .onAppear {
-                                    print(currentPrizesLevel.questionAnsweredCorrectly)
-                                    print(currentPrizesLevel.timeOver)
                                     let soundEffectUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: false)
                                     soundManager.playSoundEffect(soundUrl: soundEffectUrl)
                                 }
@@ -129,7 +128,11 @@ struct GameView: View {
                     .shadow(radius: 5)
                     .padding(.bottom, 30)
             
+                    Spacer()
+                    
                     VStack {
+                        Spacer()
+                        
                         HStack {
                             JokerButtonsView(jokerGuess: $jokerGuess, currentPrizesLevel: currentPrizesLevel)
                             
@@ -144,7 +147,10 @@ struct GameView: View {
                             Text(jokerGuess)
                         }
                         
+                        Spacer()
+                        
                         VStack {
+                            
                             QuestionTextView(currentPrizesLevel: currentPrizesLevel)
                                 .padding(.bottom, 20)
                             
@@ -200,17 +206,17 @@ struct GameView: View {
                 .padding(.top, 220)
             }
         }
-        .onAppear {
-            // Comment when using Canvas
-            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
-            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
-        }
+//        .onAppear {
+//            // Comment when using Canvas
+//            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
+//            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+//        }
     }
 }
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
-            .previewLayout(.fixed(width: 1000, height: 761))
+            .previewLayout(.fixed(width: 1000, height: 961))
     }
 }
