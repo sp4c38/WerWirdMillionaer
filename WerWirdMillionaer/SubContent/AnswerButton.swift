@@ -60,21 +60,15 @@ struct AnswerButton: View {
     
     var body: some View {
         Button(action: {
-            var questionCorrect = false
             if currentPrizesLevel.randomQuestion.correctAnswer == showingAnswer {
                 print("Correct!")
                 currentPrizesLevel.timeKeepCounting = false
                 currentPrizesLevel.questionAnsweredCorrectly = true
-                questionCorrect = true
             } else {
                 print("Wrong!")
                 currentPrizesLevel.timeKeepCounting = false
                 currentPrizesLevel.questionAnsweredCorrectly = false
             }
-            
-            // Play sound
-            let soundUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: questionCorrect)
-            soundManager.playSoundEffect(soundUrl: soundUrl)
         }) {
             HStack(spacing: 20) {
                 Text(answerName)

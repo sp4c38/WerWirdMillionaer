@@ -34,12 +34,14 @@ struct TimeRemainingCircleView: View {
                 .frame(width: 500)
         )
         .onReceive(timer) { _ in
-            print("Timer run")
-            if !(currentPrizesLevel.timeRemaining == 0 || currentPrizesLevel.timeRemaining < 0) && currentPrizesLevel.timeKeepCounting {
-                currentPrizesLevel.timeRemaining = currentPrizesLevel.timeRemaining - 1
+            if !(currentPrizesLevel.timeRemaining == 0 || currentPrizesLevel.timeRemaining < 0) {
+                if currentPrizesLevel.timeKeepCounting {
+                    currentPrizesLevel.timeRemaining = currentPrizesLevel.timeRemaining - 1
+                }
             } else {
                 currentPrizesLevel.timeOver = true
                 currentPrizesLevel.timeKeepCounting = false
+                currentPrizesLevel.questionAnsweredCorrectly = false
             }
         }
     }

@@ -79,16 +79,25 @@ struct GameView: View {
                                 .foregroundColor(Color.white)
                                 .frame(width: 40)
                                 .onAppear {
+                                    // Play the sound effect which indicates that the question was answered correctly immediately
+                                    let soundEffectUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: true)
+                                    soundManager.playSoundEffect(soundUrl: soundEffectUrl)
+                                    
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+                                        // Reset all data for next round
                                         currentPrizesLevel.questionAnsweredCorrectly = nil
+                                        
                                         currentPrizesLevel.showAudienceJokerData = false
                                         currentPrizesLevel.audienceJokerData = AudiencePollCollection()
                                         jokerGuess = ""
+                                        
                                         currentPrizesLevel.timeOver = false
                                         currentPrizesLevel.timeKeepCounting = true
                                         currentPrizesLevel.timeRemaining = 30
+                                        
                                         currentPrizesLevel.nextPrizeLevel()
                                         currentPrizesLevel.updateRandomQuestion()
+                                        
                                         let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
                                         soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
                                     }
@@ -99,6 +108,12 @@ struct GameView: View {
                                 .scaledToFit()
                                 .foregroundColor(Color.white)
                                 .frame(width: 40)
+                                .onAppear {
+                                    print(currentPrizesLevel.questionAnsweredCorrectly)
+                                    print(currentPrizesLevel.timeOver)
+                                    let soundEffectUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: false)
+                                    soundManager.playSoundEffect(soundUrl: soundEffectUrl)
+                                }
                         }
                         
                         Text(prizesData.prizeLevels[currentPrizesLevel.currentPrizeLevel].name)
@@ -185,10 +200,11 @@ struct GameView: View {
                 .padding(.top, 220)
             }
         }
-//        .onAppear {
-//            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
-//            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
-//        }
+        .onAppear {
+            // Comment when using Canvas
+            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
+            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+        }
     }
 }
 
