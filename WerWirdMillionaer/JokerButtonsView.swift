@@ -9,7 +9,7 @@ import AVFoundation
 import SwiftUI
 
 struct JokerButtonsView: View {
-    @EnvironmentObject var soundPlayer: SoundPlayer
+    @EnvironmentObject var soundManager: SoundManager
     
     @Binding var jokerGuess: String
     var currentPrizesLevel: CurrentPrizesLevel
@@ -23,7 +23,7 @@ struct JokerButtonsView: View {
                         fifthfiftyJoker(currentPrizesLevel: currentPrizesLevel)
                         currentPrizesLevel.fiftyfiftyJokerActive = false
                         let soundUrl = getJokerAudioUrl(jokerName: "50-50")
-                        soundPlayer.playSound(soundUrl: soundUrl)
+                        soundManager.playSound(soundUrl: soundUrl, loops: 0)
                     }
                 }) {
                     ZStack {
@@ -50,7 +50,7 @@ struct JokerButtonsView: View {
                         currentPrizesLevel.audienceJokerActive = false
                         currentPrizesLevel.showAudienceJokerData = true
                         let soundUrl = getJokerAudioUrl(jokerName: "audience")
-                        soundPlayer.playSound(soundUrl: soundUrl)
+                        soundManager.playSound(soundUrl: soundUrl, loops: 0)
                     }
                 }) {
                     ZStack {
@@ -67,7 +67,7 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }.disabled(currentPrizesLevel.fiftyfiftyJokerActive ? false : true )
+                }.disabled(currentPrizesLevel.audienceJokerActive ? false : true )
             }
             
             ZStack {

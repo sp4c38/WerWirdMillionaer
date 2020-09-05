@@ -5,10 +5,12 @@
 //  Created by Léon Becker on 29.08.20.
 //
 
+import AVFoundation
 import SwiftUI
 
 class CurrentPrizesLevel: ObservableObject {
     @Published var currentPrizeLevel: Int = 0
+    @Published var oldCurrentPrizeLevel: Int = -1
     @Published var changePrizeLevelIndicator = false
     @Published var randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
     @Published var longestAnswer: Int = 0 // Used to correctly use the exact amount of space for each answer
@@ -22,6 +24,7 @@ class CurrentPrizesLevel: ObservableObject {
     func nextPrizeLevel() {
         if currentPrizeLevel + 2 <= questionData!.prizeLevels.count {
             self.currentPrizeLevel += 1
+            oldCurrentPrizeLevel += 1
         } else {
             print("Maximum prize level reached. Staying on \(currentPrizeLevel) prize level")
         }
@@ -33,10 +36,13 @@ class CurrentPrizesLevel: ObservableObject {
 }
 
 struct GameView: View {
+    @EnvironmentObject var soundManager: SoundManager
+    
     @State var jokerGuess: String = ""
     @ObservedObject var currentPrizesLevel = CurrentPrizesLevel()
-    var prizesLoadedSuccessful: Bool = false
     
+    var prizesLoadedSuccessful: Bool = false
+
     var numberFormatter: NumberFormatter {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .percent
@@ -69,17 +75,15 @@ struct GameView: View {
                                 .frame(width: 40)
                                 .onAppear {
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                        for each in currentPrizesLevel.audienceJokerData.votingVariant {
-                                            print(each.name)
-                                            print(each.height)
-                                            print(each.probability)
-                                        }
                                         currentPrizesLevel.changePrizeLevelIndicator = false
                                         currentPrizesLevel.showAudienceJokerData = false
                                         currentPrizesLevel.audienceJokerData = AudiencePollCollection()
                                         jokerGuess = ""
                                         currentPrizesLevel.nextPrizeLevel()
                                         currentPrizesLevel.updateRandomQuestion()
+                                        let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
+                                        print(backgroundSoundUrl)
+                                        soundManager.playSound(soundUrl: backgroundSoundUrl, loops: -1)
                                     }
                                 }
                         }
@@ -105,12 +109,12 @@ struct GameView: View {
                             
                             VStack(spacing: 0) {
                                 Text("Frage")
-                                .font(.title)
-                                .padding(10)
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .padding(.top, 16)
-                                .padding(.bottom, 16)
+                                    .font(.title)
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .padding(.top, 16)
+                                    .padding(.bottom, 16)
                                 
                                 Text(currentPrizesLevel.randomQuestion.question)
                                     .font(.title2)
@@ -177,13 +181,11 @@ struct GameView: View {
                 .background(Color.black.opacity(0.87))
                 .cornerRadius(10)
                 .padding(.top, 220)
-//                .onAppear {
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-//                        currentPrizesLevel.showAudienceJokerData = false
-//                        currentPrizesLevel.audienceJokerData = AudiencePollCollection()
-//                    }
-//                }
             }
+        }
+        .onAppear {
+            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
+            soundManager.playSound(soundUrl: backgroundSoundUrl, loops: -1)
         }
     }
 }

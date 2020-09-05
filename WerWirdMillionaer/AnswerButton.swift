@@ -9,7 +9,7 @@ import AVFoundation
 import SwiftUI
 
 struct AnswerButton: View {
-    @EnvironmentObject var soundPlayer: SoundPlayer
+    @EnvironmentObject var soundManager: SoundManager
     
     @Binding var jokerGuess: String
     var answerName: String
@@ -47,7 +47,7 @@ struct AnswerButton: View {
             
             // Play sound
             let soundUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: questionCorrect)
-            soundPlayer.playSound(soundUrl: soundUrl)
+            soundManager.playSound(soundUrl: soundUrl, loops: 0)
         }) {
             HStack(spacing: 20) {
                 Text(answerName)

@@ -30,7 +30,9 @@ struct ContentView: View {
                         .padding(.leading, 40)
                         .shadow(radius: 10)
                     
-                    NavigationLink(destination: GameView()) {
+                    NavigationLink(destination:
+                                    GameView()
+                    ) {
                         Text("Starten!")
                             .foregroundColor(Color.white)
                             .font(.system(size: 30, weight: .semibold))
