@@ -43,8 +43,10 @@ class CurrentPrizesLevel: ObservableObject {
 
 struct GameView: View {
     @EnvironmentObject var soundManager: SoundManager
+    @EnvironmentObject var mainViewController: MainViewController
     
     @State var jokerGuess: String = ""
+    
     @ObservedObject var currentPrizesLevel = CurrentPrizesLevel()
     
     var prizesLoadedSuccessful: Bool = false
@@ -112,6 +114,11 @@ struct GameView: View {
                                 .onAppear {
                                     let soundEffectUrl = getQuestionAudioUrl(prizeLevel: currentPrizesLevel.currentPrizeLevel, isCorrect: false)
                                     soundManager.playSoundEffect(soundUrl: soundEffectUrl)
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+                                        soundManager.stopAllSounds()
+                                        mainViewController.goBackToStartView()
+                                    }
                                 }
                         }
                         
@@ -206,11 +213,11 @@ struct GameView: View {
                 .padding(.top, 220)
             }
         }
-//        .onAppear {
-//            // Comment when using Canvas
-//            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
-//            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
-//        }
+        .onAppear {
+            // Comment when using Canvas
+            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: currentPrizesLevel.currentPrizeLevel, oldCurrentPrizeLevel: currentPrizesLevel.oldCurrentPrizeLevel)
+            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+        }
     }
 }
 
@@ -218,5 +225,6 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
             .previewLayout(.fixed(width: 1000, height: 961))
+            .environmentObject(MainViewController())
     }
 }

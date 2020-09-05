@@ -45,6 +45,18 @@ class SoundManager: NSObject, AVAudioPlayerDelegate, ObservableObject {
             }
         }
     }
+    
+    func stopAllSounds() {
+        if backgroundMusicPlayer.isPlaying {
+            backgroundMusicPlayer.stop()
+        }
+        
+        for soundEffect in soundEffectsPlayers {
+            if soundEffect.value.isPlaying {
+                soundEffect.value.stop()
+            }
+        }
+    }
 }
 
 class SoundPlayer: ObservableObject {

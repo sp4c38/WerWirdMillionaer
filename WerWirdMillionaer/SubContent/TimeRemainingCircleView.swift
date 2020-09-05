@@ -91,8 +91,15 @@ struct TimeRemainingCircleView: View {
     var body: some View {
         ZStack {
             ZStack {
-                Circle().frame(width: 300, height: 300)
+                Circle()
+                    .frame(width: 300, height: 300)
                 
+                Image("CounterBackgroundImage")
+                    .resizable()
+                    .cornerRadius(100000)
+                    .blur(radius: 10)
+                    .frame(width: 300, height: 300)
+                    
                 Text(String(currentPrizesLevel.timeRemaining))
                     .bold()
                     .font(.system(size: 120))

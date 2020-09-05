@@ -12,6 +12,7 @@
 		6144FC7124FFDAC900781D9E /* GetAudioUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */; };
 		614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */; };
 		614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FD24FEA825005FE41B /* AnswerButton.swift */; };
+		6164E622250431A600DC57FC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164E621250431A500DC57FC /* HomeView.swift */; };
 		6174DD3624FE956F007909FA /* Joker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6174DD3524FE956F007909FA /* Joker.swift */; };
 		617F3C7424FBAE0F0055930B /* questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7124FBAE0F0055930B /* questions.txt */; };
 		617F3C7524FBAE0F0055930B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7224FBAE0F0055930B /* questions.json */; };
@@ -73,6 +74,7 @@
 		6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAudioUrl.swift; sourceTree = "<group>"; };
 		614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokerButtonsView.swift; sourceTree = "<group>"; };
 		614FE8FD24FEA825005FE41B /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		6164E621250431A500DC57FC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		6174DD3524FE956F007909FA /* Joker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joker.swift; sourceTree = "<group>"; };
 		617F3C7124FBAE0F0055930B /* questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = questions.txt; sourceTree = "<group>"; };
 		617F3C7224FBAE0F0055930B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				6144455E2503C053003D0254 /* SubContent */,
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
+				6164E621250431A500DC57FC /* HomeView.swift */,
 				61D11F0824FAE4C30034CE11 /* GameView.swift */,
 				61E7986024FAB16F009F914E /* Assets.xcassets */,
 				61E7986524FAB16F009F914E /* Info.plist */,
@@ -432,6 +435,7 @@
 				6144455D2503B16C003D0254 /* TimeRemainingCircleView.swift in Sources */,
 				614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */,
 				6174DD3624FE956F007909FA /* Joker.swift in Sources */,
+				6164E622250431A600DC57FC /* HomeView.swift in Sources */,
 				614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */,
 				61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */,
 			);
