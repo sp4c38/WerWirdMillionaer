@@ -36,4 +36,4 @@ Participants of the show start with the first prize category. They get a questio
 
 What would you say 😉❓ It's answer B.
 
-If the participant answers the question correctly he goes on to the next question. There are two security levels. If you reach either the 5th level or the 10th level and than lose you will still get the money from the 5th or 10th level. If you don't reach any of those two levels you will get nothing.
+If the participant answers the question correctly he goes on to the next question. There are two security levels. If one either reaches the 5th level or the 10th level and than lose one will still get the money from the 5th or 10th level. If one doesn't reach any of those two levels one will get nothing.
