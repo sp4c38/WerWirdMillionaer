@@ -2,7 +2,7 @@
 
 **Wer Wird Millionär** is a popular german quiz show from the tv station RTL moderated by Günter Jauch.
 
-This repo is an App for iOS which makes it possible to play the popular quiz show game on your iPhone 📱🎮.
+This repo is an App for iOS which makes it possible to play the popular quiz show game on your iPhone 📱🎮
 
 #### How it works:
 There are commonly 15 different prize 🏅 levels:
