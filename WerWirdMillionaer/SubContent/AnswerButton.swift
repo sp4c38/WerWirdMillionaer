@@ -9,15 +9,11 @@ import AVFoundation
 import SwiftUI
 
 struct QuestionTextView: View {
-    var currentPrizesLevel: CurrentPrizesLevel
-    
-    init(currentPrizesLevel: CurrentPrizesLevel) {
-        self.currentPrizesLevel = currentPrizesLevel
-    }
+    var question: String
     
     var body: some View {
         Button(action: {}) {
-            Text(currentPrizesLevel.randomQuestion.question)
+            Text(question)
                 .foregroundColor(Color.white)
                 .lineLimit(2)
                 .fixedSize(horizontal: true, vertical: true)

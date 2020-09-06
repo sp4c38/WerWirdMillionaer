@@ -156,9 +156,8 @@ struct GameView: View {
                         
                         Spacer()
                         
-                        VStack {
-                            
-                            QuestionTextView(currentPrizesLevel: currentPrizesLevel)
+                        VStack {    
+                            QuestionTextView(question: currentPrizesLevel.randomQuestion.question)
                                 .padding(.bottom, 20)
                             
                             HStack(spacing: 0) {
