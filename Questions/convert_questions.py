@@ -63,23 +63,25 @@ def main():
                         question["question"] = section
 
                     elif question["question"] and not question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
-                        section = section.split("1")
+                        section = section.split("^")
                         question = add_answer(section, "answerA", question)
 
                     elif question["question"] and question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
-                        section = section.split("1")
+                        section = section.split("^")
                         question = add_answer(section, "answerB", question)
 
                     elif question["question"] and question["answerA"] and question["answerB"] and not question["answerC"] and not question["answerD"]:
-                        section = section.split("1")
+                        section = section.split("^")
                         question = add_answer(section, "answerC", question)
 
                     elif question["question"] and question["answerA"] and question["answerB"] and question["answerC"] and not question["answerD"]:
-                        section = section.split("1")
+                        section = section.split("^")
                         question = add_answer(section, "answerD", question)
 
             if question["question"] and question["answerA"] and question["answerB"] and question["answerC"] and question["answerD"]:
                 output_json["prizeLevels"][current_prize_level]["questions"].append(question)
+            else:
+                print(f"Error scanning {section}.")
 
     output_file.write(json.dumps(output_json))
 

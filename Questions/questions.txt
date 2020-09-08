@@ -1,52 +1,111 @@
 50€:
-<Wird ein Roman häppchenweise in der Tageszeitung abgedruckt, steht am Ende eines Teils meist …?< <1Fortsetzung folgt<  <Bleiben Sie dran!< <Die Spannung steigt< <Ende offen<
+<Wird ein Roman häppchenweise in der Tageszeitung abgedruckt, steht am Ende eines Teils meist …?< <^Fortsetzung folgt<  <Bleiben Sie dran!< <Die Spannung steigt< <Ende offen<
 
 100€:
-<Welchem Heiligen ist der 31.12. gewidmet?< <Ali< <Brian< <1Silvester< <Nikolaus<
-<Was ist laut den biblischen 10 Geboten nicht ausdrücklich verboten?< <Ehebrechen< <Töten<  <Stehlen< <1Rauchen<
-<Worauf radelt man zu zweit?< <Trabant< <Katamaran< <Zweierbob< <1Tandem< 
-<Wer zuletzt lacht, lacht am …?< <dümmsten< <dollsten< <wenigsten< <1besten<
-<Wie bezeichnet man eine Luftspiegelung in der Wüste?< <Mata Hari< <Orang Utan< <1Fata Morgana< <Ulan Bator<
-<Wie heißen die Sicherheitscontainer, in denen radioaktives Material befördert wird?< <ARCOR< <ERROR< <GREGOR< <1CASTOR<
-<Wie heißen die Zeichentrick-Wichte, die im ZDF-Werbefernsehen „Gu’n Abend!“ Wünschen?< <Heinzelmännchen< <1Mainzelmännchen< <Lerchenzwerge< <Fruchtzwerge< 
-<Was sucht man bei einem Pkw mit Automatik-Getriebe vergeblich?< <Zündschloss< <Gaspedal< <1Kupplungspedal< <Tank< 
-<Was sollte eine Primaballerina in jedem Fall können?< <1Tanzen< <Reiten< <Backen< <Stricken<
-<Welches Schiff rammte 1912 einen Eisberg und sank?< <Wasa< <Bounty< <1Titanic< <Estonia<
+<Welchem Heiligen ist der 31.12. gewidmet?< <Ali< <Brian< <^Silvester< <Nikolaus<
+<Was ist laut den biblischen 10 Geboten nicht ausdrücklich verboten?< <Ehebrechen< <Töten<  <Stehlen< <^Rauchen<
+<Worauf radelt man zu zweit?< <Trabant< <Katamaran< <Zweierbob< <^Tandem< 
+<Wer zuletzt lacht, lacht am …?< <dümmsten< <dollsten< <wenigsten< <^besten<
+<Wie bezeichnet man eine Luftspiegelung in der Wüste?< <Mata Hari< <Orang Utan< <^Fata Morgana< <Ulan Bator<
+<Wie heißen die Sicherheitscontainer, in denen radioaktives Material befördert wird?< <ARCOR< <ERROR< <GREGOR< <^CASTOR<
+<Wie heißen die Zeichentrick-Wichte, die im ZDF-Werbefernsehen „Gu’n Abend!“ Wünschen?< <Heinzelmännchen< <^Mainzelmännchen< <Lerchenzwerge< <Fruchtzwerge< 
+<Was sucht man bei einem Pkw mit Automatik-Getriebe vergeblich?< <Zündschloss< <Gaspedal< <^Kupplungspedal< <Tank< 
+<Was sollte eine Primaballerina in jedem Fall können?< <^Tanzen< <Reiten< <Backen< <Stricken<
+<Welches Schiff rammte 1912 einen Eisberg und sank?< <Wasa< <Bounty< <^Titanic< <Estonia<
 
 
 200€:
-<Welches der folgenden Wörter bezeichnet keine japanische Form der Selbstverteidigung?< <Judo< <Aikido< <Karate< <1Mikado<
-<Was schmiert man jemandem sprichwörtlich schmeichelnd um den Bart?< <Schleim< <1Honig< <Farbe< <Sahne< 
-<Was ist eine Glucke?< <1brütendes Huhn< <Gewohnheitstrinkerin< <Dunstschicht< <Himmelbett< 
-<Was gießt man sprichwörtlich ins Feuer, um einen Streit zu verschärfen?< <Wasser< <1Öl< <Spiritus< <Benzin<
-<Über welchen Fluss geht man sprichwörtlich, wenn man das Zeitliche segnet?< <Mosel< <Donau< <Euphrat< <1Jordan<
-<Wie nennt man Kaffee mit einem Schuss Whiskey und Schlagsahne?< <Scottish Delight< <1Irhrishcoffee< <English Cream< <Nessies Dream<
-<Was wird als Firmament bezeichnet?< <Unternehmensgründung< <1Himmelsgewölbe< <trockener Zement< <Ladendiebstahl<
-<In welcher Stadt ist der Fußball-Verein Hertha BSC beheimatet?< <Braunschweig< <Bethel< <1Berlin< <Böklund<
-<Wie lautet der Name Gottes bei den Muslimen?< <Koran< <1Allah< <Mohammed< <Buddha<
-<In welchem Behältnis wird die Achse eines Verstorbenen beigesetzt?< <Vase< <Terrarium< <Wabe< <1Urne<
+<Welches der folgenden Wörter bezeichnet keine japanische Form der Selbstverteidigung?< <Judo< <Aikido< <Karate< <^Mikado<
+<Was schmiert man jemandem sprichwörtlich schmeichelnd um den Bart?< <Schleim< <^Honig< <Farbe< <Sahne< 
+<Was ist eine Glucke?< <^brütendes Huhn< <Gewohnheitstrinkerin< <Dunstschicht< <Himmelbett< 
+<Was gießt man sprichwörtlich ins Feuer, um einen Streit zu verschärfen?< <Wasser< <^Öl< <Spiritus< <Benzin<
+<Über welchen Fluss geht man sprichwörtlich, wenn man das Zeitliche segnet?< <Mosel< <Donau< <Euphrat< <^Jordan<
+<Wie nennt man Kaffee mit einem Schuss Whiskey und Schlagsahne?< <Scottish Delight< <^Irhrishcoffee< <English Cream< <Nessies Dream<
+<Was wird als Firmament bezeichnet?< <Unternehmensgründung< <^Himmelsgewölbe< <trockener Zement< <Ladendiebstahl<
+<In welcher Stadt ist der Fußball-Verein Hertha BSC beheimatet?< <Braunschweig< <Bethel< <^Berlin< <Böklund<
+<Wie lautet der Name Gottes bei den Muslimen?< <Koran< <^Allah< <Mohammed< <Buddha<
+<In welchem Behältnis wird die Achse eines Verstorbenen beigesetzt?< <Vase< <Terrarium< <Wabe< <^Urne<
 
 300€:
-<Was ist Voodoo?< <Kampfsport< <Videotechnik< <1afroamerikanische Religion< <Telefongesellschaft<
-<Was steckt sich der Hausarzt bei Bedarf in die Ohren?< <1Stethoskop< <Horoskop< <Kaleidoskop< <Teleskop<
-<Welches dieser Tiere ist in Deutschland heimisch?< <Hängebauchschwein< <Warzenschwein< <1Wildschwein< <Wasserschwein<
-<Welcher Begriff wird vor Gericht für ein Beweisstück verwendet?< <Corporate Identity< <Cordon bleu< <1Corpus Delicti< <Con Carne< 
-<Was du heute kannst besorgen, das …< <hat Zeit bis übermorgen< <sollst du klauen oder borgen< <1verschiebe nicht auf morgen< <ist am Abend längst verdorben<
-<Was sucht man in einer Cola Light vergeblich?< <Koffein <Wasser< <Kalorien< <1Kristallzucker<
-<Zu ihrem ganzen Glück brauchten die Comedian Harmonists nichts als “Wochenende und …“? <Apfelwein< <Dollarschein< <Herzilein< <1Sonnenschein<
-<Durch welches Vergehen macht man sich in Deutschland strafbar?< <Bibliphilie< <1Bigamie< <Bijouterie< <Biochemie<
-<Welchen Beinamen hatte Edith Piaf?< <Geier von Nantes< <1Spatz von Paris< <Fink von Verdun< <Rabe von Reims<
-<Wie wird die Flagge der Vereinigten Staaten von Amerika genannt?< <Fish and Chips< <Earth, Wind and Fire< <Park and Ride< <1Stars and Stripes<
+<Was ist Voodoo?< <Kampfsport< <Videotechnik< <^afroamerikanische Religion< <Telefongesellschaft<
+<Was steckt sich der Hausarzt bei Bedarf in die Ohren?< <^Stethoskop< <Horoskop< <Kaleidoskop< <Teleskop<
+<Welches dieser Tiere ist in Deutschland heimisch?< <Hängebauchschwein< <Warzenschwein< <^Wildschwein< <Wasserschwein<
+<Welcher Begriff wird vor Gericht für ein Beweisstück verwendet?< <Corporate Identity< <Cordon bleu< <^Corpus Delicti< <Con Carne< 
+<Was du heute kannst besorgen, das …< <hat Zeit bis übermorgen< <sollst du klauen oder borgen< <^verschiebe nicht auf morgen< <ist am Abend längst verdorben<
+<Was sucht man in einer Cola Light vergeblich?< <Koffein <Wasser< <Kalorien< <^Kristallzucker<
+<Zu ihrem ganzen Glück brauchten die Comedian Harmonists nichts als “Wochenende und …“? <Apfelwein< <Dollarschein< <Herzilein< <^Sonnenschein<
+<Durch welches Vergehen macht man sich in Deutschland strafbar?< <Bibliphilie< <^Bigamie< <Bijouterie< <Biochemie<
+<Welchen Beinamen hatte Edith Piaf?< <Geier von Nantes< <^Spatz von Paris< <Fink von Verdun< <Rabe von Reims<
+<Wie wird die Flagge der Vereinigten Staaten von Amerika genannt?< <Fish and Chips< <Earth, Wind and Fire< <Park and Ride< <^Stars and Stripes<
 
 500€:
-<Wer entsandte 1983 erstmals Abgeordnete in den Deutschen Bundestag?< <1Die Grünen< <SPD< <PDS< <SED<
-<Ein Schwager ist entweder der Bruder des Ehepartners oder der ..?< <Sohn der Tante< <1Mann der Schwester< <Bruder des Vaters< Sohn des Bruders<
-<In welchem Abstand findet eine Biennale statt?< <einmal im Jahr< <1alle zwei Jahre< <alle drei Jahre< <alle vier Jahre<
-<Wie nennt man die Blutgefäße, in denen der Stoff- und Gasaustausch mit den Körperzellen erfolgt?< <Balearen< <1Kapillaren< <Balustraden< <Myriaden<
-<Wie heißt das Gebäude des US-Parlaments in Washington?< <Kapital< <1Kapitol< <Kartell< <Kapitell<
-<Wie wurde der Liberalisierungsprozess in der CSSR im Frühjahr 1968 genannt?< <1Prager Frühling< <Prager Fenstersturz< <Prager Schule< <Prager Neustadt<
-<Zlatko sang sich an die Spitze der Charts mit dem Titel “Ich vermisse dich wie die …“?< <Krätze< <Galle< <1Hölle< <Manu<
-<Wen heiratete John Lennon 1969?< <Cosma Shiva< <Mata Hari< <Kawa Saki< <1Yoko Ono<
-<Welcher dieser Begriffe steht für ein Kartenspiel?< <Doppelknoten< <Doppelagent< <1Doppelkopf< <Doppelpunkt<
-<Mit Hilfe welcher Zahl wird die Fläche eines Kreises errechnet?< <1Pi< <Rho< <Lambda< <Gamma<
-<Wer fordert regelmäßig mehr Geld für Angestellte im öffentlichen Dienst?< <ORF< <SPÖ< <1ÖTV< <ÖVP<
+<Wer entsandte 1983 erstmals Abgeordnete in den Deutschen Bundestag?< <^Die Grünen< <SPD< <PDS< <SED<
+<Ein Schwager ist entweder der Bruder des Ehepartners oder der ..?< <Sohn der Tante< <^Mann der Schwester< <Bruder des Vaters< Sohn des Bruders<
+<In welchem Abstand findet eine Biennale statt?< <einmal im Jahr< <^alle zwei Jahre< <alle drei Jahre< <alle vier Jahre<
+<Wie nennt man die Blutgefäße, in denen der Stoff- und Gasaustausch mit den Körperzellen erfolgt?< <Balearen< <^Kapillaren< <Balustraden< <Myriaden<
+<Wie heißt das Gebäude des US-Parlaments in Washington?< <Kapital< <^Kapitol< <Kartell< <Kapitell<
+<Wie wurde der Liberalisierungsprozess in der CSSR im Frühjahr 1968 genannt?< <^Prager Frühling< <Prager Fenstersturz< <Prager Schule< <Prager Neustadt<
+<Zlatko sang sich an die Spitze der Charts mit dem Titel “Ich vermisse dich wie die …“?< <Krätze< <Galle< <^Hölle< <Manu<
+<Wen heiratete John Lennon 1969?< <Cosma Shiva< <Mata Hari< <Kawa Saki< <^Yoko Ono<
+<Welcher dieser Begriffe steht für ein Kartenspiel?< <Doppelknoten< <Doppelagent< <^Doppelkopf< <Doppelpunkt<
+<Mit Hilfe welcher Zahl wird die Fläche eines Kreises errechnet?< <^Pi< <Rho< <Lambda< <Gamma<
+<Wer fordert regelmäßig mehr Geld für Angestellte im öffentlichen Dienst?< <ORF< <SPÖ< <^ÖTV< <ÖVP<
+
+
+1000€:
+<Welche Stadt liegt am Ausgang des Jadebusens?< <^Wilhelmshaven< <Hongkong< <Sydney< <Kiew<
+<Was machte Judas, nachdem er Jesus verraten hatte?< <er wurde Gladiator< <^er erhängt sich< <er wurde Weinhändler< <er ging ins Kloster<
+<Aus dem Fleisch welchen Tieres wurde ursprünglich die Salami hergestellt?< <Hund< <Ratte< <^Esel< <Katze<
+<Wie nennt man ein Person, der die Hoden entfernt wurden?< <Kapaun< <^Kastrat< <Kastor< <Kasuist<
+<Wie hieß der erste Nummer-1-Hit von Britney Spears?< <“Oops … I Did it Again“< <“Genie In A Bottle“< <“All You Need Is Love“< <^“Baby, One More Time“<
+<Welche spätere Nationalheilige Frankreichs wurde 1431 wegen angeblicher Hexerei verbrannt?< <^Jeanne d’Arc< <Maria Stuart< <Anne Boleyn< <Lucrezia Borgia<
+<Wie nennt man die Endpunkte der gedachten Erdachse?< <Äquator< <^Pole< <Meridiane< <Tangenten<
+<In welchem Jahr stand die Notre-Dame in Flammen?< <2018< <2020< <2016<^2019<
+<Gegen welches Team schied Bayern München in der Saison 1999/2000 im Halbfinale der Champions League aus?< <Manchester United< <Dynamo Kiew< <^Real Madrid< <Borussia Dortmund<
+<Welcher der folgenden Begriffe bezeichnet keine Verbeugung?< <Diener< <Kotau< <Knicks< <^Salto<
+
+
+2000€:
+<Welche japanischen “Pocketmonster“ stehen bei Kindern hoch im Kurs?< <Potomac< <^Pokémon< <Posh Spice< <Pocahontas<
+<Was verarbeitet ein Kürschner?< <^Pelze< <Fallobst< <Edelhölzer< <Alteisen<
+<Was ist der Paso doble?< <Cocktail< <Doppelgänger< <Windhund< <^Gesellschaftstanz<
+<Was ist der Hauptbestandteil des Pfefferminzöls?< <Benzol< <Kampfer< <^Menthol< <Terpentin<
+<Woraus wird Lakritze gewonnen?< <Zuckerrohr< <Kautschuk< <^Süßholz< <Raps< 
+<Was gilt in der Geschäftswelt als großzügiges Verhalten?< <^Kulanz< <Assekuranz< <Solvenz< <Impertinenz<
+<Wie heißt die Landeshauptstadt von Sachsen-Anhalt?< <Dresden< <^Magdeburg< <Chemnitz< <Leipzig<
+<Welcher Fall wird in der Grammatik auch als “Wenfall“ bezeichnet?< <Nominativ< <^Akkusativ< <Dativ< <Genitiv<
+<Wie nennt man eine Quelle, aus der in rhythmischen Abständen eine Heißwasserfontäne schießt?< <Lawine< <Strudel< <Vulkan< <^Geysir<
+<Wie heißt die Landeshauptstadtvon Schleswig-Holstein?< <Flensburg< <^Kiel< <Oldenburg< <Cuxhaven<
+<Vor der Kaserne, vor dem großen Tor ..?< <^stand eine Laterne< <leuchten uns die Sterne< <ging der Weg nach Herne< <blick ich in die Ferne<
+
+4000€:
+<Die des Zaubers unkundigen Menschen in den Harry-Potter-Abendteuern heißen…?< <Rowlings< <Hogwarts< <Muggels< <Askabans<
+
+8000€:
+<Wie viele Finger hat Micky Maus an einer Hand?< <2 Finger< <3 Finger< <^4 Finger< <5 Finger<
+<Welches dieser Tiere gehört nicht zu den Lurchen?< <Grottenolm< <^Sumpfotter< <Feuersalamander< <Geburtshelferkröte<
+<Was bedeutet Film im eigentlichen Wortsinn?< <^Dünne Haut< <Schatten< <Abfolge< <Mondschein<
+<In welcher Stadt ruhen die Gebeine der Heiligen Drei Könige?< <Triest< <Rom< <^Köln< <Nantes<
+<Wie nennt man die chirurgische Korrektur der Nase?< <^Rhinoplastik< <Zinkometrie< <Pniseketion< <Nasorektomie<
+<Wie nennen Seeleute die Nordsee bei Sturm?< <Blaue Marie< <^Blanker Hans< <Grüner Heinrich< <Nasse Ulla<
+<In welcher Disziplin der Leichtathletik werden nacheinander ein “hop”, “step” und “jump” ausgeführt?< <Hochsprung< <Weitsprung< <^Dreisprung< <Stabhochsprung<
+<Was ist eine Anämie?< <Gedächtnislücke< <^Blutarmut< <Freilassung von Gefangenen< <Rhetorisches Mittel<
+<Welche Schachfigur darf ausschließlich diagonal über das Schachbrett geführt werden?< <Dame< <Turm< <König< <^Läufer<
+<Wer wählt den deutschen Bundespräsidenten?< <Bundesrat< <Bundestag< <^Bundesversammlung< <Bundesaufsicht<
+<Wie bezeichnet man die kosmologische Urknall-Theorie noch?< <^Big Bang< <Big Baff< <Big Bum< <Big Bug<
+<Wo findet die Kunstausstellung “documenta” statt?< <München< <Düsseldorf< <Leipzig< <^Kassel<
+<Was entdeckte Robert Koch?< <Vitamine< <Bikini-Atoll< <Kalorien< <^Tuberkelbazillus<
+<Wer von diesen vieren ist kein Vogel?< <Wellensittich< <^Pfauenauge< <Goldammer< <Rotkehlchen<
+<Wie heißt das Getränk, das man sich nach dem Essen gönnt?< <Amuse-Gueule< <^Digestif< <Bombe finale< <Aperitif<
+<Unter welchem Syndrom leidet ein stets müder und gleichgültiger Mitarbeiter?< <Mobbing< <Key-Account< <^Burnout< <Outsourcing< 
+<Was speichern Kamele in ihren Höckern?< <Luft< <^Fett< <Milch< <Urin<
+<Wo entwarfen 12 Staats- und Regierungschefs im Dezember 1991 die Europäische Union?< <Wien< <Liverpool< <Hamburg< <^Maastricht<
+<Was streut man normalerweise auf sein Frühstücksei?< <Ammoniumnitrat< <Calciumcarbonat< <^Natriumchlorid< <Paracetamol<
+
+16000€:
+<Was untersuchen Petrologen?< <^Gestein< <Darmkrankheiten< <Öltanker< <Russische Geschichte<
+<Wie nennen Kaufleute den letzten Tag des Monats?< <Exitus< <Finish< <^Ultimo< <Finale<
+<Wem verdankt der Teddybär seinen Namen?< <Telly Savalas< <Ted Turner< <^Theodore Roosevelt< <Prinz Edward<
+<Welcher Konfession gehörte John F. Kennedy an?< <buddhistisch< <^römisch-katholisch< <jüdisch< <puritanisch<
+<Wer erfand den Blitzableiter?< <Franklin D. Roosevelt< <Henry Ford< <Thomas A. Edison< <^Benjamin Franklin<
+<Wie nennt man die kulturelle Bewegung in Europa im Übergang vom Mittelalter zur Neuzeit?< <^Renaissance< <Barock< <Klassizismus< <Romantik<
