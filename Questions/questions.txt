@@ -79,7 +79,8 @@
 <Vor der Kaserne, vor dem großen Tor ..?< <^stand eine Laterne< <leuchten uns die Sterne< <ging der Weg nach Herne< <blick ich in die Ferne<
 
 4000€:
-<Die des Zaubers unkundigen Menschen in den Harry-Potter-Abendteuern heißen…?< <Rowlings< <Hogwarts< <Muggels< <Askabans<
+<Die des Zaubers unkundigen Menschen in den Harry-Potter-Abendteuern heißen…?< <Rowlings< <Hogwarts< <^Muggels< <Askabans<
+<In welchem Jahr flog das Spaceshuttle das letzte mal?< <2008< <2011< <2012< <2005<
 
 8000€:
 <Wie viele Finger hat Micky Maus an einer Hand?< <2 Finger< <3 Finger< <^4 Finger< <5 Finger<
@@ -109,3 +110,37 @@
 <Welcher Konfession gehörte John F. Kennedy an?< <buddhistisch< <^römisch-katholisch< <jüdisch< <puritanisch<
 <Wer erfand den Blitzableiter?< <Franklin D. Roosevelt< <Henry Ford< <Thomas A. Edison< <^Benjamin Franklin<
 <Wie nennt man die kulturelle Bewegung in Europa im Übergang vom Mittelalter zur Neuzeit?< <^Renaissance< <Barock< <Klassizismus< <Romantik<
+<Wer war August Bebel?< <General im 1. Weltkrieg< <Erster Vorsitzender der SED< <Olympiasieger im Dressurreiten< <^Mitgründer der SPD<
+<Wer erfand den Viertaktmotor?< <Gottlieb Daimler< <Carl Benz< <Rudolf Diesel< <^Nikolaus Otto<
+<Wie nennt man die im Wasser treibenden pflanzlichen und tierischen Kleinstlebewesen?< <Krill< <^Plankton< <Tang< <Mikrotom<
+<Wie nennt man ein Bauwerk mit einem achteckigen Grundriss?< <Pentagon< <Octopus< <Pantaleon< <^Oktogon<
+<Welches Metall wird mit Kupfer legiert, um Messing zu erhalten?< <Eisen< <^Zink< <Silber< <Blei<
+<Wie lautet der deutsche Begriff für Konsonant?< <Umlaut< <^Mitlaut< <Vorlaut< <Selbstlaut<
+<Was bekommt man, wenn man in einem Restaurant in Österreich Karfiol bestellt?< <Spitzkohl< <Weißkohl< <^Blumenkohl< <Rotkohl<
+<Welcher der folgenden Personen wurde nicht in Wien geboren?< <Romy Schneider< <^Wolfgang Amadeus Mozart< <Niki Lauda< <Peter Alexander<
+<Welches Gewand gehört nicht zur Garderobe der alten Römer?< <Stola< <^Burnus< <Tunika< <Toga<
+
+32000€:
+<Welche der folgenden Kulturpflanzen ist kein Getreide?< <Roggen< <Dinkel< <Hafer< <^Buchweizen<
+<Wann wurde Tetris veröffentlicht?< <^1984< <1628< <2010< <1950<
+<Was für ein Tier ist die Kellerassel?< <^Krebs< <Zecke< <Insekt< <Spinne<
+<Welches dieser Wörter ist kein Palindrom?< <Reliefpfeiler< <^Pascha< <Rentner< <Anna<
+<Was bedeutet Rock ’n’ Roll wörtlich übersetzt?< <tanzen und rollen< <^wiegen und rollen< <singen und rollen< <klatschen und rollen<
+<Auf welcher Insel liegt Tokio?< <Borneo< <^Honshu< <Luzon< <Hokkaido<
+<Wie hieß der erste von den Amerikanern entwickelte wiederverwendbare Spaceshuttle?< <^Columbia< <Enterprise< <Atlantis< <Voyager<
+<Zu welcher Tierklasse gehören die Skorpione?< <Insekten< <^Spinnentiere< <Säugetiere< <Reptilien<
+<Wie viele Nullen hat die Zahl, die man in Deutschland als Trillion bezeichnet?< <12< <15< <^18< <21<
+<Wie heißt der Miniroboter mit Glühbirnenkopf, der Daniel Düsentrieb unter die Arme greift?< <Kleine Leuchte< <^Helferlein< <Funkenmännchen< <Abraxas<
+<Wen widmenten die Germanen den Donnerstag?< <^Thor< <Wotan< <Tyr< <Baldr<
+<Wer erfand den fetten Comic-Kater Garfield?< <^Jim Davis< <Carl Barks< <Dik Browne< <Matt Groening<
+<Was bedeutete das Wort Biskuit ursprünglich?< <mit Honig gefüllt< <schaumig geschlagen< <Weizenmantel< <^zweimal gekocht<
+<Welches dieser Schiffe gehörte nicht zu Kolumbus’ Expedition von 1492?< <^Mayflower< <Pinta< <Niña< <Santa María<
+
+64000€:
+<Welches japanische Kugelfischgericht ist - unsachgemäß zubereitet - eine hochgiftige Speise?< <Takeshi< <Galma< <Surimi< <^Fugu<
+<Was ist die Amtssprache von Angola?< <Englisch< <Spanisch< <^Portugiesisch< <Französisch<
+<Wie hieß der erste europäische Verein, bei dem Fußball-Star Ronaldo stürmte?< <FC Barcelona< <Standard Lüttich< <FC Zürich< <^PSV Eindhoven<
+<Was bekommt man wenn man in Norddeutschland Plinsen bestellt?< <Bratklopse< <Linsenbratlinge< <^Eierkuchen< <Butterkekse<
+<Was ist ein Mezzanin?< <Vorsänger< <^Zwischengeschoss< <Pausenclown< <Gebetsrufer<
+<Welchen Schmetterling gibt es tatsächlich?< <Punktfalter< <^Kommafalter< <Doppelpunktfalter< <Semikolonfalter<
+
