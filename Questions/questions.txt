@@ -1,5 +1,6 @@
 50€:
 <Wird ein Roman häppchenweise in der Tageszeitung abgedruckt, steht am Ende eines Teils meist …?< <^Fortsetzung folgt<  <Bleiben Sie dran!< <Die Spannung steigt< <Ende offen<
+<Was ist die höchste Gewinnstufe bei Wer Wird Millionär?< <100000< <10000< <^1000000< <64000<
 
 100€:
 <Welchem Heiligen ist der 31.12. gewidmet?< <Ali< <Brian< <^Silvester< <Nikolaus<
@@ -27,7 +28,6 @@
 <In welchem Behältnis wird die Achse eines Verstorbenen beigesetzt?< <Vase< <Terrarium< <Wabe< <^Urne<
 
 300€:
-<Was ist Voodoo?< <Kampfsport< <Videotechnik< <^afroamerikanische Religion< <Telefongesellschaft<
 <Was steckt sich der Hausarzt bei Bedarf in die Ohren?< <^Stethoskop< <Horoskop< <Kaleidoskop< <Teleskop<
 <Welches dieser Tiere ist in Deutschland heimisch?< <Hängebauchschwein< <Warzenschwein< <^Wildschwein< <Wasserschwein<
 <Welcher Begriff wird vor Gericht für ein Beweisstück verwendet?< <Corporate Identity< <Cordon bleu< <^Corpus Delicti< <Con Carne< 
@@ -37,6 +37,7 @@
 <Durch welches Vergehen macht man sich in Deutschland strafbar?< <Bibliphilie< <^Bigamie< <Bijouterie< <Biochemie<
 <Welchen Beinamen hatte Edith Piaf?< <Geier von Nantes< <^Spatz von Paris< <Fink von Verdun< <Rabe von Reims<
 <Wie wird die Flagge der Vereinigten Staaten von Amerika genannt?< <Fish and Chips< <Earth, Wind and Fire< <Park and Ride< <^Stars and Stripes<
+<An welchem Land grenzt Deutschland im Norden an?< <England< <^Dänemark< <Copenhagen< <Norwegen<
 
 500€:
 <Wer entsandte 1983 erstmals Abgeordnete in den Deutschen Bundestag?< <^Die Grünen< <SPD< <PDS< <SED<
@@ -61,11 +62,11 @@
 <Welche spätere Nationalheilige Frankreichs wurde 1431 wegen angeblicher Hexerei verbrannt?< <^Jeanne d’Arc< <Maria Stuart< <Anne Boleyn< <Lucrezia Borgia<
 <Wie nennt man die Endpunkte der gedachten Erdachse?< <Äquator< <^Pole< <Meridiane< <Tangenten<
 <In welchem Jahr stand die Notre-Dame in Flammen?< <2018< <2020< <2016<^2019<
-<Gegen welches Team schied Bayern München in der Saison 1999/2000 im Halbfinale der Champions League aus?< <Manchester United< <Dynamo Kiew< <^Real Madrid< <Borussia Dortmund<
 <Welcher der folgenden Begriffe bezeichnet keine Verbeugung?< <Diener< <Kotau< <Knicks< <^Salto<
 
 
 2000€:
+<Was ist Voodoo?< <Kampfsport< <Videotechnik< <^afroamerikanische Religion< <Telefongesellschaft<
 <Welche japanischen “Pocketmonster“ stehen bei Kindern hoch im Kurs?< <Potomac< <^Pokémon< <Posh Spice< <Pocahontas<
 <Was verarbeitet ein Kürschner?< <^Pelze< <Fallobst< <Edelhölzer< <Alteisen<
 <Was ist der Paso doble?< <Cocktail< <Doppelgänger< <Windhund< <^Gesellschaftstanz<
@@ -81,6 +82,7 @@
 4000€:
 <Die des Zaubers unkundigen Menschen in den Harry-Potter-Abendteuern heißen…?< <Rowlings< <Hogwarts< <^Muggels< <Askabans<
 <In welchem Jahr flog das Spaceshuttle das letzte mal?< <2008< <2011< <2012< <2005<
+<Wie heißt das Atom, welches 3 Außenelektronen hat?< <Wasserstoff< <Beryllium< <Helium< <^Lithium<
 
 8000€:
 <Wie viele Finger hat Micky Maus an einer Hand?< <2 Finger< <3 Finger< <^4 Finger< <5 Finger<
@@ -143,4 +145,16 @@
 <Was bekommt man wenn man in Norddeutschland Plinsen bestellt?< <Bratklopse< <Linsenbratlinge< <^Eierkuchen< <Butterkekse<
 <Was ist ein Mezzanin?< <Vorsänger< <^Zwischengeschoss< <Pausenclown< <Gebetsrufer<
 <Welchen Schmetterling gibt es tatsächlich?< <Punktfalter< <^Kommafalter< <Doppelpunktfalter< <Semikolonfalter<
-
+<In welchem Organ wird das Hormon Insulin gebildet?< <Nebennierenrinde< <Gallenblase< <^Bauchspeicheldrüse< <Hypophyse<
+<Welcher dieser Farbtöne ist ein Rot?< <ocker< <^karmin< <umbra< <azur<
+<Welches Gift können Kartoffeln bei zu starker Lichteinwirkung bilden?< <Leptinoin< <^Solanin< <Sacchalin< <Patatin<
+<Welche Insel gehört nicht zu den Ostfriesischen Inseln?< <Norderney< <Wangerooge< <Juist< <^Amrum<
+<Woraus werden Kerzen heute meist gefertigt?< <^Stearin< <Cadaverin< <Saccharin< <Glyzerin<
+<In welcher Stadt tat Richard Wagner seinen letzten Atemzug?< <Paris< <Bayreuth< <^Venedig< <Augsburg<
+<Was bedeutete das Wort katholisch ursprünglich?< <^allgemein< <heilig< <geistlich< <erlösend<
+<Wie wird in der griechischen Mythologie der Zustand der Welt bezeichnet, bevor die Erde entstand?< <^Chaos< <Babel< <Universum< <Nirvana<
+<Was versteht man unter einem Madrigal?< <Bürgermeister< <^gesungenes Liebesgedicht< <Hochschulabschluss< <spanisches Schloss<
+<Wie heißen die Gefäße, in denen die alten Ägypter die Eingeweide von Verstorbenen beisetzten?< <Kanonaden< <Kanonissen< <Kantaten< <^Kanopen<
+<Welcher dieser US-Präsidenten war am längsten im Amt?< <John F. Kennedy< <Richard Nixon< <George Washington< <^Franklin D. Roosevelt<
+<Welche Internet-Adresse muss man eingeben, um die offizielle Homepage des Weißen Hauses zu erreichen?< <www.whitehouse.de< <www.whitehouse.com< <www.whitehouse.uk< <^www.whitehouse.gov<
+<Wozu dient das Züngeln einer Schlange hauptsächlich?< <schwitzen< <tasten< <^riechen< <Sauerstoff aufnehmen<
