@@ -13,9 +13,11 @@ func getBackgroundAudioUrl(currentPrizesLevel: Int, oldCurrentPrizeLevel: Int) -
     
     if currentPrizesLevel <= 5 && (!(oldCurrentPrizeLevel <= 5) || oldCurrentPrizeLevel == 0) {
         audioFileUrl = Bundle.main.url(forResource: "50-500_intro_sound.mp3", withExtension: nil)
-    } else if currentPrizesLevel > 5 && currentPrizesLevel <= 9  && !(oldCurrentPrizeLevel > 5) {
+    } else if currentPrizesLevel > 5 && currentPrizesLevel <= 10  && !(oldCurrentPrizeLevel > 5) {
         audioFileUrl = Bundle.main.url(forResource: "1000-16000_intro_sound.mp3", withExtension: nil)
-    } else if currentPrizesLevel == 14 && !(oldCurrentPrizeLevel == 14) {
+    } else if currentPrizesLevel > 10 && currentPrizesLevel <= 14 && !(oldCurrentPrizeLevel > 10) {
+        audioFileUrl = Bundle.main.url(forResource: "32000-5000000_intro_sound.mp3", withExtension: nil)
+    } else if currentPrizesLevel == 15 && !(oldCurrentPrizeLevel == 15) {
         audioFileUrl = Bundle.main.url(forResource: "1000000_intro_sound.mp3", withExtension: nil)
     } else {
         audioFileUrl = nil
@@ -51,6 +53,24 @@ func getQuestionAudioUrl(prizeLevel: Int, isCorrect: Bool) -> URL? {
             audioFileUrl = Bundle.main.url(forResource: "50-500_answer_correct.mp3", withExtension: nil)
         } else {
             audioFileUrl = Bundle.main.url(forResource: "50-500_answer_wrong.mp3", withExtension: nil)
+        }
+    } else if prizeLevel > 5 && prizeLevel <= 10 {
+        if isCorrect {
+            audioFileUrl = Bundle.main.url(forResource: "1000-16000_answer_correct.mp3", withExtension: nil)
+        } else {
+            audioFileUrl = Bundle.main.url(forResource: "1000-16000_answer_wrong.mp3", withExtension: nil)
+        }
+    } else if prizeLevel > 10 && prizeLevel <= 14 {
+        if isCorrect {
+            audioFileUrl = Bundle.main.url(forResource: "32000-500000_answer_correct.mp3", withExtension: nil)
+        } else {
+            audioFileUrl = Bundle.main.url(forResource: "32000-500000_answer_wrong.mp3", withExtension: nil)
+        }
+    } else if prizeLevel == 15 {
+        if isCorrect {
+            audioFileUrl = Bundle.main.url(forResource: "1000000_answer_correct.mp3", withExtension: nil)
+        } else {
+            audioFileUrl = Bundle.main.url(forResource: "1000000_answer_wrong.mp3", withExtension: nil)
         }
     }
     

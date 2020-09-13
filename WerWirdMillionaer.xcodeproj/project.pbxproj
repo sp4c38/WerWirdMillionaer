@@ -25,7 +25,6 @@
 		619C335F25013ECB00E82084 /* submit_answer_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334825013ECB00E82084 /* submit_answer_sound.mp3 */; };
 		619C336025013ECB00E82084 /* correct_answer_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334925013ECB00E82084 /* correct_answer_sound.mp3 */; };
 		619C336125013ECB00E82084 /* 1000-16000_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */; };
-		619C336225013ECB00E82084 /* game_won_sound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334B25013ECB00E82084 /* game_won_sound2.mp3 */; };
 		619C336325013ECC00E82084 /* 32000-5000000_intro_song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */; };
 		619C336425013ECC00E82084 /* outro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334D25013ECB00E82084 /* outro_sound.mp3 */; };
 		619C336525013ECC00E82084 /* 16000_security_level.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334E25013ECB00E82084 /* 16000_security_level.mp3 */; };
@@ -88,7 +87,6 @@
 		619C334825013ECB00E82084 /* submit_answer_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = submit_answer_sound.mp3; sourceTree = "<group>"; };
 		619C334925013ECB00E82084 /* correct_answer_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct_answer_sound.mp3; sourceTree = "<group>"; };
 		619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1000-16000_intro_sound.mp3"; sourceTree = "<group>"; };
-		619C334B25013ECB00E82084 /* game_won_sound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_won_sound2.mp3; sourceTree = "<group>"; };
 		619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "32000-5000000_intro_song.mp3"; sourceTree = "<group>"; };
 		619C334D25013ECB00E82084 /* outro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = outro_sound.mp3; sourceTree = "<group>"; };
 		619C334E25013ECB00E82084 /* 16000_security_level.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 16000_security_level.mp3; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				619C334825013ECB00E82084 /* submit_answer_sound.mp3 */,
 				619C334925013ECB00E82084 /* correct_answer_sound.mp3 */,
 				619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */,
-				619C334B25013ECB00E82084 /* game_won_sound2.mp3 */,
 				619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */,
 				619C334D25013ECB00E82084 /* outro_sound.mp3 */,
 				619C334E25013ECB00E82084 /* 16000_security_level.mp3 */,
@@ -385,7 +382,6 @@
 				619C336C25013ECC00E82084 /* game_won_sound.mp3 in Resources */,
 				619C335E25013ECB00E82084 /* 1000-16000_answer_wrong.mp3 in Resources */,
 				619C335F25013ECB00E82084 /* submit_answer_sound.mp3 in Resources */,
-				619C336225013ECB00E82084 /* game_won_sound2.mp3 in Resources */,
 				617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */,
 				619C336F25013ECC00E82084 /* telephone_joker_sound.mp3 in Resources */,
 				619C336B25013ECC00E82084 /* 32000-500000_answer_correct.mp3 in Resources */,
