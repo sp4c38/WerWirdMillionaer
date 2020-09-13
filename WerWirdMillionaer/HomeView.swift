@@ -40,7 +40,7 @@ struct HomeView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
-            Image("wwm_logo")
+            Image("WWMLogo")
                 .resizable()
                 .scaledToFit()
                 .padding(50)
@@ -56,7 +56,7 @@ struct HomeView: View {
                 }
             
             HStack(spacing: 90) {
-                Image("guenter_jauch")
+                Image("GuenterJauch")
                     .resizable()
                     .scaledToFit()
                     .padding(.leading, 40)
@@ -79,7 +79,7 @@ struct HomeView: View {
                         }
                     )
                     .onTapGesture {
-                        mainViewController.onHomeView.toggle()
+                        mainViewController.goToGameView()
                     }
                     .modifier(elementGlowModifier(color: Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), blurRadius: $elementGlowShadow))
                     .padding(10)

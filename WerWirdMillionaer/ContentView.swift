@@ -9,23 +9,42 @@ import AVFoundation
 import SwiftUI
 
 class MainViewController: ObservableObject {
-    @Published var onHomeView = true
+    @Published var viewShowIndex = 0
+    
+    func goToEndView() {
+        viewShowIndex = 2
+    }
+    
+    func goToGameView() {
+        viewShowIndex = 1
+    }
     
     func goBackToStartView() {
-        onHomeView.toggle()
+        viewShowIndex = 0
     }
 }
 
 struct ContentView: View {
-    @ObservedObject var mainViewController = MainViewController()
+    @EnvironmentObject var mainViewController: MainViewController
+    @EnvironmentObject var soundManager: SoundManager
+    
+    var gameStateData = GameStateData()
+    
+    init() {
+        gameStateData.updateRandomQuestion()
+    }
     
     var body: some View {
-        if mainViewController.onHomeView {
+        if mainViewController.viewShowIndex == 0 {
             HomeView()
-                .environmentObject(mainViewController)
-        } else {
+            
+        } else if mainViewController.viewShowIndex == 1 {
             GameView()
-                .environmentObject(mainViewController)
+                .environmentObject(gameStateData)
+            
+        } else if mainViewController.viewShowIndex == 2 {
+            GameFinishedView()
+                .environmentObject(gameStateData)
         }
     }
 }

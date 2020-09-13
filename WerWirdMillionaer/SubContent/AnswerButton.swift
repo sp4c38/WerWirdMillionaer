@@ -34,36 +34,36 @@ struct AnswerButton: View {
     @Binding var jokerGuess: String
     var answerName: String
     var showingAnswerIndex: Int // Index of the possible answer which is shown
-    var currentPrizesLevel: CurrentPrizesLevel
+    var gameStateData: GameStateData
     var showingAnswer: String?
     
-    init(jokerGuess: Binding<String>, answerName: String, showingIndex: Int, currentPrizesLevel: CurrentPrizesLevel) {
+    init(jokerGuess: Binding<String>, answerName: String, showingIndex: Int, gameStateData: GameStateData) {
         self._jokerGuess = jokerGuess
         self.answerName = answerName
         self.showingAnswerIndex = showingIndex
-        self.currentPrizesLevel = currentPrizesLevel
+        self.gameStateData = gameStateData
         
         if self.showingAnswerIndex == 0 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerA
+            self.showingAnswer = self.gameStateData.randomQuestion.answerA
         } else if self.showingAnswerIndex == 1 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerB
+            self.showingAnswer = self.gameStateData.randomQuestion.answerB
         } else if self.showingAnswerIndex == 2 {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerC
+            self.showingAnswer = self.gameStateData.randomQuestion.answerC
         } else {
-            self.showingAnswer = self.currentPrizesLevel.randomQuestion.answerD
+            self.showingAnswer = self.gameStateData.randomQuestion.answerD
         }
     }
     
     var body: some View {
         Button(action: {
-            if currentPrizesLevel.randomQuestion.correctAnswer == showingAnswer {
+            if gameStateData.randomQuestion.correctAnswer == showingAnswer {
                 print("Correct!")
-                currentPrizesLevel.timeKeepCounting = false
-                currentPrizesLevel.questionAnsweredCorrectly = true
+                gameStateData.timeKeepCounting = false
+                gameStateData.questionAnsweredCorrectly = true
             } else {
                 print("Wrong!")
-                currentPrizesLevel.timeKeepCounting = false
-                currentPrizesLevel.questionAnsweredCorrectly = false
+                gameStateData.timeKeepCounting = false
+                gameStateData.questionAnsweredCorrectly = false
             }
         }) {
             HStack(spacing: 20) {

@@ -18,6 +18,7 @@
 		617F3C7524FBAE0F0055930B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7224FBAE0F0055930B /* questions.json */; };
 		617F3C7624FBAE0F0055930B /* convert_questions.py in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7324FBAE0F0055930B /* convert_questions.py */; };
 		617F3C7924FBAE460055930B /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617F3C7824FBAE460055930B /* QuestionData.swift */; };
+		619B20C3250E108E00C29171 /* GameFinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619B20C2250E108E00C29171 /* GameFinishedView.swift */; };
 		619C335C25013ECB00E82084 /* 50-500_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334525013ECB00E82084 /* 50-500_intro_sound.mp3 */; };
 		619C335D25013ECB00E82084 /* audience_joker_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334625013ECB00E82084 /* audience_joker_sound.mp3 */; };
 		619C335E25013ECB00E82084 /* 1000-16000_answer_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */; };
@@ -80,6 +81,7 @@
 		617F3C7224FBAE0F0055930B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		617F3C7324FBAE0F0055930B /* convert_questions.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = convert_questions.py; sourceTree = "<group>"; };
 		617F3C7824FBAE460055930B /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		619B20C2250E108E00C29171 /* GameFinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinishedView.swift; sourceTree = "<group>"; };
 		619C334525013ECB00E82084 /* 50-500_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "50-500_intro_sound.mp3"; sourceTree = "<group>"; };
 		619C334625013ECB00E82084 /* audience_joker_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audience_joker_sound.mp3; sourceTree = "<group>"; };
 		619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1000-16000_answer_wrong.mp3"; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
 				6164E621250431A500DC57FC /* HomeView.swift */,
 				61D11F0824FAE4C30034CE11 /* GameView.swift */,
+				619B20C2250E108E00C29171 /* GameFinishedView.swift */,
 				61E7986024FAB16F009F914E /* Assets.xcassets */,
 				61E7986524FAB16F009F914E /* Info.plist */,
 				61E7986224FAB16F009F914E /* Preview Content */,
@@ -429,6 +432,7 @@
 				6144FC7124FFDAC900781D9E /* GetAudioUrl.swift in Sources */,
 				617F3C7924FBAE460055930B /* QuestionData.swift in Sources */,
 				61E7985F24FAB16D009F914E /* ContentView.swift in Sources */,
+				619B20C3250E108E00C29171 /* GameFinishedView.swift in Sources */,
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
 				612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */,
 				61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */,

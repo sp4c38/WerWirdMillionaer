@@ -8,16 +8,16 @@
 import SwiftUI
 import Foundation
 
-func telephoneJoker(currentPrizesLevel: CurrentPrizesLevel) -> String {
+func telephoneJoker(gameStateData: GameStateData) -> String {
     let outputSelection: [String]
     
-    if currentPrizesLevel.currentPrizeLevel == 0 || currentPrizesLevel.currentPrizeLevel == 1 || currentPrizesLevel.currentPrizeLevel == 2 {
+    if gameStateData.currentPrizeLevel == 0 || gameStateData.currentPrizeLevel == 1 || gameStateData.currentPrizeLevel == 2 {
         outputSelection = ["Na, das ist doch einfach! \"%@\" natürlich!", "Ja, das weiß ich. Das ist \"%@\"", "Hmm. Nimm \"%@\". Da bin ich mir sicher!", "Ja... ok. Da ist \"%@\" auf jedenfall richtig!"]
     } else {
         outputSelection = ["Na, das ist doch einfach! \"%@\" natürlich!", "Ja, das weiß ich. Das ist \"%@\"", "Hmm. Nimm \"%@\". Da bin ich mir sicher!", "Ja... ok. Da ist \"%@\" auf jedenfall richtig!"]
     }
         
-    let guessedAnswer = String(format: outputSelection.randomElement()!, currentPrizesLevel.randomQuestion.correctAnswer)
+    let guessedAnswer = String(format: outputSelection.randomElement()!, gameStateData.randomQuestion.correctAnswer)
     
     print("Telephone joker guessed \(guessedAnswer).")
     return guessedAnswer
@@ -43,24 +43,24 @@ class AudiencePollCollection {
     var votingVariant = [VotingVariant(name: "", height: 0, probability: 0), VotingVariant(name: "", height: 0, probability: 0), VotingVariant(name: "", height: 0, probability: 0), VotingVariant(name: "", height: 0, probability: 0)]
 }
 
-func audienceJoker(currentPrizesLevel: CurrentPrizesLevel) -> AudiencePollCollection {
+func audienceJoker(gameStateData: GameStateData) -> AudiencePollCollection {
     let audiencePollCollection = AudiencePollCollection()
     let probability: CGFloat
 
-    if currentPrizesLevel.currentPrizeLevel < 2 {
+    if gameStateData.currentPrizeLevel < 2 {
         probability = 1
     } else {
         probability = 0.5
     }
 
     var currentIndex = 0
-    for variant in [currentPrizesLevel.randomQuestion.answerA,
-                    currentPrizesLevel.randomQuestion.answerB,
-                    currentPrizesLevel.randomQuestion.answerC,
-                    currentPrizesLevel.randomQuestion.answerD] {
+    for variant in [gameStateData.randomQuestion.answerA,
+                    gameStateData.randomQuestion.answerB,
+                    gameStateData.randomQuestion.answerC,
+                    gameStateData.randomQuestion.answerD] {
         
         let name: String = ((currentIndex == 0) ? "A" : ((currentIndex == 1) ? "B" : ((currentIndex == 2) ? "C" : ((currentIndex == 3) ? "D" : ""))))
-        let isCorrect = (currentPrizesLevel.randomQuestion.correctAnswer == variant)
+        let isCorrect = (gameStateData.randomQuestion.correctAnswer == variant)
         
         audiencePollCollection.votingVariant[currentIndex] =
             VotingVariant(
@@ -78,14 +78,14 @@ func audienceJoker(currentPrizesLevel: CurrentPrizesLevel) -> AudiencePollCollec
     return audiencePollCollection
 }
 
-func fifthfiftyJoker(currentPrizesLevel: CurrentPrizesLevel) {
-    var selectionList = [currentPrizesLevel.randomQuestion.answerA,
-                         currentPrizesLevel.randomQuestion.answerB,
-                         currentPrizesLevel.randomQuestion.answerC,
-                         currentPrizesLevel.randomQuestion.answerD]
+func fifthfiftyJoker(gameStateData: GameStateData) {
+    var selectionList = [gameStateData.randomQuestion.answerA,
+                         gameStateData.randomQuestion.answerB,
+                         gameStateData.randomQuestion.answerC,
+                         gameStateData.randomQuestion.answerD]
     
     
-    guard let correctAnswerFirstIndex = selectionList.firstIndex(of: currentPrizesLevel.randomQuestion.correctAnswer) else {
+    guard let correctAnswerFirstIndex = selectionList.firstIndex(of: gameStateData.randomQuestion.correctAnswer) else {
         return
     }
     selectionList.remove(at: correctAnswerFirstIndex)
@@ -97,17 +97,17 @@ func fifthfiftyJoker(currentPrizesLevel: CurrentPrizesLevel) {
     selectionList.remove(at: firstRandomElementFirstIndex)
     let secondRandomElement = selectionList.randomElement()
     
-    if currentPrizesLevel.randomQuestion.answerA == firstRandomElement || currentPrizesLevel.randomQuestion.answerA == secondRandomElement {
-        currentPrizesLevel.randomQuestion.answerA = nil
+    if gameStateData.randomQuestion.answerA == firstRandomElement || gameStateData.randomQuestion.answerA == secondRandomElement {
+        gameStateData.randomQuestion.answerA = nil
     }
-    if currentPrizesLevel.randomQuestion.answerB == firstRandomElement || currentPrizesLevel.randomQuestion.answerB == secondRandomElement {
-        currentPrizesLevel.randomQuestion.answerB = nil
+    if gameStateData.randomQuestion.answerB == firstRandomElement || gameStateData.randomQuestion.answerB == secondRandomElement {
+        gameStateData.randomQuestion.answerB = nil
     }
-    if currentPrizesLevel.randomQuestion.answerC == firstRandomElement || currentPrizesLevel.randomQuestion.answerC == secondRandomElement {
-        currentPrizesLevel.randomQuestion.answerC = nil
+    if gameStateData.randomQuestion.answerC == firstRandomElement || gameStateData.randomQuestion.answerC == secondRandomElement {
+        gameStateData.randomQuestion.answerC = nil
     }
-    if currentPrizesLevel.randomQuestion.answerD == firstRandomElement || currentPrizesLevel.randomQuestion.answerD == secondRandomElement {
-        currentPrizesLevel.randomQuestion.answerD = nil
+    if gameStateData.randomQuestion.answerD == firstRandomElement || gameStateData.randomQuestion.answerD == secondRandomElement {
+        gameStateData.randomQuestion.answerD = nil
     }
 }
 

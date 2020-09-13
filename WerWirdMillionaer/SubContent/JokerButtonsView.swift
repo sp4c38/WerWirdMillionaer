@@ -12,16 +12,16 @@ struct JokerButtonsView: View {
     @EnvironmentObject var soundManager: SoundManager
     
     @Binding var jokerGuess: String
-    var currentPrizesLevel: CurrentPrizesLevel
+    var gameStateData: GameStateData
     let speech = AVSpeechSynthesizer()
     
     var body: some View {
         VStack(spacing: 30) {
             ZStack {
                 Button (action: {
-                    if currentPrizesLevel.fiftyfiftyJokerActive {
-                        fifthfiftyJoker(currentPrizesLevel: currentPrizesLevel)
-                        currentPrizesLevel.fiftyfiftyJokerActive = false
+                    if gameStateData.fiftyfiftyJokerActive {
+                        fifthfiftyJoker(gameStateData: gameStateData)
+                        gameStateData.fiftyfiftyJokerActive = false
                         let soundUrl = getJokerAudioUrl(jokerName: "50-50")
                         soundManager.playSoundEffect(soundUrl: soundUrl)
                     }
@@ -32,7 +32,7 @@ struct JokerButtonsView: View {
                             .scaledToFit()
                             .frame(width: 100)
                         
-                        if !currentPrizesLevel.fiftyfiftyJokerActive {
+                        if !gameStateData.fiftyfiftyJokerActive {
                             Image(systemName: "multiply")
                                 .resizable()
                                 .scaledToFit()
@@ -40,15 +40,15 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }.disabled(currentPrizesLevel.fiftyfiftyJokerActive ? false : true )
+                }.disabled(gameStateData.fiftyfiftyJokerActive ? false : true )
             }
             
             ZStack {
                 Button (action: {
-                    if currentPrizesLevel.audienceJokerActive {
-                        currentPrizesLevel.audienceJokerData =  audienceJoker(currentPrizesLevel: currentPrizesLevel)
-                        currentPrizesLevel.audienceJokerActive = false
-                        currentPrizesLevel.showAudienceJokerData = true
+                    if gameStateData.audienceJokerActive {
+                        gameStateData.audienceJokerData =  audienceJoker(gameStateData: gameStateData)
+                        gameStateData.audienceJokerActive = false
+                        gameStateData.showAudienceJokerData = true
                         let soundUrl = getJokerAudioUrl(jokerName: "audience")
                         soundManager.playSoundEffect(soundUrl: soundUrl)
                     }
@@ -59,7 +59,7 @@ struct JokerButtonsView: View {
                             .scaledToFit()
                             .frame(width: 100)
                         
-                        if !currentPrizesLevel.audienceJokerActive {
+                        if !gameStateData.audienceJokerActive {
                             Image(systemName: "multiply")
                                 .resizable()
                                 .scaledToFit()
@@ -67,19 +67,19 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }.disabled(currentPrizesLevel.audienceJokerActive ? false : true )
+                }.disabled(gameStateData.audienceJokerActive ? false : true )
             }
             
             ZStack {
                 Button (action: {
-                    if currentPrizesLevel.telephoneJokerActive {
-                        jokerGuess = telephoneJoker(currentPrizesLevel: currentPrizesLevel)
+                    if gameStateData.telephoneJokerActive {
+                        jokerGuess = telephoneJoker(gameStateData: gameStateData)
                         let utterance = AVSpeechUtterance(string: jokerGuess)
                         utterance.voice = AVSpeechSynthesisVoice(language: "German")
                         utterance.volume = 1.0
                         utterance.pitchMultiplier = Float.random(in: 0.3..<2)
                         speech.speak(utterance)
-                        currentPrizesLevel.telephoneJokerActive = false
+                        gameStateData.telephoneJokerActive = false
                     }
                 }) {
                     ZStack {
@@ -88,7 +88,7 @@ struct JokerButtonsView: View {
                             .scaledToFit()
                             .frame(width: 100)
                         
-                        if !currentPrizesLevel.telephoneJokerActive {
+                        if !gameStateData.telephoneJokerActive {
                             Image(systemName: "multiply")
                                 .resizable()
                                 .scaledToFit()
@@ -96,7 +96,7 @@ struct JokerButtonsView: View {
                                 .foregroundColor(Color.red)
                         }
                     }
-                }.disabled(currentPrizesLevel.telephoneJokerActive ? false : true )
+                }.disabled(gameStateData.telephoneJokerActive ? false : true )
             }
         }
     }

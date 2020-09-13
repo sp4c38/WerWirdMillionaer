@@ -79,7 +79,7 @@ struct CircleStatusView: View {
 struct TimeRemainingCircleView: View {
     @EnvironmentObject var soundManager: SoundManager
     
-    var currentPrizesLevel: CurrentPrizesLevel
+    var gameStateData: GameStateData
     var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var timeNumberFormatter: NumberFormatter {
@@ -100,7 +100,7 @@ struct TimeRemainingCircleView: View {
                     .blur(radius: 10)
                     .frame(width: 300, height: 300)
                     
-                Text(String(currentPrizesLevel.timeRemaining))
+                Text(String(gameStateData.timeRemaining))
                     .bold()
                     .font(.system(size: 120))
                     .foregroundColor(Color.white)
@@ -108,18 +108,18 @@ struct TimeRemainingCircleView: View {
                     .padding(25)
             }
             
-            CircleStatusView(allWedgeNumber: currentPrizesLevel.timeAllAvailable, wedgeNumber: currentPrizesLevel.timeRemaining)
+            CircleStatusView(allWedgeNumber: gameStateData.timeAllAvailable, wedgeNumber: gameStateData.timeRemaining)
                 .frame(width: 340, height: 340)
         }
         .onReceive(timer) { _ in
-            if !(currentPrizesLevel.timeRemaining == 0 || currentPrizesLevel.timeRemaining < 0) {
-                if currentPrizesLevel.timeKeepCounting {
-                    currentPrizesLevel.timeRemaining -= 1
+            if !(gameStateData.timeRemaining == 0 || gameStateData.timeRemaining < 0) {
+                if gameStateData.timeKeepCounting {
+                    gameStateData.timeRemaining -= 1
                 }
             } else {
-                currentPrizesLevel.timeOver = true
-                currentPrizesLevel.timeKeepCounting = false
-                currentPrizesLevel.questionAnsweredCorrectly = false
+                gameStateData.timeOver = true
+                gameStateData.timeKeepCounting = false
+                gameStateData.questionAnsweredCorrectly = false
             }
         }
     }
