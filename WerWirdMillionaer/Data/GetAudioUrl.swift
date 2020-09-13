@@ -11,9 +11,9 @@ import Foundation
 func getBackgroundAudioUrl(currentPrizesLevel: Int, oldCurrentPrizeLevel: Int) -> URL? {
     var audioFileUrl: URL? = nil
     
-    if currentPrizesLevel <= 3 && (!(oldCurrentPrizeLevel <= 3) || oldCurrentPrizeLevel == -1) {
+    if currentPrizesLevel <= 5 && (!(oldCurrentPrizeLevel <= 5) || oldCurrentPrizeLevel == 0) {
         audioFileUrl = Bundle.main.url(forResource: "50-500_intro_sound.mp3", withExtension: nil)
-    } else if currentPrizesLevel > 3 && currentPrizesLevel <= 9  && !(oldCurrentPrizeLevel > 3) {
+    } else if currentPrizesLevel > 5 && currentPrizesLevel <= 9  && !(oldCurrentPrizeLevel > 5) {
         audioFileUrl = Bundle.main.url(forResource: "1000-16000_intro_sound.mp3", withExtension: nil)
     } else if currentPrizesLevel == 14 && !(oldCurrentPrizeLevel == 14) {
         audioFileUrl = Bundle.main.url(forResource: "1000000_intro_sound.mp3", withExtension: nil)
@@ -46,7 +46,7 @@ func getJokerAudioUrl(jokerName: String) -> URL? {
 func getQuestionAudioUrl(prizeLevel: Int, isCorrect: Bool) -> URL? {
     var audioFileUrl: URL? = nil
     
-    if prizeLevel <= 4 { // 50-, 100-, 200-, 300- and 500-Questions / 0-indexed
+    if prizeLevel <= 5 { // 0-, 50-, 100-, 200-, 300- and 500-Questions / 0-indexed
         if isCorrect {
             audioFileUrl = Bundle.main.url(forResource: "50-500_answer_correct.mp3", withExtension: nil)
         } else {

@@ -8,6 +8,42 @@
 import AVFoundation
 import SwiftUI
 
+class GameStateData: ObservableObject {
+    @Published var currentPrizeLevel: Int = 1
+    @Published var oldCurrentPrizeLevel: Int = 0
+    
+    @Published var questionAnsweredCorrectly: Bool? = nil
+    
+    @Published var randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
+    
+    @Published var timeAllAvailable = 30 // Time altogether avaliable to answer a question
+    @Published var timeRemaining = 30 // Remaining time in seconds (must be same as timeAllAvailable)
+    @Published var timeKeepCounting = true // Indicates if the timer counts
+    @Published var timeOver = false // Set to true if the time is over
+    
+    @Published var telephoneJokerActive = true
+    @Published var audienceJokerActive = true
+    @Published var fiftyfiftyJokerActive = true
+    @Published var showAudienceJokerData = false
+    @Published var audienceJokerData = AudiencePollCollection()
+    
+    @Published var softStop: Bool? = nil // Is set to true if player pressed the stop button
+                                         // Is set to false if player selected a wrong answer or the time expired
+    
+    func nextPrizeLevel() {
+        if currentPrizeLevel + 2 <= questionData!.prizeLevels.count {
+            self.currentPrizeLevel += 1
+            oldCurrentPrizeLevel += 1
+        } else {
+            print("Maximum prize level reached. Staying on \(currentPrizeLevel) prize level")
+        }
+    }
+    
+    func updateRandomQuestion() {
+        self.randomQuestion = questionData!.prizeLevels[currentPrizeLevel].questions.randomElement()!
+    }
+}
+
 struct GameView: View {
     @EnvironmentObject var mainViewController: MainViewController
     @EnvironmentObject var soundManager: SoundManager
@@ -39,6 +75,8 @@ struct GameView: View {
                     HStack(spacing: 40) {
                         Button(action: {
                             soundManager.stopAllSounds()
+                            
+                            gameStateData.softStop = true
                             mainViewController.goToEndView()
                         }) {
                             Image("FinishedButton")
@@ -92,12 +130,14 @@ struct GameView: View {
                                         
                                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
                                             soundManager.stopAllSounds()
+                                            
+                                            gameStateData.softStop = false
                                             mainViewController.goToEndView()
                                         }
                                     }
                             }
                             
-                            Text(prizesData.prizeLevels[gameStateData.currentPrizeLevel].name)
+                            Text("\(prizesData.prizeLevels[gameStateData.currentPrizeLevel].name)-Frage")
                                 .font(.largeTitle)
                                 .foregroundColor((gameStateData.questionAnsweredCorrectly != nil) ? Color.white : Color.black)
                             

@@ -82,6 +82,8 @@ struct TimeRemainingCircleView: View {
     var gameStateData: GameStateData
     var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    @State var scaleSmall = true
+    
     var timeNumberFormatter: NumberFormatter {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .none
@@ -111,10 +113,12 @@ struct TimeRemainingCircleView: View {
             CircleStatusView(allWedgeNumber: gameStateData.timeAllAvailable, wedgeNumber: gameStateData.timeRemaining)
                 .frame(width: 340, height: 340)
         }
+        .scaleEffect(scaleSmall ? 1 : 1.08)
         .onReceive(timer) { _ in
             if !(gameStateData.timeRemaining == 0 || gameStateData.timeRemaining < 0) {
                 if gameStateData.timeKeepCounting {
                     gameStateData.timeRemaining -= 1
+                    scaleSmall.toggle()
                 }
             } else {
                 gameStateData.timeOver = true

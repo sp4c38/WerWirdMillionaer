@@ -11,19 +11,42 @@ struct GameFinishedView: View {
     @EnvironmentObject var mainViewController: MainViewController
     @EnvironmentObject var gameStateData: GameStateData
     
+    func findLastPrizeWithSecurityLevel() -> Int {
+        for prizeLevel in prizesData.prizeLevels.reversed() {
+            let prizeLevelIndex = prizesData.prizeLevels.lastIndex(of: prizeLevel)
+            if prizeLevelIndex != nil {
+                if prizeLevel.isSecurityLevel && prizeLevelIndex! < gameStateData.currentPrizeLevel {
+                    return prizeLevelIndex!
+                }
+            }
+        }
+        return 0
+    }
+    
     var body: some View {
+        let prize = prizesData.prizeLevels[gameStateData.currentPrizeLevel]
+        
         VStack(spacing: 50) {
             Spacer()
             
             Text("🎉")
                 .font(.system(size: 150))
             
-            Text("\(prizesData.prizeLevels[gameStateData.currentPrizeLevel].name) Gewonnen!")
-                .underline()
-                .bold()
-                .foregroundColor(Color.white)
-                .font(.system(size: 100))
-                .shadow(radius: 20)
+            if gameStateData.softStop == false || prize.isSecurityLevel {
+                Text("\(prize.name) Gewonnen!")
+                    .underline()
+                    .bold()
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 100))
+                    .shadow(radius: 20)
+            } else { // Triggered when current prize level is no security level which means that last security level is used
+                Text("\(prizesData.prizeLevels[findLastPrizeWithSecurityLevel()].name) Gewonnen!")
+                    .underline()
+                    .bold()
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 100))
+                    .shadow(radius: 20)
+            }
             
             Spacer()
             
