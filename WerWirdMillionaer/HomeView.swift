@@ -49,7 +49,7 @@ struct HomeView: View {
                 .modifier(elementGlowModifier(color: Color.white, blurRadius: $elementGlowShadow))
                 .padding(10)
                 .animation(Animation.easeInOut.speed(0.1).repeatForever())
-                .onAppear() {
+                .onAppear {
                     withAnimation {
                         self.elementGlowShadow = 30
                     }

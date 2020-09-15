@@ -11,9 +11,7 @@ import SwiftUI
 struct JokerButtonsView: View {
     @EnvironmentObject var soundManager: SoundManager
     
-    @Binding var jokerGuess: String
     var gameStateData: GameStateData
-    let speech = AVSpeechSynthesizer()
     
     var body: some View {
         VStack(spacing: 30) {
@@ -73,12 +71,7 @@ struct JokerButtonsView: View {
             ZStack {
                 Button (action: {
                     if gameStateData.telephoneJokerActive {
-                        jokerGuess = telephoneJoker(gameStateData: gameStateData)
-                        let utterance = AVSpeechUtterance(string: jokerGuess)
-                        utterance.voice = AVSpeechSynthesisVoice(language: "German")
-                        utterance.volume = 1.0
-                        utterance.pitchMultiplier = Float.random(in: 0.3..<2)
-                        speech.speak(utterance)
+                        telephoneJoker(gameStateData: gameStateData)
                         gameStateData.telephoneJokerActive = false
                     }
                 }) {

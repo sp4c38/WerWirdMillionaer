@@ -16,12 +16,8 @@ struct GameFinishedView: View {
             let prizeLevelIndex = prizesData.prizeLevels.lastIndex(of: prizeLevel)
             if prizeLevelIndex != nil {
                 if prizeLevel.isSecurityLevel {
-                    print("Is security level.")
                 }
                 
-                if prizeLevelIndex! < gameStateData.oldCurrentPrizeLevel {
-                    print("Is smaller than \(gameStateData.oldCurrentPrizeLevel)")
-                }
                 if prizeLevel.isSecurityLevel && prizeLevelIndex! < gameStateData.oldCurrentPrizeLevel {
                     return prizeLevelIndex!
                 }

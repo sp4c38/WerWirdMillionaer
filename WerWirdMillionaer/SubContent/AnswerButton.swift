@@ -22,36 +22,25 @@ struct QuestionTextView: View {
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
         }
-        .buttonStyle(AnswerButtonStyle())
+        .buttonStyle(AnswerButtonStyle(isCorrectAndSelected: false))
         .disabled(true)
     }
 }
 
 
 struct AnswerButton: View {
+    @EnvironmentObject var mainViewController: MainViewController
     @EnvironmentObject var soundManager: SoundManager
+    @EnvironmentObject var gameStateData: GameStateData
+
+    @State var showingAnswer: String = ""
     
-    @Binding var jokerGuess: String
     var answerName: String
     var showingAnswerIndex: Int // Index of the possible answer which is shown
-    var gameStateData: GameStateData
-    var showingAnswer: String?
     
-    init(jokerGuess: Binding<String>, answerName: String, showingIndex: Int, gameStateData: GameStateData) {
-        self._jokerGuess = jokerGuess
+    init(answerName: String, showingIndex: Int) {
         self.answerName = answerName
         self.showingAnswerIndex = showingIndex
-        self.gameStateData = gameStateData
-        
-        if self.showingAnswerIndex == 0 {
-            self.showingAnswer = self.gameStateData.randomQuestion.answerA
-        } else if self.showingAnswerIndex == 1 {
-            self.showingAnswer = self.gameStateData.randomQuestion.answerB
-        } else if self.showingAnswerIndex == 2 {
-            self.showingAnswer = self.gameStateData.randomQuestion.answerC
-        } else {
-            self.showingAnswer = self.gameStateData.randomQuestion.answerD
-        }
     }
     
     var body: some View {
@@ -76,22 +65,56 @@ struct AnswerButton: View {
                     .cornerRadius(10)
                     
                 Spacer()
-                
-                if showingAnswer != nil {
-                    HStack(spacing: 0) {
-                        Text(showingAnswer!)
-                            .foregroundColor(Color.white)
-                            .lineLimit(2)
-                            .font(.headline)
-                    }
-                    .fixedSize(horizontal: true, vertical: true)
                     
-                    Spacer()
-                }
+                Text(showingAnswer)
+                    .foregroundColor(Color.white)
+                    .lineLimit(2)
+                    .font(.headline)
+                    .fixedSize(horizontal: true, vertical: true)
+                        
+                Spacer()
             }
             .padding(.leading, 20)
             .padding(.trailing, 20)
         }
-        .buttonStyle(AnswerButtonStyle())
+        .onAppear {
+            if showingAnswerIndex == 0 {
+                if gameStateData.randomQuestion.answerA != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerA!
+                }
+            } else if showingAnswerIndex == 1 {
+                if gameStateData.randomQuestion.answerB != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerB!
+                }
+            } else if showingAnswerIndex == 2 {
+                if gameStateData.randomQuestion.answerC != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerC!
+                }
+            } else {
+                if gameStateData.randomQuestion.answerD != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerD!
+                }
+            }
+        }
+        .onChange(of: gameStateData.randomQuestion) { _ in
+            if showingAnswerIndex == 0 {
+                if gameStateData.randomQuestion.answerA != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerA!
+                }
+            } else if showingAnswerIndex == 1 {
+                if gameStateData.randomQuestion.answerB != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerB!
+                }
+            } else if showingAnswerIndex == 2 {
+                if gameStateData.randomQuestion.answerC != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerC!
+                }
+            } else {
+                if gameStateData.randomQuestion.answerD != nil {
+                    showingAnswer = gameStateData.randomQuestion.answerD!
+                }
+            }
+        }
+        .buttonStyle(AnswerButtonStyle(isCorrectAndSelected: (gameStateData.questionAnsweredCorrectly == true && gameStateData.randomQuestion.correctAnswer == showingAnswer) ? true : false))
     }
 }

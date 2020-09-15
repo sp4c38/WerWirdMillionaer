@@ -21,25 +21,6 @@ def main():
     text_file = open(os.path.join(os.getcwd(), "questions.txt"), "r") # File with the text to convert
     output_file = open(os.path.join(os.getcwd(), "questions.json"), "w")
 
-    # prizeLevels are stored in a sorted list. The first item is the smallest prize level
-    # All prize levels are:
-    #  Index   |   Prize Money in €
-    #    0     |       50
-    #    1     |       100
-    #    2     |       200
-    #    3     |       300
-    #    4     |       500
-    #    5     |       1.000
-    #    6     |       2.000
-    #    7     |       4.000
-    #    8     |       8.000
-    #    9     |       16.000
-    #   10     |       32.000
-    #   11     |       64.000
-    #   12     |       125.000
-    #   13     |       500.000
-    #   14     |       1.000.000
-
     output_json = {"prizeLevels": []}
     current_prize_level = -1
 

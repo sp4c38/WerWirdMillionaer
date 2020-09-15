@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct AnswerButtonStyle: ButtonStyle {
+    var isCorrectAndSelected: Bool
+    init(isCorrectAndSelected: Bool) {
+        self.isCorrectAndSelected = isCorrectAndSelected
+    }
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(maxWidth: .infinity)
@@ -17,7 +22,7 @@ struct AnswerButtonStyle: ButtonStyle {
             .background(
                 ZStack {
                     AnswerButtonShape()
-                        .fill(Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294))
+                        .fill(isCorrectAndSelected ? Color(hue: 0.3244, saturation: 0.7222, brightness: 0.7059) : Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294))
                     
                     AnswerButtonShape()
                         .stroke(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451), lineWidth: 3)
@@ -72,16 +77,13 @@ struct ButtonShape_Previews: PreviewProvider {
                 Button(action: {}) {
                     Text("Antwort A: Irgendeine Antwort")
                         .foregroundColor(Color.white)
-                }.buttonStyle(AnswerButtonStyle())
-                
-//                AnswerButtonShapeDividerLine()
-//                    .fill(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451))
+                }.buttonStyle(AnswerButtonStyle(isCorrectAndSelected: false))
             }
             
             Button(action: {}) {
                 Text("Antwort A: Irgendeine Antwort")
                     .foregroundColor(Color.white)
-            }.buttonStyle(AnswerButtonStyle())
+            }.buttonStyle(AnswerButtonStyle(isCorrectAndSelected: true))
         }
     }
 }

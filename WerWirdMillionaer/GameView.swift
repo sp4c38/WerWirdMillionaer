@@ -49,8 +49,6 @@ struct GameView: View {
     @EnvironmentObject var soundManager: SoundManager
     @EnvironmentObject var gameStateData: GameStateData
     
-    @State var jokerGuess: String = ""
-    
     var prizesLoadedSuccessful: Bool = false
     
     var numberFormatter: NumberFormatter {
@@ -105,7 +103,6 @@ struct GameView: View {
                                             
                                             gameStateData.showAudienceJokerData = false
                                             gameStateData.audienceJokerData = AudiencePollCollection()
-                                            jokerGuess = ""
                                             
                                             gameStateData.timeOver = false
                                             gameStateData.timeKeepCounting = true
@@ -157,17 +154,13 @@ struct GameView: View {
                         Spacer()
                         
                         HStack {
-                            JokerButtonsView(jokerGuess: $jokerGuess, gameStateData: gameStateData)
+                            JokerButtonsView(gameStateData: gameStateData)
                             
                             Spacer()
                             
                             TimeRemainingCircleView(gameStateData: gameStateData)
                             
                             Spacer()
-                        }
-                        
-                        if jokerGuess != "" {
-                            Text(jokerGuess)
                         }
                         
                         Spacer()
@@ -178,15 +171,13 @@ struct GameView: View {
                             
                             HStack(spacing: 0) {
                                 VStack(spacing: 40) {
-                                    AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort A", showingIndex: 0, gameStateData: gameStateData)
-                                    
-                                    AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort B", showingIndex: 1, gameStateData: gameStateData)
+                                    AnswerButton(answerName: "A", showingIndex: 0)
+                                    AnswerButton(answerName: "B", showingIndex: 1)
                                 }
                                 
                                 VStack(spacing: 40) {
-                                    AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort C", showingIndex: 2, gameStateData: gameStateData)
-                                
-                                    AnswerButton(jokerGuess: $jokerGuess, answerName: "Antwort D", showingIndex: 3, gameStateData: gameStateData)
+                                    AnswerButton(answerName: "C", showingIndex: 2)
+                                    AnswerButton(answerName: "D", showingIndex: 3)
                                 }
                             }
                         }.padding(.top, 40)
@@ -199,7 +190,7 @@ struct GameView: View {
             }
             .padding(40)
             .frame(maxWidth: .infinity)
-            .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5667, saturation: 1.0000, brightness: 0.6176), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .ignoresSafeArea()
             .navigationBarHidden(true)
             .animation(.easeInOut(duration: 0.2))

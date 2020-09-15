@@ -5,10 +5,11 @@
 //  Created by Léon Becker on 01.09.20.
 //
 
+import AVFoundation
 import SwiftUI
 import Foundation
 
-func telephoneJoker(gameStateData: GameStateData) -> String {
+func telephoneJoker(gameStateData: GameStateData) {
     let outputSelection: [String]
     
     if gameStateData.currentPrizeLevel == 0 || gameStateData.currentPrizeLevel == 1 || gameStateData.currentPrizeLevel == 2 {
@@ -20,7 +21,13 @@ func telephoneJoker(gameStateData: GameStateData) -> String {
     let guessedAnswer = String(format: outputSelection.randomElement()!, gameStateData.randomQuestion.correctAnswer)
     
     print("Telephone joker guessed \(guessedAnswer).")
-    return guessedAnswer
+    
+    let utterance = AVSpeechUtterance(string: guessedAnswer)
+    utterance.voice = AVSpeechSynthesisVoice(language: "German")
+    utterance.volume = 1.0
+    utterance.pitchMultiplier = Float.random(in: 0.3..<2)
+    let speech = AVSpeechSynthesizer()
+    speech.speak(utterance)
 }
 
 struct VotingVariant: Hashable {
