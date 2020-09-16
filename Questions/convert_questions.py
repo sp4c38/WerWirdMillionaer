@@ -1,4 +1,3 @@
-
 # Used to convert a text with a specific format to JSON format
 # for the Wer Wird Millionär-App. Used to make it easier to add and remove questions
 # without needing to handle a large JSON dataset

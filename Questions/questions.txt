@@ -83,6 +83,41 @@
 <Die des Zaubers unkundigen Menschen in den Harry-Potter-Abendteuern heißen…?< <Rowlings< <Hogwarts< <^Muggels< <Askabans<
 <In welchem Jahr flog das Spaceshuttle das letzte mal?< <2008< <2011< <2012< <2005<
 <Wie heißt das Atom, welches 3 Außenelektronen hat?< <Wasserstoff< <Beryllium< <Helium< <^Lithium<
+<Wie nennt man eine Legierung aus Kupfer und Zinn?< <Blei< <Platin< <^Bronze< <Quecksilber<
+<Was tanken Düsenflugzeuge?< <Birkin< <Karotin< <Chinin< <^Kerosin< 
+<Wo zahlt man mit Escudos?< <1Portugal< <Spanien< <Griechenland< <Italien< 
+<Was bedeutet der Ausdruck “da capo“?< <alles kaputt< <von unten< <da vorne< <^noch einmal< 
+<Was sagen Politiker häufig, wenn sie “zweiseitig“ meinen?< <bilingual< <bisexuell< <bipolar< <^bilateral<
+<Zu welcher Tierunterordnung gehört die Blindschleiche?< <^Echsen< <Schlangen< <Kröten< <Würmer< 
+<Was gehört nicht zu den Geschenken der Heiligen Drei Könige?< <Gold< <^Salbei< <Myrre< <Weihrauch<
+<Wo liegen die Appalachen?< <Italien< <^USA< <Frankreich< <Argentinien< 
+<Wer siegte 333 bei der Keilerei bei Issos?< <Napoleon< <^Alexander< <Spartacus< <Hannibal<
+<Wie heißt das russische Parlament?< <Datscha< <Borschtsch< <^Duma< <Gulag<
+<Worin besteht der kleine genetische Unterschied zwischen Mann und Frau?< <Beta-Blocker< <Vitamin C< <^Y-Chromosom< <Gamma-Strahlen< 
+<Ein solventer Mensch ist …?< <pleite< <widerborstig< <redegewandt< <^zahlungsfähig<<Was sind Demoskopen?< <Kredithaie< <SPD-Politiker< <Fortnite Spieler< <^Meinungsforscher< 
+<Was sind Primaten?< <Erdsatelliten< <Camper< <^Herrentiere< <Oberschüler< 
+<Wie nennt der Biologe die farbgebenden Substanzen in den Zellen von Pflanzen und Tieren?< <^Pigmente< <Streptokokken< <Allergene< <Mikroskop< 
+<Welches gruselige Kostümfest feiern Amerikaner am Abend vor Allerheiligen?< <Geburtstag< <^Halloween< <Thanksgiving< <St. Patrick´s Day<
+<Welchen Staat kauften die USA 1867 Alaska ab?< <Kanada< <^Russland< <England< <Dänemark< 
+<Wie nennt man in der katholischen Kirche die Lossprechung von Sünden?< <Absonderung< <^Absolution< <Absorbation< <Abstoß<
+<Welcher dieser Inseln gehört zu den Kleinen Sundainseln?< <Spiekeroog< <^Bali< <Hawaii< <Korfu< 
+<Um was für ein Kleidungsstück handelt es sich bei einem persischen Tschador?< <Männerreithose< <Priesterhut< <^Frauenschleier< <Soldatenrock<
+<Was bedeutet im Altgriechischen das Wort Charakter?< <Atem< <Bauchnabel< <^das Eingeprägte< <Ansprechbarkeit<
+<Wie heißt die Hauptstadt Syriens?< <Beirut< <Amman< <^Damaskus< <Jerusalem<
+<In welchem US-Bundesstaat liegt Las Vegas?< <^Nevada< <Kalifornien< <Texas< <South Carolina<
+<Wie lautete der ursprüngliche Name von New York?< <New Castle< <^Neu Amsterdam< <New Haarlem< <Neu Liverpool<
+<Was bedeutet der Begriff Diskothek wörtlich übersetzt?< <Tanzhalle< <Heiratsmarkt< <^Scheibensammlung< <Nachtlager< 
+<Zu welchem Staat zählt Tasmanien?< <Madagaskar< <Argentinien< <^Australien< <Indonesien<
+<Was lässt sich in grammatikalischer Hinsicht mit einem Verb machen?< <Deklinieren< <Extrahieren< <^Konjungieren< <Tranchieren<
+<Was ist ein Rhombus?< <männliche Hornisse< <mit Gas betriebener Bus< <bemaltes Kirchenfenster< <^Viereck<
+<Wie nennt man die Lobrede auf einen Preisträger?< <^Laudatio< <Tirade< <Ovation< <Konjugation< 
+<Wie nennt man die Kegel beim Bowling?< <Blocks< <^Pins< <Pales< <Posts<
+<Wie heißt der größte See Südamerikas?< <^Titicacasee< <Humboldtsee< <Platasee< <Chacosee<
+<Was ist eine Hybride?< <^Kreuzung< <Zapfsäule< <Wasserkur< <Heilpraktikerin< 
+<Wie heißt die Lehre vom Herzen und den Herzkrankheiten?< <Neurologie< <^Kardiologie< <Karzinologie< <Hämatologie<
+<Welcher Ausdruck ist in Österreich für die Johannisbeere gebräuchlich?< <Zwetschke< <Marille< <Ribisel< <Preiselbeere< 
+<Wie nennt man die Greifvögeln ausgewürgten Klumpen unverdaulicher Nahrung?< <Gewürg< <Gebrechen< <Gespei< <^Gewölle<<Welche dieser Disziplinen gehört nicht zum modernen Fünfkampf?< <Fechten< <Schießen< <Schwimmen< <^Weitsprung<
+<Welcher dieser Preise wird nicht für Filme vergeben?< <César< <^Ingeborg-Bachmann-Preis< <Goldene Palme von Cannes< <Oscar<
 
 8000€:
 <Wie viele Finger hat Micky Maus an einer Hand?< <2 Finger< <3 Finger< <^4 Finger< <5 Finger<
@@ -121,6 +156,12 @@
 <Was bekommt man, wenn man in einem Restaurant in Österreich Karfiol bestellt?< <Spitzkohl< <Weißkohl< <^Blumenkohl< <Rotkohl<
 <Welcher der folgenden Personen wurde nicht in Wien geboren?< <Romy Schneider< <^Wolfgang Amadeus Mozart< <Niki Lauda< <Peter Alexander<
 <Welches Gewand gehört nicht zur Garderobe der alten Römer?< <Stola< <^Burnus< <Tunika< <Toga<
+<Zu welcher Band gehört der ehemalige Friseur Thomas D.?< <^Die Fantastischen 4< <Rödelheim Hartreim< <Rammstein< <Wolfsheim<
+<Welcher Begriff aus dem Kasino-Jargon steht für besonders bedeutende Aktiengesellschaften?< <^Blue Chips< <Rouge ou noir< <Zero-Bounds< <Jetons<
+<Wie nennt man Nadelhölzer noch?< <Koryphäen< <Korinthen< <^Koniferen< <Koriander<
+<Wie nennt man die längste Seite eines rechtwinkligen Dreiecks?< <^Hypotenuse< <Tangente< <Sekante< <Kathete<
+<Wie heißt die Hauptstadt von Mecklenburg-Vorpommern?< <Rostock< <Greifswald< <Magdeburg< <^Schwerin<
+<Was sind die Salomonen?< <Virenstamm< <^Inselgruppe< <Forellen< <Satanisten<
 
 32000€:
 <Welche der folgenden Kulturpflanzen ist kein Getreide?< <Roggen< <Dinkel< <Hafer< <^Buchweizen<
@@ -137,6 +178,28 @@
 <Wer erfand den fetten Comic-Kater Garfield?< <^Jim Davis< <Carl Barks< <Dik Browne< <Matt Groening<
 <Was bedeutete das Wort Biskuit ursprünglich?< <mit Honig gefüllt< <schaumig geschlagen< <Weizenmantel< <^zweimal gekocht<
 <Welches dieser Schiffe gehörte nicht zu Kolumbus’ Expedition von 1492?< <^Mayflower< <Pinta< <Niña< <Santa María<
+<Für welche Berufsgruppe wurde der Trenchcoat ursprünglich gefertigt?< <Torfstecher< <Förster< <^Soldaten< <Detektive<
+<Was ist Genealogie?< <^Ahnenforschung< <Vererbungslehre< <Gesteinskunde< <Erziehungswissenschaft<
+<Welche Kunstepoche löste in Europa das Barock ab?< <^Rokoko< <Jugendstil< <Kubismus< <Gotik<
+<Was bedeutete ursprünglich das Wort Zeitung?< <Morgen< <^Nachricht< <Todesfall< <Marktplatz<
+<Worunter leidet ein Patienten, dem Adipositas bescheinigt wird?< <Magersucht< <Alkoholsucht< <Spielsucht< <^Fettsucht<
+<Aus welchem Land stammt ursprünglich das Rugby?< <^England< <Australien< <Schottland< <USA<
+<Was soll bei einem Theaterbrand die Ausbreitung des Feuers verhindern?< <eiserne Lunge< <eiserne Jungfrau< <^eiserner Vorhang< <eiserne Maske<
+<Wie lange dauert eine Amtsperiode des französischen Staatspräsidenten?< <fünf Jahre< <^sieben Jahre< <vier Jahre< <ein Jahr<
+<Was bedeutet das Wort “Christus”?< <König< <Gekreuzigter< <^Gesalbter< <Herr<
+<Aus welchem chemischen Elementen besteht das Ozon?< <^Sauerstoff< <Wasserstoff< <Stickstoff< <Kohlenstoff<
+<Wie lautet der geläufigere Name der Insel Kalaallit Nunaat?< <Madagaskar< <^Grönland< <Borneo< <Java<
+<Welche Großkatze kann als einige ihre Krallen nicht vollständig einziehen?< <^Gepard< <Löwe< <Leopard< <Jaguar<
+<Was ist eine Glyptothek?< <^Skulpturensammlung< <Wachsfigurenkabinett< <Museumsrestaurant< <Kupfersticharchiv<
+<Wie lautet der frühere Name von Taiwan?< <Ceylon< <^Formosa< <Mandschurei< <Macao<
+<Welche der folgenden Pflanzen gibt es tatsächlich?< <^Pestwurz< <Cholerawurz< <Syphiliswurz< <Mumpswurz<
+<Was versteht man unter einem Piktogramm?< <Eilbrief< <^Bildsymbol< <Werbeplakat< <Sportzeitung<
+<Woher stammt die Friedensnobelpreisträgerin Mutter Teresa?< <Spanien< <Italien< <^Albanien< <Griechenland<
+<Wie heißt die Hauptstadt von Kanada?< <^Ottawa< <Toronto< <Quebec< <Montreal<
+<Wohin geht man, wenn man einen Termin beim Ökologen hat?< <Umweltbeauftragter< <Tierzüchter< <^Weinfachmann< <Schönheitschirurg<
+<Was gehört zur Familie der Korbblütler?< <^Sonnenblume< <Tulpe< <Veilchen< <Rose<
+<Wie heißt die Hauptstadt von Pakistan?< <Neu-Delhi< <^Islamabad< <Karatschi< <Rangun<
+
 
 64000€:
 <Welches japanische Kugelfischgericht ist - unsachgemäß zubereitet - eine hochgiftige Speise?< <Takeshi< <Galma< <Surimi< <^Fugu<
@@ -158,3 +221,11 @@
 <Welcher dieser US-Präsidenten war am längsten im Amt?< <John F. Kennedy< <Richard Nixon< <George Washington< <^Franklin D. Roosevelt<
 <Welche Internet-Adresse muss man eingeben, um die offizielle Homepage des Weißen Hauses zu erreichen?< <www.whitehouse.de< <www.whitehouse.com< <www.whitehouse.uk< <^www.whitehouse.gov<
 <Wozu dient das Züngeln einer Schlange hauptsächlich?< <schwitzen< <tasten< <^riechen< <Sauerstoff aufnehmen<
+
+125000€:
+
+
+500000€:
+
+
+1000000€:
