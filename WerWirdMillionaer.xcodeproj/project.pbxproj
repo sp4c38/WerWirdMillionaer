@@ -13,6 +13,7 @@
 		614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */; };
 		614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614FE8FD24FEA825005FE41B /* AnswerButton.swift */; };
 		6164E622250431A600DC57FC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6164E621250431A500DC57FC /* HomeView.swift */; };
+		616DE97D251A1C9E00BA5E7F /* CooldownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616DE97C251A1C9E00BA5E7F /* CooldownView.swift */; };
 		6174DD3624FE956F007909FA /* Joker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6174DD3524FE956F007909FA /* Joker.swift */; };
 		617F3C7424FBAE0F0055930B /* questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7124FBAE0F0055930B /* questions.txt */; };
 		617F3C7524FBAE0F0055930B /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 617F3C7224FBAE0F0055930B /* questions.json */; };
@@ -75,6 +76,7 @@
 		614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokerButtonsView.swift; sourceTree = "<group>"; };
 		614FE8FD24FEA825005FE41B /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		6164E621250431A500DC57FC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		616DE97C251A1C9E00BA5E7F /* CooldownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CooldownView.swift; sourceTree = "<group>"; };
 		6174DD3524FE956F007909FA /* Joker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joker.swift; sourceTree = "<group>"; };
 		617F3C7124FBAE0F0055930B /* questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = questions.txt; sourceTree = "<group>"; };
 		617F3C7224FBAE0F0055930B /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */,
 				61D11F0624FAC9020034CE11 /* ButtonShape.swift */,
+				616DE97C251A1C9E00BA5E7F /* CooldownView.swift */,
 			);
 			path = SubContent;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
 				612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */,
 				61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */,
+				616DE97D251A1C9E00BA5E7F /* CooldownView.swift in Sources */,
 				6144455D2503B16C003D0254 /* TimeRemainingCircleView.swift in Sources */,
 				614FE8FE24FEA825005FE41B /* AnswerButton.swift in Sources */,
 				6174DD3624FE956F007909FA /* Joker.swift in Sources */,

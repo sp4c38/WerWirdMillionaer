@@ -41,7 +41,7 @@ struct ContentView: View {
         } else if mainViewController.viewShowIndex == 1 {
             GameView()
                 .environmentObject(gameStateData)
-            
+
         } else if mainViewController.viewShowIndex == 2 {
             GameFinishedView()
                 .environmentObject(gameStateData)

@@ -57,12 +57,14 @@ struct AnswerButton: View {
         }) {
             HStack(spacing: 20) {
                 Text(answerName)
+                    .foregroundColor(Color.black)
                     .lineLimit(1)
                     .fixedSize(horizontal: true, vertical: true)
                     .font(.subheadline)
                     .padding(10)
-                    .background(Color.white)
-                    .cornerRadius(10)
+//                    .background(
+//                        Circle()
+//                            .foregroundColor(Color.white))
                     
                 Spacer()
                     
