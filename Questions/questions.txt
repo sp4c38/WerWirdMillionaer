@@ -139,6 +139,14 @@
 <Was speichern Kamele in ihren Höckern?< <Luft< <^Fett< <Milch< <Urin<
 <Wo entwarfen 12 Staats- und Regierungschefs im Dezember 1991 die Europäische Union?< <Wien< <Liverpool< <Hamburg< <^Maastricht<
 <Was streut man normalerweise auf sein Frühstücksei?< <Ammoniumnitrat< <Calciumcarbonat< <^Natriumchlorid< <Paracetamol<
+<Welcher der folgenden Ausdrücke wird nicht für Pferde benutzt?< <Mähre< <Klepper< <Gaul< <^Bache<
+<Wie heißt der längste Fluss Europas?< <Rhein< <Donau< <Elbe< <^Wolga<
+<Welcher Begriff gab dem Pfifferling seinen Namen?< <Pfeifer< <Pfeiler< <^Pfeffer< <Pfaffe<
+<Wie nennt man das Schlusswort des Verteidigers oder Staatsanwaltes vor Gericht?< <Predigt< <Prolog< <Referat< <^Plädoyer<
+<Welches der folgenden Metalle ist nicht radioaktiv?< <Radium< <Plutonium< <Uran< <Vanadium<
+<Welche Tiere gehören zur Familie der Felidae?< <Hunde< <^Katzen< <Vögel< <Hamster<
+<Woher kommt die aus der Werbung bekannte Piemont-Kirsche?< <Spanien< <Frankreich< <^Italien< <Kroatien<
+<Wie heißt die größte Stadt Afrikas?< <Kapstadt< <Nairobi< <^Kairo< <Johannesburg<
 
 16000€:
 <Was untersuchen Petrologen?< <^Gestein< <Darmkrankheiten< <Öltanker< <Russische Geschichte<
@@ -162,6 +170,17 @@
 <Wie nennt man die längste Seite eines rechtwinkligen Dreiecks?< <^Hypotenuse< <Tangente< <Sekante< <Kathete<
 <Wie heißt die Hauptstadt von Mecklenburg-Vorpommern?< <Rostock< <Greifswald< <Magdeburg< <^Schwerin<
 <Was sind die Salomonen?< <Virenstamm< <^Inselgruppe< <Forellen< <Satanisten<
+<Wie bezeichnet man in der Informatik eine Sicherungskopie auf einem zweiten Datenträger?< <Download< <Plug In< <^Backup< <Scroll<
+<Woraus wird Safran gewonnen?< <Tuple< <Rose< <^Krokus< <Orchidee<
+<Wie nennt man in der Schifffahrt die dem Wind zugewandte Seite des Schiffes?< <Lee< <Backbord< <^Luv< <Steuerbord<
+<Wie heißt die Hauptstadt Afghanistans?< <Paschtu< <^Kabul< <Rabbani< <Hazara<
+<Was versteht man unter Ökotrophologie?< <^Ernährungswissenschaft< <Umweltschutz< <Heimlichtuerei< <biologische Düngung<
+<Welches Gemüse bezeichnet man auch als Spargelkohl?< <Broccoli< <Radieschen< <Kohlrabi< <Wirsing<
+<Was bezeichnet man als Aurora borealis?< <Schwarze Orchidee< <^Polarlicht< <Tiefseebeben< <Kinderhochzeit<
+<Wie heißt die größte Provinz Finnlands?< <Putzi< <^Lappi< <Pappi< <Suppi<
+<Welches Satzzeichen wird auch Kolon genannt?< <Punkt< <Komma< <^Doppelpunkt< <Fragezeichen<
+<Was ist ein Labradorit?< <Hunderasse< <^Schmuckstein< <Himmelskörper< <Klugschwätzer<
+<Was liebt der Philanthrop?< <Tiere< <^Menschen< <Pflanzen< <Pilze<
 
 32000€:
 <Welche der folgenden Kulturpflanzen ist kein Getreide?< <Roggen< <Dinkel< <Hafer< <^Buchweizen<
