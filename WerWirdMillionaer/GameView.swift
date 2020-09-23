@@ -15,6 +15,7 @@ class GameStateData: ObservableObject {
     @Published var questionAnsweredCorrectly: Bool? = nil
     
     @Published var randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
+    @Published var randomQuestionAnswerIndexes = [Int]() // Will contain four unique numbers each time the question is updated to show the answer options randomly on the Game View
     
     @Published var timeAllAvailable = 30 // Time altogether avaliable to answer a question
     @Published var timeRemaining = 30 // Remaining time in seconds (must be same as timeAllAvailable)
@@ -42,6 +43,15 @@ class GameStateData: ObservableObject {
     
     func updateRandomQuestion() {
         self.randomQuestion = questionData!.prizeLevels[currentPrizeLevel].questions.randomElement()!
+        self.randomQuestionAnswerIndexes = []
+        for _ in 1...4 {
+            var randomAnswerIndex = [0, 1, 2, 3].randomElement()!
+            while self.randomQuestionAnswerIndexes.contains(randomAnswerIndex) {
+                randomAnswerIndex = [0, 1, 2, 3].randomElement()!
+            }
+            
+            self.randomQuestionAnswerIndexes.append(randomAnswerIndex)
+        }
     }
     
     func changeCoolDownTimerActive() {
@@ -179,13 +189,13 @@ struct GameView: View {
 
                                 HStack(spacing: 0) {
                                     VStack(spacing: 40) {
-                                        AnswerButton(answerName: "A", showingIndex: 0)
-                                        AnswerButton(answerName: "B", showingIndex: 1)
+                                        AnswerButton(answerName: "A", showingIndex: gameStateData.randomQuestionAnswerIndexes[0])
+                                        AnswerButton(answerName: "B", showingIndex: gameStateData.randomQuestionAnswerIndexes[1])
                                     }
 
                                     VStack(spacing: 40) {
-                                        AnswerButton(answerName: "C", showingIndex: 2)
-                                        AnswerButton(answerName: "D", showingIndex: 3)
+                                        AnswerButton(answerName: "C", showingIndex: gameStateData.randomQuestionAnswerIndexes[2])
+                                        AnswerButton(answerName: "D", showingIndex: gameStateData.randomQuestionAnswerIndexes[3])
                                     }
                                 }
                             }.padding(.top, 40)

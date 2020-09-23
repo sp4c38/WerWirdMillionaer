@@ -62,9 +62,9 @@ struct AnswerButton: View {
                     .fixedSize(horizontal: true, vertical: true)
                     .font(.subheadline)
                     .padding(10)
-//                    .background(
-//                        Circle()
-//                            .foregroundColor(Color.white))
+                    .background(
+                        Circle()
+                            .foregroundColor(Color.white))
                     
                 Spacer()
                     
