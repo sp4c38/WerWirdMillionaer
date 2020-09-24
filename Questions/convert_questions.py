@@ -27,8 +27,7 @@ def main():
         line = line.replace("\n", "")
         if "€" in line and ":" in line: # Don't include in output
             current_prize_level += 1
-            prize_level = {"prizeLevelName": "", "questions": []}
-            prize_level["prizeLevelName"] = line
+            prize_level = {"questions": []}
             prize_level["questions"] = []
             output_json["prizeLevels"].append(prize_level)
             continue

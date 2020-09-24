@@ -17,7 +17,6 @@ struct Question: Codable, Equatable {
 }
 
 struct PrizeLevel: Codable {
-    var prizeLevelName: String
     var questions: [Question]
 }
 

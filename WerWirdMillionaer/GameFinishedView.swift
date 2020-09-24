@@ -15,9 +15,6 @@ struct GameFinishedView: View {
         for prizeLevel in prizesData.prizeLevels.reversed() {
             let prizeLevelIndex = prizesData.prizeLevels.lastIndex(of: prizeLevel)
             if prizeLevelIndex != nil {
-                if prizeLevel.isSecurityLevel {
-                }
-                
                 if prizeLevel.isSecurityLevel && prizeLevelIndex! < gameStateData.oldCurrentPrizeLevel {
                     return prizeLevelIndex!
                 }
@@ -25,6 +22,13 @@ struct GameFinishedView: View {
         }
         
         return 0
+    }
+    
+    var numberFormatter: NumberFormatter
+    
+    init() {
+        numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .none
     }
     
     var body: some View {
@@ -43,7 +47,7 @@ struct GameFinishedView: View {
             .font(.system(size: 150))
             
             if gameStateData.softStop == true || prize.isSecurityLevel {
-                Text("\(prize.name) Gewonnen!")
+                Text("\(numberFormatter.string(from: NSNumber(value: prize.amount))!) Gewonnen!")
                     .underline()
                     .bold()
                     .foregroundColor(Color.white)
@@ -53,7 +57,7 @@ struct GameFinishedView: View {
             } else { // Triggered when current prize level is no security level which means that last nearest security level is used
                 let lastPrizeWithSecurityLevel = findLastPrizeWithSecurityLevel()
                 
-                Text("\(prizesData.prizeLevels[lastPrizeWithSecurityLevel].name) Gewonnen!")
+                Text("\(numberFormatter.string(from: NSNumber(value: prizesData.prizeLevels[lastPrizeWithSecurityLevel].amount))!) Gewonnen!")
                     .underline()
                     .bold()
                     .foregroundColor(Color.white)

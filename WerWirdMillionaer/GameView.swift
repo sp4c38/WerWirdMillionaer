@@ -68,12 +68,8 @@ struct GameView: View {
     
     var prizesLoadedSuccessful: Bool = false
     
-    var numberFormatter: NumberFormatter {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .percent
-        numberFormatter.locale = Locale(identifier: "de_De")
-        return numberFormatter
-    }
+    var audienceJokerNumberFormatter: NumberFormatter
+    var prizeLevelNumberFormatter: NumberFormatter
     
     init() {
         if questionData != nil {
@@ -81,6 +77,13 @@ struct GameView: View {
         } else {
             prizesLoadedSuccessful = false
         }
+        
+        audienceJokerNumberFormatter = NumberFormatter()
+        audienceJokerNumberFormatter.numberStyle = .percent
+        audienceJokerNumberFormatter.locale = Locale(identifier: "de_De")
+        
+        prizeLevelNumberFormatter = NumberFormatter()
+        prizeLevelNumberFormatter.numberStyle = .none
     }
     
     var body: some View {
@@ -116,21 +119,8 @@ struct GameView: View {
                                             soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
                                             DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                                // Reset all data for next round
-                                                gameStateData.questionAnsweredCorrectly = nil
-
-                                                gameStateData.showAudienceJokerData = false
-                                                gameStateData.audienceJokerData = AudiencePollCollection()
-
-                                                gameStateData.timeRemaining = gameStateData.timeAllAvailable
                                                 gameStateData.changeCoolDownTimerActive()
-                                                // When the cool down timer is finished other timer settings will be set from the CooldownView
-
-                                                gameStateData.nextPrizeLevel()
-                                                gameStateData.updateRandomQuestion()
-
-                                                let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, oldCurrentPrizeLevel: gameStateData.oldCurrentPrizeLevel)
-                                                soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+                                                // When the cool down timer is finished other settings will be reset from within the CooldownView
                                             }
                                         }
                                 } else if gameStateData.timeOver == true || gameStateData.questionAnsweredCorrectly == false {
@@ -152,7 +142,7 @@ struct GameView: View {
                                         }
                                 }
 
-                                Text("\(prizesData.prizeLevels[gameStateData.currentPrizeLevel].name)-Frage")
+                                Text("\(prizeLevelNumberFormatter.string(from: NSNumber(value: prizesData.prizeLevels[gameStateData.currentPrizeLevel].amount))!) \(prizesData.unit)  Frage")
                                     .font(.largeTitle)
                                     .foregroundColor((gameStateData.questionAnsweredCorrectly != nil) ? Color.white : Color.black)
 
@@ -175,10 +165,15 @@ struct GameView: View {
                                 JokerButtonsView(gameStateData: gameStateData)
 
                                 Spacer()
+                                Spacer()
+                                Spacer()
 
                                 TimeRemainingCircleView(gameStateData: gameStateData)
 
                                 Spacer()
+                                Spacer()
+                                
+                                PrizesView()
                             }
 
                             Spacer()
@@ -228,7 +223,7 @@ struct GameView: View {
                 HStack(alignment: .bottom, spacing: 20) {
                     ForEach(gameStateData.audienceJokerData.votingVariant, id: \.self) { pollSection in
                         VStack {
-                            Text((numberFormatter.string(from: pollSection.probability) != nil) ? numberFormatter.string(from: pollSection.probability)! : "")
+                            Text((audienceJokerNumberFormatter.string(from: pollSection.probability) != nil) ? audienceJokerNumberFormatter.string(from: pollSection.probability)! : "")
                                 .foregroundColor(Color.white)
 
                             RoundedRectangle(cornerRadius: 10)

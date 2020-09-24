@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61256372251CF17E008D1BF9 /* PrizesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61256371251CF17E008D1BF9 /* PrizesView.swift */; };
 		612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D061924FC2D1600C4B6EB /* PrizeLevels.swift */; };
 		6144455D2503B16C003D0254 /* TimeRemainingCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144455C2503B16C003D0254 /* TimeRemainingCircleView.swift */; };
 		6144FC7124FFDAC900781D9E /* GetAudioUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		61256371251CF17E008D1BF9 /* PrizesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizesView.swift; sourceTree = "<group>"; };
 		612D061924FC2D1600C4B6EB /* PrizeLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeLevels.swift; sourceTree = "<group>"; };
 		6144455C2503B16C003D0254 /* TimeRemainingCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRemainingCircleView.swift; sourceTree = "<group>"; };
 		6144FC7024FFDAC900781D9E /* GetAudioUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAudioUrl.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6144455C2503B16C003D0254 /* TimeRemainingCircleView.swift */,
+				61256371251CF17E008D1BF9 /* PrizesView.swift */,
 				614FE8FD24FEA825005FE41B /* AnswerButton.swift */,
 				614FE8FB24FEA51C005FE41B /* JokerButtonsView.swift */,
 				61D11F0624FAC9020034CE11 /* ButtonShape.swift */,
@@ -431,6 +434,7 @@
 				6144FC7124FFDAC900781D9E /* GetAudioUrl.swift in Sources */,
 				617F3C7924FBAE460055930B /* QuestionData.swift in Sources */,
 				61E7985F24FAB16D009F914E /* ContentView.swift in Sources */,
+				61256372251CF17E008D1BF9 /* PrizesView.swift in Sources */,
 				619B20C3250E108E00C29171 /* GameFinishedView.swift in Sources */,
 				61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */,
 				612D061A24FC2D1600C4B6EB /* PrizeLevels.swift in Sources */,
@@ -610,6 +614,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -632,6 +637,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.sp4c38.WerWirdMillionaer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -64,7 +64,8 @@ struct AnswerButton: View {
                     .padding(10)
                     .background(
                         Circle()
-                            .foregroundColor(Color.white))
+                            .foregroundColor(Color.white)
+                    )
                     
                 Spacer()
                     

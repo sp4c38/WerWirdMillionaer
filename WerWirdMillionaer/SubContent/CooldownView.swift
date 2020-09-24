@@ -16,13 +16,14 @@ extension AnyTransition {
 }
 
 struct CooldownView: View {
+    @EnvironmentObject var soundManager: SoundManager
     @EnvironmentObject var gameStateData: GameStateData
     
     @State var numberSwitch: Bool? = nil // Needed to display the transitions between the numbers correctly
     @State var counterSeconds = 3
     @State var switchedToNewSettings = false
     
-    let timer = Timer.publish(every: 0.8, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1.1, on: .main, in: .common).autoconnect()
     
     let numberFormatter: NumberFormatter
     
@@ -45,31 +46,53 @@ struct CooldownView: View {
                 }
             }
         }
-        .foregroundColor(Color.white)
-        .shadow(color: Color.black, radius: 70)
+        .foregroundColor(Color.black)
+        .shadow(color: Color.gray, radius: 10)
         .padding(20)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.white)
+        .ignoresSafeArea()
+        .onAppear {
+            if numberSwitch == nil {
+                numberSwitch = false
+            }
+        }
         .onReceive(timer) { input in
             if !((counterSeconds) == 1) {
                 withAnimation {
                     if numberSwitch != nil {
                         numberSwitch!.toggle()
-                    } else {
-                        numberSwitch = false
-                        counterSeconds += 1 // Add one the first time to correctly display the seconds
                     }
                     
                     counterSeconds -= 1
                 }
             } else {
                 if !switchedToNewSettings {
-                    gameStateData.timeOver = false
-                    gameStateData.timeKeepCounting = true
-                    gameStateData.coolDownTimerActive = false
-                    switchedToNewSettings.toggle()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        // Reset all data for next round
+                        gameStateData.questionAnsweredCorrectly = nil
+
+                        gameStateData.showAudienceJokerData = false
+                        gameStateData.audienceJokerData = AudiencePollCollection()
+
+                        gameStateData.timeRemaining = gameStateData.timeAllAvailable
+                        gameStateData.timeOver = false
+                        gameStateData.timeKeepCounting = true
+                        gameStateData.coolDownTimerActive = false
+                        
+                        gameStateData.nextPrizeLevel()
+                        gameStateData.updateRandomQuestion()
+                        
+                        
+                        let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, oldCurrentPrizeLevel: gameStateData.oldCurrentPrizeLevel)
+                        soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+                        
+                        switchedToNewSettings.toggle()
+                    }
                 }
             }
         }
-        .animation(.easeInOut(duration: 0.7))
+        .animation(.easeInOut(duration: 1.05))
     }
 }
 
