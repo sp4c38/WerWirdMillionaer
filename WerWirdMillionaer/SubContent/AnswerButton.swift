@@ -46,11 +46,9 @@ struct AnswerButton: View {
     var body: some View {
         Button(action: {
             if gameStateData.randomQuestion.correctAnswer == showingAnswer {
-                print("Correct!")
                 gameStateData.timeKeepCounting = false
                 gameStateData.questionAnsweredCorrectly = true
             } else {
-                print("Wrong!")
                 gameStateData.timeKeepCounting = false
                 gameStateData.questionAnsweredCorrectly = false
             }

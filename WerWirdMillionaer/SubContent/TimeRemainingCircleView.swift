@@ -78,8 +78,8 @@ struct CircleStatusView: View {
 
 struct TimeRemainingCircleView: View {
     @EnvironmentObject var soundManager: SoundManager
+    @EnvironmentObject var gameStateData: GameStateData
     
-    var gameStateData: GameStateData
     var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @State var scaleSmall = true

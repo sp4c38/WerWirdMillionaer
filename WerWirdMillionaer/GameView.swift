@@ -21,7 +21,6 @@ class GameStateData: ObservableObject {
     @Published var timeRemaining = 30 // Remaining time in seconds (must be same as timeAllAvailable)
     @Published var timeKeepCounting = true // Indicates if the timer counts
     @Published var timeOver = false // Set to true if the time is over
-    @Published var coolDownTimerActive = false // Set to true if a cool down timer shall be activated, and than set to false
     
     @Published var telephoneJokerActive = true
     @Published var audienceJokerActive = true
@@ -51,12 +50,6 @@ class GameStateData: ObservableObject {
             }
             
             self.randomQuestionAnswerIndexes.append(randomAnswerIndex)
-        }
-    }
-    
-    func changeCoolDownTimerActive() {
-        withAnimation {
-            self.coolDownTimerActive.toggle()
         }
     }
 }
@@ -119,8 +112,24 @@ struct GameView: View {
                                             soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
                                             DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                                gameStateData.changeCoolDownTimerActive()
-                                                // When the cool down timer is finished other settings will be reset from within the CooldownView
+                                                // Reset all data for next round
+                                                gameStateData.questionAnsweredCorrectly = nil
+
+                                                gameStateData.showAudienceJokerData = false
+                                                gameStateData.audienceJokerData = AudiencePollCollection()
+
+                                                gameStateData.timeRemaining = gameStateData.timeAllAvailable
+                                                
+                                                gameStateData.nextPrizeLevel()
+                                                gameStateData.updateRandomQuestion()
+                                                
+                                                let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, oldCurrentPrizeLevel: gameStateData.oldCurrentPrizeLevel)
+                                                soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                                    gameStateData.timeOver = false
+                                                    gameStateData.timeKeepCounting = true
+                                                }
                                             }
                                         }
                                 } else if gameStateData.timeOver == true || gameStateData.questionAnsweredCorrectly == false {
@@ -168,7 +177,7 @@ struct GameView: View {
                                 Spacer()
                                 Spacer()
 
-                                TimeRemainingCircleView(gameStateData: gameStateData)
+                                TimeRemainingCircleView()
 
                                 Spacer()
                                 Spacer()
@@ -208,15 +217,6 @@ struct GameView: View {
                 .navigationBarHidden(true)
                 .animation(.easeInOut(duration: 0.2))
                 .zIndex(0)
-                
-                VStack {
-                    if gameStateData.coolDownTimerActive {
-                        CooldownView()
-                            .transition(.opacity)
-                            .zIndex(1)
-                    }
-                }
-                .animation(.easeInOut(duration: 1))
             }
 
             if gameStateData.showAudienceJokerData {
