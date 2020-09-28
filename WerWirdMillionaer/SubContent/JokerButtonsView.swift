@@ -46,7 +46,6 @@ struct JokerButtonsView: View {
                     if gameStateData.audienceJokerActive {
                         gameStateData.audienceJokerData =  audienceJoker(gameStateData: gameStateData)
                         gameStateData.audienceJokerActive = false
-                        gameStateData.showAudienceJokerData = true
                         let soundUrl = getJokerAudioUrl(jokerName: "audience")
                         soundManager.playSoundEffect(soundUrl: soundUrl)
                     }

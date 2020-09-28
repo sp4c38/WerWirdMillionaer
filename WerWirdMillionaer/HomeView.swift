@@ -94,7 +94,7 @@ struct HomeView: View {
         .frame(maxWidth: .infinity)
         .background(
             Rectangle()
-                .fill(Color(hue: 0.6429, saturation: 1.0000, brightness: 0.4118))//LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                .fill(Color(hue: 0.6429, saturation: 1.0000, brightness: 0.4118))
                 .modifier(QuestionmarkModifier(blurRadius: $backgroundShadowWidth))
                 .animation(Animation.easeInOut.speed(0.1).repeatForever())
                 .onAppear() {
