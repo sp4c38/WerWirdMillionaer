@@ -28,7 +28,10 @@ struct GameFinishedView: View {
     
     init() {
         numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .none
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale(identifier: "de_DE")
+        numberFormatter.currencySymbol = "€"
+        numberFormatter.maximumFractionDigits = 0
     }
     
     var body: some View {
@@ -37,17 +40,24 @@ struct GameFinishedView: View {
         VStack(spacing: 50) {
             Spacer()
             
+            let lastPrizeWithSecurityLevel = findLastPrizeWithSecurityLevel()
+            
             VStack {
-//                if gameStateData {
-//                    Text("❌")
-//                } else {
-                    Text("🎉")
-//                }
+                
+                if (gameStateData.softStop == true && prize.amount == 0) {
+                    Text("❌")
+                } else {
+                    if (gameStateData.softStop == false && prizesData.prizeLevels[lastPrizeWithSecurityLevel].amount == 0) {
+                        Text("❌")
+                    } else {
+                        Text("🎉")
+                    }
+                }
             }
             .font(.system(size: 150))
             
             if gameStateData.softStop == true || prize.isSecurityLevel {
-                Text("\(numberFormatter.string(from: NSNumber(value: prize.amount))!) Gewonnen!")
+                Text("\(numberFormatter.string(from: NSNumber(value: prize.amount)) ?? "NaN") gewonnen!")
                     .underline()
                     .bold()
                     .foregroundColor(Color.white)
@@ -55,9 +65,7 @@ struct GameFinishedView: View {
                     .shadow(radius: 20)
                 
             } else { // Triggered when current prize level is no security level which means that last nearest security level is used
-                let lastPrizeWithSecurityLevel = findLastPrizeWithSecurityLevel()
-                
-                Text("\(numberFormatter.string(from: NSNumber(value: prizesData.prizeLevels[lastPrizeWithSecurityLevel].amount))!) Gewonnen!")
+                Text("\(numberFormatter.string(from: NSNumber(value: prizesData.prizeLevels[lastPrizeWithSecurityLevel].amount)) ?? "NaN") gewonnen!")
                     .underline()
                     .bold()
                     .foregroundColor(Color.white)
@@ -75,7 +83,9 @@ struct GameFinishedView: View {
                 .background(Color.white)
                 .cornerRadius(10)
                 .onTapGesture {
+                    gameStateData.resetForNextGame()
                     mainViewController.goBackToStartView()
+                    gameStateData.updateRandomQuestion()
                 }
         }
         .shadow(radius: 10)

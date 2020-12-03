@@ -35,17 +35,21 @@ struct ContentView: View {
     }
     
     var body: some View {
-        if mainViewController.viewShowIndex == 0 {
-            HomeView()
-            
-        } else if mainViewController.viewShowIndex == 1 {
-            GameView()
-                .environmentObject(gameStateData)
+        VStack {
+            if mainViewController.viewShowIndex == 0 {
+                HomeView()
+                    .transition(.opacity)
+            } else if mainViewController.viewShowIndex == 1 {
+                GameView()
+                    .transition(.opacity)
+                    .environmentObject(gameStateData)
 
-        } else if mainViewController.viewShowIndex == 2 {
-            GameFinishedView()
-                .environmentObject(gameStateData)
-        }
+            } else if mainViewController.viewShowIndex == 2 {
+                GameFinishedView()
+                    .transition(.opacity)
+                    .environmentObject(gameStateData)
+            }
+        }.animation(.easeInOut)
     }
 }
 

@@ -35,7 +35,6 @@
 <Was sucht man in einer Cola Light vergeblich?< <Koffein <Wasser< <Kalorien< <^Kristallzucker<
 <Zu ihrem ganzen Glück brauchten die Comedian Harmonists nichts als “Wochenende und …“? <Apfelwein< <Dollarschein< <Herzilein< <^Sonnenschein<
 <Durch welches Vergehen macht man sich in Deutschland strafbar?< <Bibliphilie< <^Bigamie< <Bijouterie< <Biochemie<
-<Welchen Beinamen hatte Edith Piaf?< <Geier von Nantes< <^Spatz von Paris< <Fink von Verdun< <Rabe von Reims<
 <Wie wird die Flagge der Vereinigten Staaten von Amerika genannt?< <Fish and Chips< <Earth, Wind and Fire< <Park and Ride< <^Stars and Stripes<
 <An welchem Land grenzt Deutschland im Norden an?< <England< <^Dänemark< <Copenhagen< <Norwegen<
 
@@ -63,7 +62,7 @@
 <Wie nennt man die Endpunkte der gedachten Erdachse?< <Äquator< <^Pole< <Meridiane< <Tangenten<
 <In welchem Jahr stand die Notre-Dame in Flammen?< <2018< <2020< <2016<^2019<
 <Welcher der folgenden Begriffe bezeichnet keine Verbeugung?< <Diener< <Kotau< <Knicks< <^Salto<
-
+<Wer war der Begründer der physikalischen Chemie in Deutschland und gewann 1909 den Chemie-Nobelpreis?< <^Wilhelm Ostwald< <Herr Etienne< <Arthur Niekisch< <Manfred Eigen<
 
 2000€:
 <Was ist Voodoo?< <Kampfsport< <Videotechnik< <^afroamerikanische Religion< <Telefongesellschaft<
@@ -136,7 +135,7 @@
 <Wer von diesen vieren ist kein Vogel?< <Wellensittich< <^Pfauenauge< <Goldammer< <Rotkehlchen<
 <Wie heißt das Getränk, das man sich nach dem Essen gönnt?< <Amuse-Gueule< <^Digestif< <Bombe finale< <Aperitif<
 <Unter welchem Syndrom leidet ein stets müder und gleichgültiger Mitarbeiter?< <Mobbing< <Key-Account< <^Burnout< <Outsourcing< 
-<Was speichern Kamele in ihren Höckern?< <Luft< <^Fett< <Milch< <Urin<
+<Was speichern Kamele in ihren Höckern?<Luft< <^Fett< <Milch< <Urin<
 <Wo entwarfen 12 Staats- und Regierungschefs im Dezember 1991 die Europäische Union?< <Wien< <Liverpool< <Hamburg< <^Maastricht<
 <Was streut man normalerweise auf sein Frühstücksei?< <Ammoniumnitrat< <Calciumcarbonat< <^Natriumchlorid< <Paracetamol<
 <Welcher der folgenden Ausdrücke wird nicht für Pferde benutzt?< <Mähre< <Klepper< <Gaul< <^Bache<
@@ -241,10 +240,30 @@
 <Welche Internet-Adresse muss man eingeben, um die offizielle Homepage des Weißen Hauses zu erreichen?< <www.whitehouse.de< <www.whitehouse.com< <www.whitehouse.uk< <^www.whitehouse.gov<
 <Wozu dient das Züngeln einer Schlange hauptsächlich?< <schwitzen< <tasten< <^riechen< <Sauerstoff aufnehmen<
 
-125000€:
+125000€: 
+
+
+
+250000€: 
+<Was wurde erstmals am 8. Mai 1954 ausgestrahlt?< <Tagesschau< <Plusminus< <Tatort< <^Das Wort zum Sonntag< 
+<Laut Immanuel Kant war die Philosophie der Aufklärung für die Menschen der Ausgang aus ihrer selbstverschuldeten …?< <^Unmündigkeit< <Schlaflosigkeit< <Transzendalität< <Überbevölkerung< 
+<Was ist ein Dugong?< <Meditationswerkzeug< <^Seekuh< <Tischtennisplatte< <Klingel< 
+<Wo und wann wurde der erste Bankautomat aufgestellt?< <^London, 1967< <New York, 1970< <Mailand, 1972< <Tokyo, 1975< 
+<Wer legte 1954 den Grundstein für den Restaurant Konzern McDonald’s?< <Ronald McDonald< <Dick van Mac< <^Ray Kroc< <Archie Macmillan<
+<Was war Katharina von Bora, bevor sie den Reformator Martin Luther heiratete?< <Pastorin< <Krankenschwester< <Organistin< <^Nonne< 
+<Wer gewann 1950 die erste Formel-1 Weltmeisterschaft?< <Juan Manuel Fangio< <Alberto Ascari< <^Nino Farina< <Jack Brabham<
+<Wer gründete 1964 in Frankreich das politische engagierte Théâtre du Soleil?< <^Ariane Mnouchkine< <Jean-Baptiste Poquelin< <Dario Fo< <Eugène Ionesco< 
+<Wie heißt die Währung von Vietnam?< <Ding< <^Dong< <Dang< <Dung< 
 
 
 500000€:
+<Welcher der Großen Seen Nordamerikas gehört als einziger komplett zum Staatsgebiet der USA?< <Huronsee< <^Michigansee< <Ontariosee< <Eriesee<
+<Was bedeutet der vietnamesische Name Ho Chi Minh wörtlich übersetzt?< <der Gütige< <^der Erleuchtete< <der Tiger< <der Standhafte<
+<Wer gründete 1835 Melbourne?< <William Superman< <^John Batman< <George Spiderman< <Tom Fatman<
+<Wer war der direkte Vorgänger Karajans als musikalische Leiter der Berliner Philharmoniker?< <^Willhelm Furtwängler< <Leonard Bernstein< <Paul Hindemith< <Yehudi Menuhin<
+<Was bedeutet das griechische Wort “sarx“, von dem sich der Begriff Sarkasmus ableitet?< <Teufel< <Fluch< <Messer <^Fleisch<
+<Wie lautet der althochdeutsche Wortursprung von Mittwoch?< <^mittawehha< <mettiwich< <middilwech< <muddewach< 
+<Wer war der Begründer der physikalischen Chemie in Deutschland und gewann 1909 den Chemie-Nobelpreis?< <^Wilhelm Ostwald< <Herr Étienne< <Arthur Niekisch< <Manfred Eigen<
 
 
 1000000€:

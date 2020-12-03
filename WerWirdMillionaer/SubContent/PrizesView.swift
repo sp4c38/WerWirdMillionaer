@@ -60,16 +60,17 @@ struct PrizesView: View {
                                 .font(.title2)
                                 .bold()
                         }
-                        .foregroundColor((gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? Color.white : (level.isSecurityLevel ? Color.white : Color(hue: 0.0665, saturation: 0.7910, brightness: 0.9569)))
+                        .foregroundColor((gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? Color.blue : (level.isSecurityLevel ? Color.white : Color(hue: 0.0665, saturation: 0.7910, brightness: 0.9569)))
                         .padding(.trailing, 10)
                         .background((gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? Color(hue: 0.0665, saturation: 0.7910, brightness: 0.9569) : Color.white.opacity(0))
-                        .shadow(color: (gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? Color.black : Color.black, radius: 5)
+                        .shadow(color: (gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? Color.white : Color.black, radius: (gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? 1 : 2)
                         .cornerRadius(5)
                         .padding(.leading, 5)
                     }
                 }
             }
         }
+        .drawingGroup()
         .shadow(color: Color.white, radius: 20)
         .padding()
         .overlay(RoundedRectangle(cornerRadius: 10)

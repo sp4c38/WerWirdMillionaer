@@ -31,6 +31,24 @@ class GameStateData: ObservableObject {
     @Published var softStop: Bool? = nil // Is set to true if player pressed the stop button
                                          // Is set to false if player selected a wrong answer or the time expired
     
+    func resetForNextGame() {
+        self.currentPrizeLevel = 1
+        self.oldCurrentPrizeLevel = 0
+        self.questionAnsweredCorrectly = nil
+        self.randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
+        self.randomQuestionAnswerIndexes = [Int]()
+        self.timeAllAvailable = 30
+        self.timeRemaining = 30
+        self.timeKeepCounting = true
+        self.timeOver = false
+        self.telephoneJokerActive = true
+        self.telephoneJokerText = nil
+        self.audienceJokerActive = true
+        self.fiftyfiftyJokerActive = true
+        self.audienceJokerData = nil
+        self.softStop = false
+    }
+    
     func nextPrizeLevel() {
         if currentPrizeLevel + 2 <= questionData!.prizeLevels.count {
             self.currentPrizeLevel += 1
@@ -61,106 +79,19 @@ struct GameView: View {
     
     var prizesLoadedSuccessful: Bool = false
     
-    var prizeLevelNumberFormatter: NumberFormatter
-    
     init() {
         if questionData != nil {
             prizesLoadedSuccessful = true
         } else {
             prizesLoadedSuccessful = false
         }
-        
-        prizeLevelNumberFormatter = NumberFormatter()
-        prizeLevelNumberFormatter.numberStyle = .none
     }
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
             VStack {
                 if prizesLoadedSuccessful {
-                    HStack(spacing: 40) {
-                        Button(action: {
-                            soundManager.stopAllSounds()
-
-                            gameStateData.softStop = true
-                            mainViewController.goToEndView()
-                        }) {
-                            Image("FinishedButton")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100)
-                        }
-
-                        HStack(spacing: 40) {
-                            Spacer()
-
-                            if gameStateData.questionAnsweredCorrectly == true {
-                                Image(systemName: "checkmark")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(Color.white)
-                                    .frame(width: 40)
-                                    .onAppear {
-                                        // Play the sound effect which indicates that the question was answered correctly immediately
-                                        let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: true)
-                                        soundManager.playSoundEffect(soundUrl: soundEffectUrl)
-
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                            // Reset all data for next round
-                                            gameStateData.questionAnsweredCorrectly = nil
-
-                                            gameStateData.telephoneJokerText = nil
-                                            gameStateData.audienceJokerData = nil
-
-                                            gameStateData.timeRemaining = gameStateData.timeAllAvailable
-                                            
-                                            gameStateData.nextPrizeLevel()
-                                            gameStateData.updateRandomQuestion()
-                                            
-                                            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, oldCurrentPrizeLevel: gameStateData.oldCurrentPrizeLevel)
-                                            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
-                                            
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                                gameStateData.timeOver = false
-                                                gameStateData.timeKeepCounting = true
-                                            }
-                                        }
-                                    }
-                            } else if gameStateData.timeOver == true || gameStateData.questionAnsweredCorrectly == false {
-                                Image(systemName: "multiply")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .foregroundColor(Color.white)
-                                    .frame(width: 40)
-                                    .onAppear {
-                                        let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: false)
-                                        soundManager.playSoundEffect(soundUrl: soundEffectUrl)
-
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                            soundManager.stopAllSounds()
-
-                                            gameStateData.softStop = false
-                                            mainViewController.goToEndView()
-                                        }
-                                    }
-                            }
-
-                            Text("\(prizeLevelNumberFormatter.string(from: NSNumber(value: prizesData.prizeLevels[gameStateData.currentPrizeLevel].amount))!) \(prizesData.unit)  Frage")
-                                .font(.largeTitle)
-                                .foregroundColor((gameStateData.questionAnsweredCorrectly != nil) ? Color.white : Color.black)
-
-                            Spacer()
-                        }
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background((gameStateData.questionAnsweredCorrectly != nil) ? Color(hue: 0.0814, saturation: 0.8821, brightness: 0.9647) : Color.white)
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
-                    }
-                    .padding(.top, 40)
-                    .padding(.leading, 40)
-                    .padding(.trailing, 40)
-                    .padding(.bottom, 30)
+                    TopHeaderView()
 
                     Spacer()
                     
@@ -168,7 +99,7 @@ struct GameView: View {
                         Spacer()
 
                         HStack {
-                            JokerButtonsView(gameStateData: gameStateData)
+                            JokerButtonsView()
 
                             if gameStateData.audienceJokerData != nil {
                                 Spacer()

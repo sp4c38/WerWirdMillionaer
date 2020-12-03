@@ -10,8 +10,7 @@ import SwiftUI
 
 struct JokerButtonsView: View {
     @EnvironmentObject var soundManager: SoundManager
-    
-    var gameStateData: GameStateData
+    @EnvironmentObject var gameStateData: GameStateData
     
     var body: some View {
         VStack(spacing: 30) {

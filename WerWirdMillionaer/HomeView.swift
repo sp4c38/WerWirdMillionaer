@@ -37,6 +37,8 @@ struct HomeView: View {
     
     @State var elementGlowShadow: CGFloat = 10
     @State var backgroundShadowWidth: CGFloat = 0
+    @State var buttonScaleEffectSize: CGFloat = 1
+    @State var buttonRotationEffect: Double = 0
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -82,11 +84,15 @@ struct HomeView: View {
                         mainViewController.goToGameView()
                     }
                     .modifier(elementGlowModifier(color: Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), blurRadius: $elementGlowShadow))
+                    .scaleEffect(buttonScaleEffectSize)
+                    .rotationEffect(.degrees(buttonRotationEffect))
                     .padding(10)
                     .animation(Animation.easeInOut.speed(0.1).repeatForever())
                     .onAppear() {
                         withAnimation {
                             self.elementGlowShadow = 60
+                            self.buttonScaleEffectSize = 1.3
+                            self.buttonRotationEffect = 5
                         }
                     }
             }
