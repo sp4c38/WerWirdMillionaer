@@ -81,7 +81,7 @@ struct HomeView: View {
                         }
                     )
                     .onTapGesture {
-                        mainViewController.goToGameView()
+                        mainViewController.changeViewShowIndex(newViewNumber: 1)
                     }
                     .modifier(elementGlowModifier(color: Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), blurRadius: $elementGlowShadow))
                     .scaleEffect(buttonScaleEffectSize)

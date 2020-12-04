@@ -89,88 +89,18 @@ struct GameView: View {
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
-            VStack {
+            VStack(spacing: 0) {
                 if prizesLoadedSuccessful {
-                    TopHeaderView()
+                    GameHeaderView() // Includes: end button, the prize money which can be won in the current round
 
                     Spacer()
-                    
-                    VStack(spacing: 0) {
-                        Spacer()
+                    Spacer()
 
-                        HStack {
-                            JokerButtonsView()
-
-                            if gameStateData.audienceJokerData != nil {
-                                Spacer()
-                                AudienceJokerResultView()
-                                Spacer()
-                            }
-                            
-                            if gameStateData.telephoneJokerText != nil {
-                                Spacer()
-                                Text(gameStateData.telephoneJokerText!)
-                                    .foregroundColor(Color.black)
-                                    .padding(20)
-                                    .background(Color.white)
-                                    .cornerRadius(10)
-                                    .shadow(radius: 20)
-                                    .padding(.leading, 10)
-                                    .padding(.trailing, 10)
-                                    .transition(.opacity)
-                                    .animation(.easeInOut(duration: 4))
-                                Spacer()
-                            }
-                            
-                            if gameStateData.telephoneJokerText == nil && gameStateData.audienceJokerData == nil {
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                            }
-                            
-                            TimeRemainingCircleView()
-
-                            if gameStateData.telephoneJokerText == nil || gameStateData.audienceJokerData == nil {
-                                Spacer()
-                                Spacer()
-                            } else {
-                                Spacer()
-                            }
-                            
-                            PrizesView()
-                        }
-                        .padding(.leading, 40)
-                        .padding(.trailing, 40)
-
-                        Spacer()
+                    GameCenterView() // Includes: Joker buttons, timer, prizes view
                         
-                        HStack(spacing: 0) {
-                            Image("GuenterJauchOnChair")
-                                .resizable()
-                                .scaledToFit()
-                                .padding(.leading, 3)
-                                .padding(.top, -70)
-                            
-                            VStack {
-                                QuestionTextView(question: gameStateData.randomQuestion.question)
-                                    .padding(.bottom, 20)
-
-                                HStack(spacing: 0) {
-                                    VStack(spacing: 40) {
-                                        AnswerButton(answerName: "A", showingIndex: gameStateData.randomQuestionAnswerIndexes[0])
-                                        AnswerButton(answerName: "B", showingIndex: gameStateData.randomQuestionAnswerIndexes[1])
-                                    }
-
-                                    VStack(spacing: 40) {
-                                        AnswerButton(answerName: "C", showingIndex: gameStateData.randomQuestionAnswerIndexes[2])
-                                        AnswerButton(answerName: "D", showingIndex: gameStateData.randomQuestionAnswerIndexes[3])
-                                    }
-                                }
-                            }
-                            .padding(.bottom, 40)
-                        }
-                        .padding(.trailing, 40)
-                    }
+                    Spacer()
+                        
+                    GameBottomView() // Includes: picture of the moderator, answer, answer options
                 } else {
                     Text("Fragen konnten nicht geladen werden.")
                 }
@@ -183,12 +113,11 @@ struct GameView: View {
                     .blur(radius: 15)
             )
             .ignoresSafeArea()
-            .navigationBarHidden(true)
             .animation(.easeInOut(duration: 0.2))
         }
         .onAppear {
             // Comment when using Canvas
-            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, oldCurrentPrizeLevel: gameStateData.oldCurrentPrizeLevel)
+            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
             soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
         }
     }

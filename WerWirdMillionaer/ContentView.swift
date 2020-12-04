@@ -11,16 +11,8 @@ import SwiftUI
 class MainViewController: ObservableObject {
     @Published var viewShowIndex = 0
     
-    func goToEndView() {
-        viewShowIndex = 2
-    }
-    
-    func goToGameView() {
-        viewShowIndex = 1
-    }
-    
-    func goBackToStartView() {
-        viewShowIndex = 0
+    func changeViewShowIndex(newViewNumber: Int) {
+        viewShowIndex = newViewNumber
     }
 }
 
@@ -40,11 +32,14 @@ struct ContentView: View {
                 HomeView()
                     .transition(.opacity)
             } else if mainViewController.viewShowIndex == 1 {
+                GameIntroVideoView()
+                    .transition(.opacity)
+            } else if mainViewController.viewShowIndex == 2 {
                 GameView()
                     .transition(.opacity)
                     .environmentObject(gameStateData)
 
-            } else if mainViewController.viewShowIndex == 2 {
+            } else if mainViewController.viewShowIndex == 3 {
                 GameFinishedView()
                     .transition(.opacity)
                     .environmentObject(gameStateData)

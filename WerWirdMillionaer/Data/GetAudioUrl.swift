@@ -8,16 +8,18 @@
 import AVFoundation
 import Foundation
 
-func getBackgroundAudioUrl(currentPrizesLevel: Int, oldCurrentPrizeLevel: Int) -> URL? {
+func getBackgroundAudioUrl(currentPrizesLevel: Int, previousPrizeLevel: Int) -> URL? {
+    // The previous prize level is needed to check if the music is still the same with the current prize level compared to the previous prize level. If so the music already playing can play further and doesn't need to start new.
+    
     var audioFileUrl: URL? = nil
     
-    if currentPrizesLevel <= 5 && (!(oldCurrentPrizeLevel <= 5) || oldCurrentPrizeLevel == 0) {
+    if currentPrizesLevel <= 5 && (!(previousPrizeLevel <= 5) || previousPrizeLevel == 0) {
         audioFileUrl = Bundle.main.url(forResource: "50-500_intro_sound.mp3", withExtension: nil)
-    } else if currentPrizesLevel > 5 && currentPrizesLevel <= 10  && !(oldCurrentPrizeLevel > 5) {
+    } else if currentPrizesLevel > 5 && currentPrizesLevel <= 10  && !(previousPrizeLevel > 5) {
         audioFileUrl = Bundle.main.url(forResource: "1000-16000_intro_sound.mp3", withExtension: nil)
-    } else if currentPrizesLevel > 10 && currentPrizesLevel <= 14 && !(oldCurrentPrizeLevel > 10) {
+    } else if currentPrizesLevel > 10 && currentPrizesLevel <= 14 && !(previousPrizeLevel > 10) {
         audioFileUrl = Bundle.main.url(forResource: "32000-5000000_intro_sound.mp3", withExtension: nil)
-    } else if currentPrizesLevel == 15 && !(oldCurrentPrizeLevel == 15) {
+    } else if currentPrizesLevel == 15 && !(previousPrizeLevel == 15) {
         audioFileUrl = Bundle.main.url(forResource: "1000000_intro_sound.mp3", withExtension: nil)
     } else {
         audioFileUrl = nil
