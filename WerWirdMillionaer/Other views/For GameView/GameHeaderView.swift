@@ -40,7 +40,7 @@ struct GameHeaderView: View {
                 soundManager.stopAllSounds()
 
                 gameStateData.softStop = true
-                mainViewController.changeViewShowIndex(newViewNumber: 2)
+                mainViewController.changeViewShowIndex(newViewNumber: 3)
             }) {
                 Image("FinishedButton")
                     .resizable()

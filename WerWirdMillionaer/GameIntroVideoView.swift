@@ -49,7 +49,7 @@ struct GameIntroVideoView: View {
             }
         }
         .onReceive(videoPublisher) { output in
-            mainViewController.changeViewShowIndex(newViewNumber: 2)
+            mainViewController.changeViewShowIndex(newViewNumber: 1)
         }
         .ignoresSafeArea(.all)
     }

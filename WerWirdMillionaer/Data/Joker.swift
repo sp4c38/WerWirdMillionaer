@@ -137,12 +137,32 @@ func fifthfiftyJoker(gameStateData: GameStateData) {
         return
     }
     
-    var randomList = [0, 1, 2, 3]
+//    print("Before \(answerOptions)")
+    
+    var randomList = [0, 1, 2, 3] // Must be sorted
     randomList.remove(at: currentAnswerIndex)
-    let firstRandomElement = randomList.randomElement()!
-    answerOptions[firstRandomElement] = nil
-    randomList.remove(at: firstRandomElement)
-    answerOptions[randomList.randomElement()!] = nil
+    let originalRandomElementIndex = randomList.firstIndex(of: randomList.randomElement()!)!
+    var firstRandomElementIndex = originalRandomElementIndex
+    if firstRandomElementIndex >= currentAnswerIndex {
+        firstRandomElementIndex += 1
+    }
+    answerOptions[firstRandomElementIndex] = nil
+    randomList.remove(at: originalRandomElementIndex)
+//    print("Set first to \(firstRandomElementIndex)")
+    
+//    print(answerOptions)
+//    print(randomList)
+    var secondRandomElementIndex = randomList.firstIndex(of: randomList.randomElement()!)!
+    if secondRandomElementIndex >= originalRandomElementIndex {
+        secondRandomElementIndex += 1
+    }
+    if secondRandomElementIndex >= currentAnswerIndex {
+        secondRandomElementIndex += 1
+    }
+    answerOptions[secondRandomElementIndex] = nil
+//    print("Set second to \(secondRandomElementIndex)")
+    
+//    print("After \(answerOptions)")
     
     gameStateData.randomQuestion.answerA = answerOptions[0]
     gameStateData.randomQuestion.answerB = answerOptions[1]

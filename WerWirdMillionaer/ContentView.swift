@@ -9,7 +9,7 @@ import AVFoundation
 import SwiftUI
 
 class MainViewController: ObservableObject {
-    @Published var viewShowIndex = 0
+    @Published var viewShowIndex = 1
     
     func changeViewShowIndex(newViewNumber: Int) {
         viewShowIndex = newViewNumber
@@ -27,14 +27,14 @@ struct ContentView: View {
     }
     
     var body: some View {
-        ZStack {
+        VStack {
             if mainViewController.viewShowIndex == 0 {
-                HomeView()
+                GameIntroVideoView()
                     .environmentObject(gameStateData)
                     .transition(.opacity)
                     .zIndex(0)
             } else if mainViewController.viewShowIndex == 1 {
-                GameIntroVideoView()
+                HomeView()
                     .environmentObject(gameStateData)
                     .transition(.opacity)
                     .zIndex(1)
