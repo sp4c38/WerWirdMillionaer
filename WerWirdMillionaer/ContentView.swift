@@ -30,6 +30,7 @@ struct ContentView: View {
         ZStack {
             if mainViewController.viewShowIndex == 0 {
                 HomeView()
+                    .environmentObject(gameStateData)
                     .transition(.opacity)
                     .zIndex(0)
             } else if mainViewController.viewShowIndex == 1 {
