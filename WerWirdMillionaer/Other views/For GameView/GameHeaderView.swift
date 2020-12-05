@@ -97,7 +97,7 @@ struct GameHeaderView: View {
                                 soundManager.stopAllSounds()
 
                                 gameStateData.softStop = false
-                                mainViewController.changeViewShowIndex(newViewNumber: 2)
+                                mainViewController.changeViewShowIndex(newViewNumber: 3)
                             }
                         }
                 }

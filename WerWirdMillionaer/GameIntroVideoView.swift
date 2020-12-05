@@ -8,16 +8,11 @@
 import AVKit
 import SwiftUI
 
-struct GameIntroViewRepresentable: UIViewControllerRepresentable {
+struct AVPlayerView: UIViewControllerRepresentable {
     var player: AVPlayer
     
-//    class Coordinator {
-//        init()
-//        }
-//    }
-    
     func makeUIViewController(context: Context) -> AVPlayerViewController {
-        var playerViewController = AVPlayerViewController()
+        let playerViewController = AVPlayerViewController()
         playerViewController.showsPlaybackControls = false
         return playerViewController
     }
@@ -26,12 +21,17 @@ struct GameIntroViewRepresentable: UIViewControllerRepresentable {
         uiViewController.modalPresentationStyle = .fullScreen
         uiViewController.player = player
         uiViewController.player!.play()
+        uiViewController.videoGravity = .resizeAspectFill
     }
 }
 
 struct GameIntroVideoView: View {
+    @EnvironmentObject var mainViewController: MainViewController
+    
     var resourceBundleUrl: URL? = nil
     var player: AVPlayer? = nil
+
+    var videoPublisher = NotificationCenter.default.publisher(for: Notification.Name.AVPlayerItemDidPlayToEndTime)
     
     init() {
         resourceBundleUrl = Bundle.main.url(forResource: "GameIntroVideo", withExtension: "mp4")
@@ -43,16 +43,11 @@ struct GameIntroVideoView: View {
     var body: some View {
         VStack {
             if player != nil {
-                GameIntroViewRepresentable(player: player!)
-//                VideoPlayer(player: player!)
-//
-//                    .onAppear {
-//                        player!.play()
-//                    }
-//                    .onChange(of: player!.status) { newStatus in
-//                        print(newStatus)
-//                    }
+                AVPlayerView(player: player!)
             }
+        }
+        .onReceive(videoPublisher) { output in
+            mainViewController.changeViewShowIndex(newViewNumber: 2)
         }
         .ignoresSafeArea(.all)
     }
