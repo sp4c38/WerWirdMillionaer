@@ -131,35 +131,22 @@ struct AudienceJokerResultView: View {
 }
 
 func fifthfiftyJoker(gameStateData: GameStateData) {
-    var selectionList = [gameStateData.randomQuestion.answerA,
-                         gameStateData.randomQuestion.answerB,
-                         gameStateData.randomQuestion.answerC,
-                         gameStateData.randomQuestion.answerD]
-    
-    
-    guard let correctAnswerFirstIndex = selectionList.firstIndex(of: gameStateData.randomQuestion.correctAnswer) else {
+    var answerOptions = [gameStateData.randomQuestion.answerA, gameStateData.randomQuestion.answerB,
+                         gameStateData.randomQuestion.answerC, gameStateData.randomQuestion.answerD]
+    guard let currentAnswerIndex = answerOptions.firstIndex(of: gameStateData.randomQuestion.correctAnswer) else {
         return
     }
-    selectionList.remove(at: correctAnswerFirstIndex)
     
-    let firstRandomElement = selectionList.randomElement()
-    guard let firstRandomElementFirstIndex = selectionList.firstIndex(of: firstRandomElement!!) else {
-        return
-    }
-    selectionList.remove(at: firstRandomElementFirstIndex)
-    let secondRandomElement = selectionList.randomElement()
+    var randomList = [0, 1, 2, 3]
+    randomList.remove(at: currentAnswerIndex)
+    let firstRandomElement = randomList.randomElement()!
+    answerOptions[firstRandomElement] = nil
+    randomList.remove(at: firstRandomElement)
+    answerOptions[randomList.randomElement()!] = nil
     
-    if gameStateData.randomQuestion.answerA == firstRandomElement || gameStateData.randomQuestion.answerA == secondRandomElement {
-        gameStateData.randomQuestion.answerA = nil
-    }
-    if gameStateData.randomQuestion.answerB == firstRandomElement || gameStateData.randomQuestion.answerB == secondRandomElement {
-        gameStateData.randomQuestion.answerB = nil
-    }
-    if gameStateData.randomQuestion.answerC == firstRandomElement || gameStateData.randomQuestion.answerC == secondRandomElement {
-        gameStateData.randomQuestion.answerC = nil
-    }
-    if gameStateData.randomQuestion.answerD == firstRandomElement || gameStateData.randomQuestion.answerD == secondRandomElement {
-        gameStateData.randomQuestion.answerD = nil
-    }
+    gameStateData.randomQuestion.answerA = answerOptions[0]
+    gameStateData.randomQuestion.answerB = answerOptions[1]
+    gameStateData.randomQuestion.answerC = answerOptions[2]
+    gameStateData.randomQuestion.answerD = answerOptions[3]
 }
 

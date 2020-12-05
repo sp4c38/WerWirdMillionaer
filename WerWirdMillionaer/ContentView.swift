@@ -27,22 +27,26 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
+        ZStack {
             if mainViewController.viewShowIndex == 0 {
                 HomeView()
                     .transition(.opacity)
+                    .zIndex(0)
             } else if mainViewController.viewShowIndex == 1 {
                 GameIntroVideoView()
+                    .environmentObject(gameStateData)
                     .transition(.opacity)
+                    .zIndex(1)
             } else if mainViewController.viewShowIndex == 2 {
                 GameView()
-                    .transition(.opacity)
                     .environmentObject(gameStateData)
-
+                    .transition(.opacity)
+                    .zIndex(2)
             } else if mainViewController.viewShowIndex == 3 {
                 GameFinishedView()
-                    .transition(.opacity)
                     .environmentObject(gameStateData)
+                    .transition(.opacity)
+                    .zIndex(3)
             }
         }.animation(.easeInOut)
     }

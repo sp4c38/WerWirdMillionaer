@@ -38,7 +38,7 @@ struct AnswerButton: View {
     var answerName: String
     var showingAnswerIndex: Int // Index of the possible answer which is shown
     
-    init(answerName: String, showingIndex: Int) {
+    init(answerName: String, _ showingIndex: Int) {
         self.answerName = answerName
         self.showingAnswerIndex = showingIndex
     }
@@ -80,40 +80,24 @@ struct AnswerButton: View {
         }
         .onAppear {
             if showingAnswerIndex == 0 {
-                if gameStateData.randomQuestion.answerA != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerA!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerA ?? ""
             } else if showingAnswerIndex == 1 {
-                if gameStateData.randomQuestion.answerB != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerB!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerB ?? ""
             } else if showingAnswerIndex == 2 {
-                if gameStateData.randomQuestion.answerC != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerC!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerC ?? ""
             } else {
-                if gameStateData.randomQuestion.answerD != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerD!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerD ?? ""
             }
         }
-        .onChange(of: gameStateData.randomQuestion) { _ in
+        .onChange(of: gameStateData.randomQuestion) { newRandomQuestion in
             if showingAnswerIndex == 0 {
-                if gameStateData.randomQuestion.answerA != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerA!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerA ?? ""
             } else if showingAnswerIndex == 1 {
-                if gameStateData.randomQuestion.answerB != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerB!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerB ?? ""
             } else if showingAnswerIndex == 2 {
-                if gameStateData.randomQuestion.answerC != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerC!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerC ?? ""
             } else {
-                if gameStateData.randomQuestion.answerD != nil {
-                    showingAnswer = gameStateData.randomQuestion.answerD!
-                }
+                showingAnswer = gameStateData.randomQuestion.answerD ?? ""
             }
         }
         .buttonStyle(AnswerButtonStyle(isCorrectAndSelected: (gameStateData.questionAnsweredCorrectly == true && gameStateData.randomQuestion.correctAnswer == showingAnswer) ? true : false))

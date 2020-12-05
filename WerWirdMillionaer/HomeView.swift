@@ -33,7 +33,9 @@ struct QuestionmarkModifier: ViewModifier {
 }
 
 struct HomeView: View {
+    @EnvironmentObject var gameStateData: GameStateData
     @EnvironmentObject var mainViewController: MainViewController
+    @EnvironmentObject var soundManager: SoundManager
     
     @State var elementGlowShadow: CGFloat = 10
     @State var backgroundShadowWidth: CGFloat = 0
@@ -81,7 +83,7 @@ struct HomeView: View {
                         }
                     )
                     .onTapGesture {
-                        mainViewController.changeViewShowIndex(newViewNumber: 1)
+                        mainViewController.changeViewShowIndex(newViewNumber: 2)
                     }
                     .modifier(elementGlowModifier(color: Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), blurRadius: $elementGlowShadow))
                     .scaleEffect(buttonScaleEffectSize)
@@ -111,6 +113,11 @@ struct HomeView: View {
         )
         .ignoresSafeArea()
         .preferredColorScheme(.light)
+        .onAppear {
+            // Comment when using Canvas
+            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
+            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+        }
     }
 }
 

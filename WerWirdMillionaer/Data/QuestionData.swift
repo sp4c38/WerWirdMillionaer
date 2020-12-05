@@ -13,7 +13,16 @@ struct Question: Codable, Equatable {
     var answerB: String? // Answer possibility B
     var answerC: String? // Answer possibility C
     var answerD: String? // Answer possibility D
-    var correctAnswer: String // Name of the answer possibility variable which holds the correct answer
+    var correctAnswer: String // Name of the answer possibility variable which is the correct answer
+    
+    mutating func shuffleOrder() {
+        var items = [self.answerA, self.answerB, self.answerC, self.answerD]
+        items.shuffle()
+        self.answerA = items[0]
+        self.answerB = items[1]
+        self.answerC = items[2]
+        self.answerD = items[3]
+    }
 }
 
 struct PrizeLevel: Codable {

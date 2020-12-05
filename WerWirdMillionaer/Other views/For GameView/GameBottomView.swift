@@ -24,13 +24,13 @@ struct GameBottomView: View {
 
                 HStack(spacing: 0) {
                     VStack(spacing: 40) {
-                        AnswerButton(answerName: "A", showingIndex: gameStateData.randomQuestionAnswerIndexes[0])
-                        AnswerButton(answerName: "B", showingIndex: gameStateData.randomQuestionAnswerIndexes[1])
+                        AnswerButton(answerName: "A", 0)
+                        AnswerButton(answerName: "B", 1)
                     }
 
                     VStack(spacing: 40) {
-                        AnswerButton(answerName: "C", showingIndex: gameStateData.randomQuestionAnswerIndexes[2])
-                        AnswerButton(answerName: "D", showingIndex: gameStateData.randomQuestionAnswerIndexes[3])
+                        AnswerButton(answerName: "C", 2)
+                        AnswerButton(answerName: "D", 3)
                     }
                 }
             }

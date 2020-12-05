@@ -21,12 +21,14 @@ struct AVPlayerView: UIViewControllerRepresentable {
         uiViewController.modalPresentationStyle = .fullScreen
         uiViewController.player = player
         uiViewController.player!.play()
-        uiViewController.videoGravity = .resizeAspectFill
+//        uiViewController.videoGravity = .resizeAspectFill
     }
 }
 
 struct GameIntroVideoView: View {
+    @EnvironmentObject var gameStateData: GameStateData
     @EnvironmentObject var mainViewController: MainViewController
+    @EnvironmentObject var soundManager: SoundManager
     
     var resourceBundleUrl: URL? = nil
     var player: AVPlayer? = nil
