@@ -33,11 +33,15 @@ class SoundManager: NSObject, AVAudioPlayerDelegate, ObservableObject {
         }
     }
     
-    func playBackgroundMusic(soundUrl: URL?) {
+    func playBackgroundMusic(soundUrl: URL?, playInfinite: Bool = true) {
         if let soundUrl = soundUrl {
             do {
                 backgroundMusicPlayer = try AVAudioPlayer(contentsOf: soundUrl)
-                backgroundMusicPlayer.numberOfLoops = -1
+                if playInfinite {
+                    backgroundMusicPlayer.numberOfLoops = -1
+                } else {
+                    backgroundMusicPlayer.numberOfLoops = 0
+                }
                 backgroundMusicPlayer.prepareToPlay()
                 backgroundMusicPlayer.play()
             } catch {

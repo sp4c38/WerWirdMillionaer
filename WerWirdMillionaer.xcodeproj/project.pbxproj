@@ -30,7 +30,6 @@
 		619C335D25013ECB00E82084 /* audience_joker_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334625013ECB00E82084 /* audience_joker_sound.mp3 */; };
 		619C335E25013ECB00E82084 /* 1000-16000_answer_wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */; };
 		619C335F25013ECB00E82084 /* submit_answer_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334825013ECB00E82084 /* submit_answer_sound.mp3 */; };
-		619C336025013ECB00E82084 /* correct_answer_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334925013ECB00E82084 /* correct_answer_sound.mp3 */; };
 		619C336125013ECB00E82084 /* 1000-16000_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */; };
 		619C336325013ECC00E82084 /* 32000-5000000_intro_song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */; };
 		619C336425013ECC00E82084 /* outro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C334D25013ECB00E82084 /* outro_sound.mp3 */; };
@@ -48,7 +47,7 @@
 		619C337025013ECC00E82084 /* general_intro_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335925013ECB00E82084 /* general_intro_sound.mp3 */; };
 		619C337125013ECC00E82084 /* 1000000_answer_correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335A25013ECB00E82084 /* 1000000_answer_correct.mp3 */; };
 		619C337225013ECC00E82084 /* 500_security_level.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 619C335B25013ECB00E82084 /* 500_security_level.mp3 */; };
-		61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0624FAC9020034CE11 /* ButtonShape.swift */; };
+		61D11F0724FAC9020034CE11 /* AnswerButtonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0624FAC9020034CE11 /* AnswerButtonShape.swift */; };
 		61D11F0924FAE4C30034CE11 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D11F0824FAE4C30034CE11 /* GameView.swift */; };
 		61E63BE8257AC00400620E28 /* GameIntroVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 61E63BE7257AC00400620E28 /* GameIntroVideo.mp4 */; };
 		61E7985D24FAB16D009F914E /* WerWirdMillionaerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */; };
@@ -100,7 +99,6 @@
 		619C334625013ECB00E82084 /* audience_joker_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audience_joker_sound.mp3; sourceTree = "<group>"; };
 		619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1000-16000_answer_wrong.mp3"; sourceTree = "<group>"; };
 		619C334825013ECB00E82084 /* submit_answer_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = submit_answer_sound.mp3; sourceTree = "<group>"; };
-		619C334925013ECB00E82084 /* correct_answer_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct_answer_sound.mp3; sourceTree = "<group>"; };
 		619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1000-16000_intro_sound.mp3"; sourceTree = "<group>"; };
 		619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "32000-5000000_intro_song.mp3"; sourceTree = "<group>"; };
 		619C334D25013ECB00E82084 /* outro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = outro_sound.mp3; sourceTree = "<group>"; };
@@ -118,7 +116,7 @@
 		619C335925013ECB00E82084 /* general_intro_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = general_intro_sound.mp3; sourceTree = "<group>"; };
 		619C335A25013ECB00E82084 /* 1000000_answer_correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000000_answer_correct.mp3; sourceTree = "<group>"; };
 		619C335B25013ECB00E82084 /* 500_security_level.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 500_security_level.mp3; sourceTree = "<group>"; };
-		61D11F0624FAC9020034CE11 /* ButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShape.swift; sourceTree = "<group>"; };
+		61D11F0624FAC9020034CE11 /* AnswerButtonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonShape.swift; sourceTree = "<group>"; };
 		61D11F0824FAE4C30034CE11 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		61E63BE7257AC00400620E28 /* GameIntroVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GameIntroVideo.mp4; sourceTree = "<group>"; };
 		61E7985924FAB16D009F914E /* WerWirdMillionaer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WerWirdMillionaer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,7 +196,6 @@
 				619C334625013ECB00E82084 /* audience_joker_sound.mp3 */,
 				619C334725013ECB00E82084 /* 1000-16000_answer_wrong.mp3 */,
 				619C334825013ECB00E82084 /* submit_answer_sound.mp3 */,
-				619C334925013ECB00E82084 /* correct_answer_sound.mp3 */,
 				619C334A25013ECB00E82084 /* 1000-16000_intro_sound.mp3 */,
 				619C334C25013ECB00E82084 /* 32000-5000000_intro_song.mp3 */,
 				619C334D25013ECB00E82084 /* outro_sound.mp3 */,
@@ -237,7 +234,7 @@
 		61A4FB33257A98BA00BEEE78 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				61D11F0624FAC9020034CE11 /* ButtonShape.swift */,
+				61D11F0624FAC9020034CE11 /* AnswerButtonShape.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -414,7 +411,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E7986424FAB16F009F914E /* Preview Assets.xcassets in Resources */,
-				619C336025013ECB00E82084 /* correct_answer_sound.mp3 in Resources */,
 				61E63BE8257AC00400620E28 /* GameIntroVideo.mp4 in Resources */,
 				619C336625013ECC00E82084 /* 1000000_answer_wrong.mp3 in Resources */,
 				619C336825013ECC00E82084 /* 1000000_intro_sound.mp3 in Resources */,
@@ -483,7 +479,7 @@
 				6164E622250431A600DC57FC /* HomeView.swift in Sources */,
 				6175F843257AA1F0005B5EC8 /* GameIntroVideoView.swift in Sources */,
 				614FE8FC24FEA51C005FE41B /* JokerButtonsView.swift in Sources */,
-				61D11F0724FAC9020034CE11 /* ButtonShape.swift in Sources */,
+				61D11F0724FAC9020034CE11 /* AnswerButtonShape.swift in Sources */,
 				6175F83E257A9BF0005B5EC8 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

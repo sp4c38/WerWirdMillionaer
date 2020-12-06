@@ -22,7 +22,7 @@ struct QuestionTextView: View {
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
         }
-        .buttonStyle(AnswerButtonStyle(isCorrectAndSelected: false))
+        .buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: nil))
         .disabled(true)
     }
 }
@@ -100,6 +100,6 @@ struct AnswerButton: View {
                 showingAnswer = gameStateData.randomQuestion.answerD ?? ""
             }
         }
-        .buttonStyle(AnswerButtonStyle(isCorrectAndSelected: (gameStateData.questionAnsweredCorrectly == true && gameStateData.randomQuestion.correctAnswer == showingAnswer) ? true : false))
+        .buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: (gameStateData.randomQuestion.correctAnswer == showingAnswer) ? gameStateData.questionAnsweredCorrectly : nil))
     }
 }

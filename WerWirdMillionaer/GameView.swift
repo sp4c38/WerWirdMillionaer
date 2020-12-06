@@ -9,7 +9,9 @@ import AVFoundation
 import SwiftUI
 
 struct GameView: View {
+    @EnvironmentObject var gameStateData: GameStateData
     @EnvironmentObject var mainViewController: MainViewController
+    @EnvironmentObject var soundManager: SoundManager
     
     var prizesLoadedSuccessful: Bool = false
     
@@ -48,6 +50,10 @@ struct GameView: View {
             )
             .ignoresSafeArea()
             .animation(.easeInOut(duration: 0.2))
+            .onAppear {
+                let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
+                soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+            }
         }
     }
 }

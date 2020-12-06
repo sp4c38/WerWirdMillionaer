@@ -33,7 +33,7 @@ func telephoneJoker(gameStateData: GameStateData) {
     let utterance = AVSpeechUtterance(string: guessedAnswer)
     utterance.voice = AVSpeechSynthesisVoice(language: "German")
     utterance.volume = 1.0
-    utterance.pitchMultiplier = Float.random(in: 0.3..<2)
+    utterance.pitchMultiplier = Float.random(in: 0.7..<1.6)
     let speech = AVSpeechSynthesizer()
     speech.speak(utterance)
 }
@@ -137,8 +137,6 @@ func fifthfiftyJoker(gameStateData: GameStateData) {
         return
     }
     
-//    print("Before \(answerOptions)")
-    
     var randomList = [0, 1, 2, 3] // Must be sorted
     randomList.remove(at: currentAnswerIndex)
     let originalRandomElementIndex = randomList.firstIndex(of: randomList.randomElement()!)!
@@ -148,10 +146,7 @@ func fifthfiftyJoker(gameStateData: GameStateData) {
     }
     answerOptions[firstRandomElementIndex] = nil
     randomList.remove(at: originalRandomElementIndex)
-//    print("Set first to \(firstRandomElementIndex)")
     
-//    print(answerOptions)
-//    print(randomList)
     var secondRandomElementIndex = randomList.firstIndex(of: randomList.randomElement()!)!
     if secondRandomElementIndex >= originalRandomElementIndex {
         secondRandomElementIndex += 1
@@ -160,9 +155,6 @@ func fifthfiftyJoker(gameStateData: GameStateData) {
         secondRandomElementIndex += 1
     }
     answerOptions[secondRandomElementIndex] = nil
-//    print("Set second to \(secondRandomElementIndex)")
-    
-//    print("After \(answerOptions)")
     
     gameStateData.randomQuestion.answerA = answerOptions[0]
     gameStateData.randomQuestion.answerB = answerOptions[1]

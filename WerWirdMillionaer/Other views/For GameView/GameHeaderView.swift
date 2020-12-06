@@ -93,7 +93,7 @@ struct GameHeaderView: View {
                             let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: false)
                             soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 10.1) {
                                 soundManager.stopAllSounds()
 
                                 gameStateData.softStop = false

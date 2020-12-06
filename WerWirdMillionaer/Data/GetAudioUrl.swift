@@ -8,6 +8,10 @@
 import AVFoundation
 import Foundation
 
+func getGeneralMusicAudioUrl() -> URL? {
+    return Bundle.main.url(forResource: "general_intro_sound", withExtension: "mp3")
+}
+
 func getBackgroundAudioUrl(currentPrizesLevel: Int, previousPrizeLevel: Int) -> URL? {
     // The previous prize level is needed to check if the music is still the same with the current prize level compared to the previous prize level. If so the music already playing can play further and doesn't need to start new.
     

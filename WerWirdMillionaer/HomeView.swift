@@ -33,7 +33,6 @@ struct QuestionmarkModifier: ViewModifier {
 }
 
 struct HomeView: View {
-    @EnvironmentObject var gameStateData: GameStateData
     @EnvironmentObject var mainViewController: MainViewController
     @EnvironmentObject var soundManager: SoundManager
     
@@ -115,8 +114,8 @@ struct HomeView: View {
         .preferredColorScheme(.light)
         .onAppear {
             // Comment when using Canvas
-            let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
-            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+            let backgroundSoundUrl = getGeneralMusicAudioUrl()
+            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl, playInfinite: false)
         }
     }
 }
