@@ -22,7 +22,19 @@ struct QuestionTextView: View {
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
         }
-//        .buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: nil))
+        .frame(maxWidth: .infinity)
+        .padding()
+        .padding(.trailing, 15)
+        .padding(.leading, 15)
+        .background(
+            ZStack {
+                AnswerButtonShape()
+                    .fill(Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294))
+                
+                AnswerButtonShape()
+                    .stroke(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451), lineWidth: 3)
+            }
+        )
         .disabled(true)
     }
 }
