@@ -37,6 +37,7 @@ class SoundManager: NSObject, AVAudioPlayerDelegate, ObservableObject {
         if let soundUrl = soundUrl {
             do {
                 backgroundMusicPlayer = try AVAudioPlayer(contentsOf: soundUrl)
+                backgroundMusicPlayer.volume = 0.8
                 if playInfinite {
                     backgroundMusicPlayer.numberOfLoops = -1
                 } else {

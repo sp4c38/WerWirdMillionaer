@@ -49,7 +49,7 @@ struct ContentView: View {
                     .transition(.opacity)
                     .zIndex(3)
             }
-        }.animation(.easeInOut)
+        }
     }
 }
 

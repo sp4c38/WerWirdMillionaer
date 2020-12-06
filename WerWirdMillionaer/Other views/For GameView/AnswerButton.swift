@@ -22,7 +22,7 @@ struct QuestionTextView: View {
                 .padding(.leading, 20)
                 .padding(.trailing, 20)
         }
-        .buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: nil))
+//        .buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: nil))
         .disabled(true)
     }
 }
@@ -34,6 +34,7 @@ struct AnswerButton: View {
     @EnvironmentObject var gameStateData: GameStateData
 
     @State var showingAnswer: String = ""
+    @State var showOpacity: Double = 1
     
     var answerName: String
     var showingAnswerIndex: Int // Index of the possible answer which is shown
@@ -49,6 +50,18 @@ struct AnswerButton: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             gameStateData.timeKeepCounting = false
             gameStateData.questionAnsweredCorrectly = answerCorrect
+        }
+    }
+    
+    func getButtonBackgroundColor() -> Color {
+        if gameStateData.questionAnsweredCorrectly == true && showingAnswer == gameStateData.randomQuestion.correctAnswer {
+            return Color(hue: 0.3244, saturation: 0.7222, brightness: 0.7059)
+        } else if gameStateData.questionAnsweredCorrectly == false && showingAnswer == gameStateData.answerSubmitted {
+            return Color.red
+        } else if gameStateData.answerSubmitted != nil && gameStateData.answerSubmitted == showingAnswer {
+            return Color.yellow
+        } else {
+            return Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294)
         }
     }
     
@@ -107,10 +120,30 @@ struct AnswerButton: View {
                 showingAnswer = gameStateData.randomQuestion.answerD ?? ""
             }
         }
-        .buttonStyle(AnswerButtonStyle(
-                        answerSubmitted: gameStateData.answerSubmitted,
-                        questionAnsweredCorrectly: gameStateData.questionAnsweredCorrectly,
-                        showingAnswer: showingAnswer,
-                        correctAnswer: gameStateData.randomQuestion.correctAnswer))
+        .frame(maxWidth: .infinity)
+        .padding()
+        .padding(.trailing, 15)
+        .padding(.leading, 15)
+        .background(
+            ZStack {
+                AnswerButtonShape()
+                    .fill(getButtonBackgroundColor())
+                
+                if gameStateData.questionAnsweredCorrectly == false && showingAnswer == gameStateData.randomQuestion.correctAnswer {
+                    AnswerButtonShape()
+                        .fill(Color.green)
+                        .opacity(showOpacity)
+                        .animation(Animation.easeInOut(duration: 0.8).repeatForever(autoreverses: false))
+                        .onAppear {
+                            withAnimation(Animation.easeInOut.repeatForever()) {
+                                showOpacity = 0
+                            }
+                        }
+                }
+                
+                AnswerButtonShape()
+                    .stroke(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451), lineWidth: 3)
+            }
+        )
     }
 }

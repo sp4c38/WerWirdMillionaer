@@ -7,57 +7,6 @@
 
 import SwiftUI
 
-struct AnswerButtonStyle: ButtonStyle {
-    @State var answeredFalseOpacity: Bool = false
-    
-    var answerSubmitted: String?
-    var questionAnsweredCorrectly: Bool?
-    var showingAnswer: String
-    var correctAnswer: String
-    
-    init(answerSubmitted: String? = nil, questionAnsweredCorrectly: Bool? = nil, showingAnswer: String = "", correctAnswer: String = "") {
-        self.answerSubmitted = answerSubmitted
-        self.questionAnsweredCorrectly = questionAnsweredCorrectly
-        self.showingAnswer = showingAnswer
-        self.correctAnswer = correctAnswer
-    }
-    
-    func getButtonBackgroundColor() -> Color {
-        if questionAnsweredCorrectly == true && showingAnswer == correctAnswer {
-            return Color(hue: 0.3244, saturation: 0.7222, brightness: 0.7059)
-        } else if questionAnsweredCorrectly == false && showingAnswer == answerSubmitted {
-            return Color.red
-        } else if answerSubmitted != nil && answerSubmitted == showingAnswer {
-            return Color.yellow
-        } else {
-            return Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294)
-        }
-    }
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .frame(maxWidth: .infinity)
-            .padding()
-            .padding(.trailing, 15)
-            .padding(.leading, 15)
-            .background(
-                ZStack {
-                    if questionAnsweredCorrectly == false {
-                        AnswerButtonShape()
-                            .fill(getButtonBackgroundColor())
-                    }
-                    
-                    AnswerButtonShape()
-                        .fill(getButtonBackgroundColor())
-                        .scaleEffect(answeredFalseOpacity ? 0.5 : 1)
-                    
-                    AnswerButtonShape()
-                        .stroke(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451), lineWidth: 3)
-                }
-            )
-    }
-}
-
 struct AnswerButtonShape: Shape {
     func path(in rect: CGRect) -> Path {
         Path { path in
