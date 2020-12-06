@@ -113,7 +113,7 @@ struct TimeRemainingCircleView: View {
             CircleStatusView(allWedgeNumber: gameStateData.timeAllAvailable, wedgeNumber: gameStateData.timeRemaining)
                 .frame(width: 340, height: 340)
         }
-        .scaleEffect(scaleSmall ? 1 : 1.08)
+        .scaleEffect(scaleSmall ? 1 : 1.1)
         .onReceive(timer) { _ in
             if !(gameStateData.timeRemaining == 0 || gameStateData.timeRemaining < 0) {
                 if gameStateData.timeKeepCounting {

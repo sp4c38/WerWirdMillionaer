@@ -12,6 +12,7 @@ class GameStateData: ObservableObject {
     @Published var oldCurrentPrizeLevel: Int = 0
     
     @Published var questionAnsweredCorrectly: Bool? = nil
+    @Published var answerSubmitted: String? = nil
     
     @Published var randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
     @Published var randomQuestionAnswerIndexes = [Int]() // Will contain four unique numbers each time the question is updated to show the answer options randomly on the Game View
@@ -34,6 +35,7 @@ class GameStateData: ObservableObject {
         self.currentPrizeLevel = 1
         self.oldCurrentPrizeLevel = 0
         self.questionAnsweredCorrectly = nil
+        self.answerSubmitted = nil
         self.randomQuestion = Question(question: "", answerA: "", answerB: "", answerC: "", answerD: "", correctAnswer: "")
         self.randomQuestionAnswerIndexes = [Int]()
         self.timeAllAvailable = 30

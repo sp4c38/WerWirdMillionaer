@@ -58,7 +58,7 @@ struct GameHeaderView: View {
                         .foregroundColor(Color.white)
                         .frame(width: 40)
                         .onAppear {
-                            // Play the sound effect which indicates that the question was answered correctly immediately
+                            // Play the sound effect which indicates that the question was answered correctly
                             let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: true)
                             soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
@@ -93,7 +93,7 @@ struct GameHeaderView: View {
                             let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: false)
                             soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 10.1) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4.1) {
                                 soundManager.stopAllSounds()
 
                                 gameStateData.softStop = false

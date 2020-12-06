@@ -114,8 +114,8 @@ struct HomeView: View {
         .preferredColorScheme(.light)
         .onAppear {
             // Comment when using Canvas
-            let backgroundSoundUrl = getGeneralMusicAudioUrl()
-            soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl, playInfinite: false)
+            let soundUrl = getGeneralMusicAudioUrl(intro: true)
+            soundManager.playBackgroundMusic(soundUrl: soundUrl, playInfinite: false)
         }
     }
 }

@@ -10,30 +10,29 @@ import SwiftUI
 struct AnswerButtonStyle: ButtonStyle {
     @State var answeredFalseOpacity: Bool = false
     
+    var answerSubmitted: String?
     var questionAnsweredCorrectly: Bool?
+    var showingAnswer: String
+    var correctAnswer: String
     
-    init(questionAnsweredCorrectly: Bool? = nil) {
+    init(answerSubmitted: String? = nil, questionAnsweredCorrectly: Bool? = nil, showingAnswer: String = "", correctAnswer: String = "") {
+        self.answerSubmitted = answerSubmitted
         self.questionAnsweredCorrectly = questionAnsweredCorrectly
+        self.showingAnswer = showingAnswer
+        self.correctAnswer = correctAnswer
     }
     
-    func getButtonBackgroundColor(_ questionAnswerIdentifier: Bool?) -> Color {
-        if questionAnswerIdentifier == true {
+    func getButtonBackgroundColor() -> Color {
+        if questionAnsweredCorrectly == true && showingAnswer == correctAnswer {
             return Color(hue: 0.3244, saturation: 0.7222, brightness: 0.7059)
-        } else if questionAnswerIdentifier == false {
-            return Color(hue: 0.3244, saturation: 0.7222, brightness: 0.7059)
+        } else if questionAnsweredCorrectly == false && showingAnswer == answerSubmitted {
+            return Color.red
+        } else if answerSubmitted != nil && answerSubmitted == showingAnswer {
+            return Color.yellow
         } else {
             return Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294)
         }
     }
-    
-//    func loadChanges(_ questionAnswerIdentifier: Bool?) {
-//        if questionAnswerIdentifier == false {
-//            print("Loads changes")
-//            withAnimation(Animation.easeInOut(duration: 0.4).repeatForever()) {
-//                questionAnsweredFalseOpacity = 0
-//            }
-//        }
-//    }
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -45,29 +44,17 @@ struct AnswerButtonStyle: ButtonStyle {
                 ZStack {
                     if questionAnsweredCorrectly == false {
                         AnswerButtonShape()
-                            .fill(getButtonBackgroundColor(nil))
+                            .fill(getButtonBackgroundColor())
                     }
                     
                     AnswerButtonShape()
-                        .fill(getButtonBackgroundColor(questionAnsweredCorrectly))
+                        .fill(getButtonBackgroundColor())
                         .scaleEffect(answeredFalseOpacity ? 0.5 : 1)
-//                        .onAppear {
-//                            withAnimation(Animation.easeInOut(duration: 1).repeatForever()) {
-//                                print("du")
-//                                answeredFalseOpacity.toggle()
-//                            }
-//                        }
                     
                     AnswerButtonShape()
                         .stroke(Color(hue: 0.6381, saturation: 0.1452, brightness: 0.9451), lineWidth: 3)
                 }
             )
-//            .onAppear {
-//                loadChanges(questionAnsweredCorrectly)
-//            }
-//            .onChange(of: questionAnsweredCorrectly) { newIdentifier in
-//                loadChanges(newIdentifier)
-//            }
     }
 }
 
@@ -106,24 +93,6 @@ struct AnswerButtonShapeDividerLine: Shape {
 
             path.move(to: CGPoint(x: 0, y: startHeight))
             path.addRect(CGRect(x: 0, y: startHeight, width: width, height: lineHeight))
-        }
-    }
-}
-
-struct AnswerButtonShape_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack(spacing: 40) {
-            HStack(spacing: -1) {
-                Button(action: {}) {
-                    Text("Antwort A: Irgendeine Antwort")
-                        .foregroundColor(Color.white)
-                }.buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: true))
-            }
-            
-            Button(action: {}) {
-                Text("Antwort A: Irgendeine Antwort")
-                    .foregroundColor(Color.white)
-            }.buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: nil))
         }
     }
 }

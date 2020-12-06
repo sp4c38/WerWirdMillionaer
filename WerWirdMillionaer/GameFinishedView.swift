@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct GameFinishedView: View {
-    @EnvironmentObject var mainViewController: MainViewController
     @EnvironmentObject var gameStateData: GameStateData
+    @EnvironmentObject var mainViewController: MainViewController
+    @EnvironmentObject var soundManager: SoundManager
     
     func findLastPrizeWithSecurityLevel() -> Int {
         for prizeLevel in prizesData.prizeLevels.reversed() {
@@ -93,6 +94,10 @@ struct GameFinishedView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
         .ignoresSafeArea()
+        .onAppear {
+            let soundUrl = getGeneralMusicAudioUrl(outro: true)
+            soundManager.playBackgroundMusic(soundUrl: soundUrl, playInfinite: false)
+        }
     }
 }
 

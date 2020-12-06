@@ -43,14 +43,21 @@ struct AnswerButton: View {
         self.showingAnswerIndex = showingIndex
     }
     
+    func buttonPressedAction(answerCorrect: Bool) {
+        gameStateData.answerSubmitted = showingAnswer
+        soundManager.playSoundEffect(soundUrl: getAnswerSubmittedUrl())
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            gameStateData.timeKeepCounting = false
+            gameStateData.questionAnsweredCorrectly = answerCorrect
+        }
+    }
+    
     var body: some View {
         Button(action: {
             if gameStateData.randomQuestion.correctAnswer == showingAnswer {
-                gameStateData.timeKeepCounting = false
-                gameStateData.questionAnsweredCorrectly = true
+                buttonPressedAction(answerCorrect: true)
             } else {
-                gameStateData.timeKeepCounting = false
-                gameStateData.questionAnsweredCorrectly = false
+                buttonPressedAction(answerCorrect: false)
             }
         }) {
             HStack(spacing: 20) {
@@ -100,6 +107,10 @@ struct AnswerButton: View {
                 showingAnswer = gameStateData.randomQuestion.answerD ?? ""
             }
         }
-        .buttonStyle(AnswerButtonStyle(questionAnsweredCorrectly: (gameStateData.randomQuestion.correctAnswer == showingAnswer) ? gameStateData.questionAnsweredCorrectly : nil))
+        .buttonStyle(AnswerButtonStyle(
+                        answerSubmitted: gameStateData.answerSubmitted,
+                        questionAnsweredCorrectly: gameStateData.questionAnsweredCorrectly,
+                        showingAnswer: showingAnswer,
+                        correctAnswer: gameStateData.randomQuestion.correctAnswer))
     }
 }
