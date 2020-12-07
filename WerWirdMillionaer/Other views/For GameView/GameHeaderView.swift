@@ -22,15 +22,33 @@ struct GameHeaderView: View {
         numberFormatter.maximumFractionDigits = 0
     }
     
-    func getBackgroundColor() -> Color {
+    func getColor(foreground: Bool = false, background: Bool = false) -> Color {
+        if (foreground == false && background == false) || (foreground == true && background == true) {
+            return Color.white
+        }
+        
+        var returnBackgroundColor: Color = Color.white
+        
         if gameStateData.questionAnsweredCorrectly != nil {
             if gameStateData.questionAnsweredCorrectly == true {
-                return Color.green
+                returnBackgroundColor = Color.green
             } else {
-                return Color.red
+                returnBackgroundColor = Color.red
+            }
+        } else if gameStateData.answerSubmitted != nil {
+            returnBackgroundColor = Color(red: 1, green: 0.62, blue: 0)
+        } else {
+            returnBackgroundColor = Color.white
+        }
+        
+        if foreground {
+            if returnBackgroundColor == Color.white {
+                return Color.black
+            } else {
+                return Color.white
             }
         } else {
-            return Color.white
+            return returnBackgroundColor
         }
     }
     
@@ -97,13 +115,13 @@ struct GameHeaderView: View {
 
                 Text("\(numberFormatter.string(from: NSNumber(value: prizesData.prizeLevels[gameStateData.currentPrizeLevel].amount))!) \(prizesData.unit)  Frage")
                     .font(.largeTitle)
-                    .foregroundColor((gameStateData.questionAnsweredCorrectly != nil) ? Color.white : Color.black)
+                    .foregroundColor(getColor(foreground: true))
 
                 Spacer()
             }
             .frame(maxWidth: .infinity)
             .padding()
-            .background(getBackgroundColor())
+            .background(getColor(background: true))
             .cornerRadius(10)
             .shadow(radius: 5)
         }

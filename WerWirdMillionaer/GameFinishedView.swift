@@ -58,7 +58,7 @@ struct GameFinishedView: View {
             .font(.system(size: 150))
             
             if gameStateData.softStop == true || prize.isSecurityLevel {
-                Text("\(numberFormatter.string(from: NSNumber(value: prize.amount)) ?? "NaN") gewonnen!")
+                Text("\(numberFormatter.string(from: NSNumber(value: prize.amount)) ?? "NaN")  gewonnen!")
                     .underline()
                     .bold()
                     .foregroundColor(Color.white)

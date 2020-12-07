@@ -108,6 +108,7 @@ struct TimeRemainingCircleView: View {
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
                     .padding(25)
+                    .animation(nil)
             }
             
             CircleStatusView(allWedgeNumber: gameStateData.timeAllAvailable, wedgeNumber: gameStateData.timeRemaining)

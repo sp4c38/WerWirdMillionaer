@@ -26,7 +26,7 @@ class SoundManager: NSObject, ObservableObject {
                 let item = AVPlayerItem(asset: asset)
                 let params = AVMutableAudioMixInputParameters(track: asset.tracks.first!)
                 
-                let firstSecondFraction = CMTimeRangeMake(start: CMTime(value: 0, timescale: 1), duration: CMTime(value: 2, timescale: 2))
+                let firstSecondFraction = CMTimeRangeMake(start: CMTime(value: 0, timescale: 1), duration: CMTime(value: 1, timescale: 4))
                 
                 params.setVolumeRamp(fromStartVolume: 0, toEndVolume: 1, timeRange: firstSecondFraction)
                 

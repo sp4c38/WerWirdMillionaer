@@ -57,10 +57,10 @@ struct AnswerButton: View {
     }
     
     func buttonPressedAction(answerCorrect: Bool) {
+        gameStateData.timeKeepCounting = false
         gameStateData.answerSubmitted = showingAnswer
         soundManager.playSoundEffect(soundUrl: getAnswerSubmittedUrl())
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            gameStateData.timeKeepCounting = false
             gameStateData.questionAnsweredCorrectly = answerCorrect
         }
     }
@@ -145,7 +145,7 @@ struct AnswerButton: View {
                     AnswerButtonShape()
                         .fill(Color(red: 0.21, green: 0.91, blue: 0))
                         .opacity(showOpacity)
-                        .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: false))
+                        .animation(Animation.easeInOut(duration: 0.4).repeatForever())
                         .onAppear {
                             withAnimation(Animation.easeInOut.repeatForever()) {
                                 showOpacity = 0
