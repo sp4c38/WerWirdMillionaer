@@ -64,13 +64,6 @@ struct GameHeaderView: View {
 
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
                                 // Reset all data for next round
-                                gameStateData.questionAnsweredCorrectly = nil
-
-                                gameStateData.telephoneJokerText = nil
-                                gameStateData.audienceJokerData = nil
-
-                                gameStateData.timeRemaining = gameStateData.timeAllAvailable
-                                
                                 gameStateData.nextPrizeLevel()
                                 gameStateData.updateRandomQuestion()
                                 
@@ -93,7 +86,7 @@ struct GameHeaderView: View {
                             let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: false)
                             soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 4.1) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
                                 soundManager.stopAllSounds()
 
                                 gameStateData.softStop = false

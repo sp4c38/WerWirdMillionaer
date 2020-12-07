@@ -51,6 +51,14 @@ class GameStateData: ObservableObject {
     }
     
     func nextPrizeLevel() {
+        self.answerSubmitted = nil
+        self.questionAnsweredCorrectly = nil
+
+        self.telephoneJokerText = nil
+        self.audienceJokerData = nil
+
+        self.timeRemaining = self.timeAllAvailable
+        
         if currentPrizeLevel + 2 <= questionData!.prizeLevels.count {
             self.currentPrizeLevel += 1
             oldCurrentPrizeLevel += 1

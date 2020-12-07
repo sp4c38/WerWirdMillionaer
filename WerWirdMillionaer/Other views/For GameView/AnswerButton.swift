@@ -71,7 +71,7 @@ struct AnswerButton: View {
         } else if gameStateData.questionAnsweredCorrectly == false && showingAnswer == gameStateData.answerSubmitted {
             return Color.red
         } else if gameStateData.answerSubmitted != nil && gameStateData.answerSubmitted == showingAnswer {
-            return Color.yellow
+            return Color(red: 1, green: 0.62, blue: 0)
         } else {
             return Color(hue: 0.5881, saturation: 0.8945, brightness: 0.9294)
         }
@@ -143,9 +143,9 @@ struct AnswerButton: View {
                 
                 if gameStateData.questionAnsweredCorrectly == false && showingAnswer == gameStateData.randomQuestion.correctAnswer {
                     AnswerButtonShape()
-                        .fill(Color.green)
+                        .fill(Color(red: 0.21, green: 0.91, blue: 0))
                         .opacity(showOpacity)
-                        .animation(Animation.easeInOut(duration: 0.8).repeatForever(autoreverses: false))
+                        .animation(Animation.easeInOut(duration: 1).repeatForever(autoreverses: false))
                         .onAppear {
                             withAnimation(Animation.easeInOut.repeatForever()) {
                                 showOpacity = 0

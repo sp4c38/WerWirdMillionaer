@@ -50,6 +50,7 @@ struct ContentView: View {
                     .zIndex(3)
             }
         }
+        .animation(.easeInOut)
     }
 }
 
