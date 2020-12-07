@@ -53,6 +53,11 @@ struct GameView: View {
             .onAppear {
                 let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
                 soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+                
+                gameStateData.timeKeepCounting = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    gameStateData.timeKeepCounting = true
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 50€:
 <Wird ein Roman häppchenweise in der Tageszeitung abgedruckt, steht am Ende eines Teils meist …?< <^Fortsetzung folgt<  <Bleiben Sie dran!< <Die Spannung steigt< <Ende offen<
 <Was ist die höchste Gewinnstufe bei Wer Wird Millionär?< <100000< <10000< <^1000000< <64000<
+<Was ist ein anerkannter Ausbildungsberuf?< <Gemäldekaiser< <Bildkönig< <Diafürst< <^Fotograf<
 
 100€:
 <Welchem Heiligen ist der 31.12. gewidmet?< <Ali< <Brian< <^Silvester< <Nikolaus<
@@ -21,11 +22,11 @@
 <Was ist eine Glucke?< <^brütendes Huhn< <Gewohnheitstrinkerin< <Dunstschicht< <Himmelbett< 
 <Was gießt man sprichwörtlich ins Feuer, um einen Streit zu verschärfen?< <Wasser< <^Öl< <Spiritus< <Benzin<
 <Über welchen Fluss geht man sprichwörtlich, wenn man das Zeitliche segnet?< <Mosel< <Donau< <Euphrat< <^Jordan<
-<Wie nennt man Kaffee mit einem Schuss Whiskey und Schlagsahne?< <Scottish Delight< <^Irhrishcoffee< <English Cream< <Nessies Dream<
+<Wie nennt man Kaffee mit einem Schuss Whiskey und Schlagsahne?< <Scottish Delight< <^Irish Coffee< <English Cream< <Nessies Dream<
 <Was wird als Firmament bezeichnet?< <Unternehmensgründung< <^Himmelsgewölbe< <trockener Zement< <Ladendiebstahl<
 <In welcher Stadt ist der Fußball-Verein Hertha BSC beheimatet?< <Braunschweig< <Bethel< <^Berlin< <Böklund<
 <Wie lautet der Name Gottes bei den Muslimen?< <Koran< <^Allah< <Mohammed< <Buddha<
-<In welchem Behältnis wird die Achse eines Verstorbenen beigesetzt?< <Vase< <Terrarium< <Wabe< <^Urne<
+<In welchem Behältnis wird die Asche eines Verstorbenen beigesetzt?< <Vase< <Terrarium< <Wabe< <^Urne<
 
 300€:
 <Was steckt sich der Hausarzt bei Bedarf in die Ohren?< <^Stethoskop< <Horoskop< <Kaleidoskop< <Teleskop<
@@ -56,7 +57,6 @@
 <Welche Stadt liegt am Ausgang des Jadebusens?< <^Wilhelmshaven< <Hongkong< <Sydney< <Kiew<
 <Was machte Judas, nachdem er Jesus verraten hatte?< <er wurde Gladiator< <^er erhängt sich< <er wurde Weinhändler< <er ging ins Kloster<
 <Aus dem Fleisch welchen Tieres wurde ursprünglich die Salami hergestellt?< <Hund< <Ratte< <^Esel< <Katze<
-<Wie nennt man ein Person, der die Hoden entfernt wurden?< <Kapaun< <^Kastrat< <Kastor< <Kasuist<
 <Wie hieß der erste Nummer-1-Hit von Britney Spears?< <“Oops … I Did it Again“< <“Genie In A Bottle“< <“All You Need Is Love“< <^“Baby, One More Time“<
 <Welche spätere Nationalheilige Frankreichs wurde 1431 wegen angeblicher Hexerei verbrannt?< <^Jeanne d’Arc< <Maria Stuart< <Anne Boleyn< <Lucrezia Borgia<
 <Wie nennt man die Endpunkte der gedachten Erdachse?< <Äquator< <^Pole< <Meridiane< <Tangenten<
@@ -81,7 +81,7 @@
 4000€:
 <Die des Zaubers unkundigen Menschen in den Harry-Potter-Abendteuern heißen…?< <Rowlings< <Hogwarts< <^Muggels< <Askabans<
 <In welchem Jahr flog das Spaceshuttle das letzte mal?< <2008< <2011< <2012< <2005<
-<Wie heißt das Atom, welches 3 Außenelektronen hat?< <Wasserstoff< <Beryllium< <Helium< <^Lithium<
+<Wie heißt das Atom, welches 3 Außenelektronen hat?< <Wasserstoff< <Beryllium< <Helium< <^Aluminium<
 <Wie nennt man eine Legierung aus Kupfer und Zinn?< <Blei< <Platin< <^Bronze< <Quecksilber<
 <Was tanken Düsenflugzeuge?< <Birkin< <Karotin< <Chinin< <^Kerosin< 
 <Wo zahlt man mit Escudos?< <1Portugal< <Spanien< <Griechenland< <Italien< 

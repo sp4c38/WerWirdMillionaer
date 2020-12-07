@@ -88,10 +88,8 @@ struct GameHeaderView: View {
                                 let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
                                 soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
                                 
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                    gameStateData.timeOver = false
-                                    gameStateData.timeKeepCounting = true
-                                }
+                                gameStateData.timeOver = false
+                                gameStateData.timeKeepCounting = true
                             }
                         }
                 } else if gameStateData.timeOver == true || gameStateData.questionAnsweredCorrectly == false {

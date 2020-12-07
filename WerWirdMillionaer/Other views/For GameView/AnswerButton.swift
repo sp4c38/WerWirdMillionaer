@@ -61,7 +61,7 @@ struct AnswerButton: View {
             gameStateData.timeKeepCounting = false
             gameStateData.answerSubmitted = showingAnswer
             soundManager.playSoundEffect(soundUrl: getAnswerSubmittedUrl())
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 gameStateData.questionAnsweredCorrectly = answerCorrect
             }
         }
@@ -138,6 +138,7 @@ struct AnswerButton: View {
         .padding()
         .padding(.trailing, 15)
         .padding(.leading, 15)
+        .disabled(gameStateData.answerSubmitted != nil ? true : false)
         .background(
             ZStack {
                 AnswerButtonShape()

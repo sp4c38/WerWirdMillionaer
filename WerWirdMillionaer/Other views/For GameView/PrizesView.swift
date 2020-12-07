@@ -24,7 +24,7 @@ struct PrizesView: View {
         let firstPrizeLevelIndex = prizesData.prizeLevels.firstIndex(of: level)
         
         if gameStateData.currentPrizeLevel == firstPrizeLevelIndex {
-            return Color(red: 0.04, green: 0.54, blue: 0.86)
+            return Color.black
         } else if level.isSecurityLevel {
             return Color.white
         } else {
@@ -74,7 +74,7 @@ struct PrizesView: View {
                         }
                         .foregroundColor(getTextForegroundColor(for: level))
                         .padding(.trailing, 10)
-                        .background((gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? Color(red: 0.85, green: 0.39, blue: 0.07) : Color.white.opacity(0))
+                        .background((gameStateData.currentPrizeLevel == firstPrizeLevelIndex!) ? Color.orange : Color.white.opacity(0))
                         .ifTrue(gameStateData.currentPrizeLevel != firstPrizeLevelIndex!) { content in
                             content
                                 .shadow(color: Color.black, radius: 1)
