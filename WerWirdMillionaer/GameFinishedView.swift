@@ -16,7 +16,7 @@ struct GameFinishedView: View {
         for prizeLevel in prizesData.prizeLevels.reversed() {
             let prizeLevelIndex = prizesData.prizeLevels.lastIndex(of: prizeLevel)
             if prizeLevelIndex != nil {
-                if prizeLevel.isSecurityLevel && prizeLevelIndex! < gameStateData.oldCurrentPrizeLevel {
+                if prizeLevel.isSecurityLevel && prizeLevelIndex! <= gameStateData.oldCurrentPrizeLevel {
                     return prizeLevelIndex!
                 }
             }

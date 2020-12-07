@@ -38,7 +38,7 @@ func LoadQuestionsJson(fileName: String, fileExtension: String) -> QuestionData?
     // This JSON file is generated out of more overviewable text by a python script
     
     let fileData: Data
-    let fileContents: QuestionData
+    var fileContents: QuestionData
     let decoder = JSONDecoder()
     
     guard let fileLocation = Bundle.main.url(forResource: fileName, withExtension: fileExtension) else {

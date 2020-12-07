@@ -59,16 +59,16 @@ class GameStateData: ObservableObject {
 
         self.timeRemaining = self.timeAllAvailable
         
-        if currentPrizeLevel + 2 <= questionData!.prizeLevels.count {
+        if currentPrizeLevel + 1 <= questionData!.prizeLevels.count {
             self.currentPrizeLevel += 1
-            oldCurrentPrizeLevel += 1
+            self.oldCurrentPrizeLevel += 1
         } else {
             print("Maximum prize level reached. Staying on \(currentPrizeLevel) prize level")
         }
     }
     
     func updateRandomQuestion() {
-        self.randomQuestion = questionData!.prizeLevels[currentPrizeLevel].questions.randomElement()!
+        self.randomQuestion = questionData!.prizeLevels[currentPrizeLevel - 1].questions.randomElement()! // Subtract 1 of the currentPrizeLevel because there is no 0 Euro prize level in questionData.prizeLevels | currentPrizeLevel = 0 refers to the 0 Euro prize level. Because currentPrizeLevel at initialization is 1, subtract one to get the 0th prize level from questionData.prizeLevelss.
         self.randomQuestion.shuffleOrder()
     }
 }

@@ -57,11 +57,13 @@ struct AnswerButton: View {
     }
     
     func buttonPressedAction(answerCorrect: Bool) {
-        gameStateData.timeKeepCounting = false
-        gameStateData.answerSubmitted = showingAnswer
-        soundManager.playSoundEffect(soundUrl: getAnswerSubmittedUrl())
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            gameStateData.questionAnsweredCorrectly = answerCorrect
+        if gameStateData.timeRemaining != 0 && !(gameStateData.timeRemaining < 0) {
+            gameStateData.timeKeepCounting = false
+            gameStateData.answerSubmitted = showingAnswer
+            soundManager.playSoundEffect(soundUrl: getAnswerSubmittedUrl())
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                gameStateData.questionAnsweredCorrectly = answerCorrect
+            }
         }
     }
     

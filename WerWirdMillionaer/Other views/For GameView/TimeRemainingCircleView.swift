@@ -116,12 +116,15 @@ struct TimeRemainingCircleView: View {
         }
         .scaleEffect(scaleSmall ? 1 : 1.1)
         .onReceive(timer) { _ in
-            if !(gameStateData.timeRemaining == 0 || gameStateData.timeRemaining < 0) {
+            if !(gameStateData.timeRemaining - 1 == 0 || gameStateData.timeRemaining - 1 < 0) { // Subtract one because gameStateData.timeRemaining is still the value from last time
                 if gameStateData.timeKeepCounting {
                     gameStateData.timeRemaining -= 1
                     scaleSmall.toggle()
                 }
             } else {
+                if gameStateData.timeRemaining == 1 {
+                    gameStateData.timeRemaining -= 1
+                }
                 gameStateData.timeOver = true
                 gameStateData.timeKeepCounting = false
                 gameStateData.questionAnsweredCorrectly = false
