@@ -8,57 +8,75 @@
 import AVFoundation
 import Foundation
 
-class SoundManager: NSObject, AVAudioPlayerDelegate, ObservableObject {
-    var soundEffectsPlayers = [URL: AVAudioPlayer]()
-    var backgroundMusicPlayer = AVAudioPlayer()
+class SoundManager: NSObject, ObservableObject {
+    var soundEffectsPlayers = [URL: AVPlayer]()
+    var backgroundMusicPlayer = AVQueuePlayer()
+    var backgroundMusicLooper: AVPlayerLooper? = nil
     
     func playSoundEffect(soundUrl: URL?) {
         if let soundUrl = soundUrl {
             if let currentPlayer = soundEffectsPlayers[soundUrl] { // Player is already stored and not in use
-                if !currentPlayer.isPlaying {
-                    soundEffectsPlayers[soundUrl]!.prepareToPlay()
-                    soundEffectsPlayers[soundUrl]!.play()
+                if currentPlayer.timeControlStatus == .paused {
+                    currentPlayer.seek(to: CMTime(value: 0, timescale: 1))
+                    currentPlayer.play()
                 } else { // Player is already stored but currently in use
                 }
             } else {
-                do {
-                    let currentPlayer = try AVAudioPlayer(contentsOf: soundUrl)
-                    soundEffectsPlayers[soundUrl] = currentPlayer
-                    soundEffectsPlayers[soundUrl]!.prepareToPlay()
-                    soundEffectsPlayers[soundUrl]!.play()
-                } catch {
-                    print("Couldn't play sound file at \(soundUrl). Exited with \(error)")
-                }
+                let asset = AVAsset(url: soundUrl)
+                let item = AVPlayerItem(asset: asset)
+                let params = AVMutableAudioMixInputParameters(track: asset.tracks.first!)
+                
+                let firstSecondFraction = CMTimeRangeMake(start: CMTime(value: 0, timescale: 1), duration: CMTime(value: 2, timescale: 2))
+                
+                params.setVolumeRamp(fromStartVolume: 0, toEndVolume: 1, timeRange: firstSecondFraction)
+                
+                let mixer = AVMutableAudioMix()
+                mixer.inputParameters = [params]
+                item.audioMix = mixer
+                
+                let currentPlayer = AVPlayer(playerItem: item)
+                soundEffectsPlayers[soundUrl] = currentPlayer
+                soundEffectsPlayers[soundUrl]?.play()
             }
         }
     }
     
     func playBackgroundMusic(soundUrl: URL?, playInfinite: Bool = true) {
         if let soundUrl = soundUrl {
-            do {
-                backgroundMusicPlayer = try AVAudioPlayer(contentsOf: soundUrl)
-                backgroundMusicPlayer.volume = 0.8
-                if playInfinite {
-                    backgroundMusicPlayer.numberOfLoops = -1
-                } else {
-                    backgroundMusicPlayer.numberOfLoops = 0
-                }
-                backgroundMusicPlayer.prepareToPlay()
-                backgroundMusicPlayer.play()
-            } catch {
-                print("Couldn't play sound file at \(soundUrl). Exited with \(error)")
+            let asset = AVAsset(url: soundUrl)
+            let duration = CMTimeGetSeconds(asset.duration)
+            let item = AVPlayerItem(asset: AVAsset(url: soundUrl))
+            
+            let params = AVMutableAudioMixInputParameters(track: asset.tracks.first!)
+            
+            let firstSecond = CMTimeRangeMake(start: CMTimeMake(value: 0, timescale: 1), duration: CMTimeMake(value: 1, timescale: 1))
+            let lastSecond = CMTimeRangeMake(start: CMTimeMake(value: Int64(duration - 1), timescale: 1), duration: CMTimeMake(value: 1, timescale: 1))
+            
+            params.setVolumeRamp(fromStartVolume: 0, toEndVolume: 0.8, timeRange: firstSecond)
+            params.setVolumeRamp(fromStartVolume: 0.8, toEndVolume: 0, timeRange: lastSecond)
+            
+            let mix = AVMutableAudioMix()
+            
+            mix.inputParameters = [params]
+            item.audioMix = mix
+            
+            backgroundMusicPlayer = AVQueuePlayer(playerItem: item)
+            if playInfinite {
+                backgroundMusicLooper = AVPlayerLooper(player: backgroundMusicPlayer, templateItem: item)
             }
+
+            backgroundMusicPlayer.play()
         }
     }
     
     func stopAllSounds() {
-        if backgroundMusicPlayer.isPlaying {
-            backgroundMusicPlayer.stop()
+        if !backgroundMusicPlayer.items().isEmpty {
+            backgroundMusicPlayer.pause()
         }
         
         for soundEffect in soundEffectsPlayers {
-            if soundEffect.value.isPlaying {
-                soundEffect.value.stop()
+            if soundEffect.value.timeControlStatus == .playing {
+                soundEffect.value.pause()
             }
         }
     }

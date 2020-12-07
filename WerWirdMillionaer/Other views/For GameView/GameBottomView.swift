@@ -15,7 +15,7 @@ struct GameBottomView: View {
             Image("GuenterJauchOnChair")
                 .resizable()
                 .scaledToFit()
-                .padding(.leading, 3)
+                .padding(.leading, 33)
                 .padding(.top, -70)
             
             VStack {

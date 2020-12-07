@@ -244,6 +244,7 @@
 			children = (
 				617F3C7024FBAE0F0055930B /* Questions */,
 				619C334425013ECB00E82084 /* Sounds */,
+				61F2F6D3257E13680088C4E8 /* Videos */,
 				61E7985B24FAB16D009F914E /* WerWirdMillionaer */,
 				61E7986D24FAB16F009F914E /* WerWirdMillionaerTests */,
 				61E7987824FAB16F009F914E /* WerWirdMillionaerUITests */,
@@ -269,7 +270,6 @@
 				6144455E2503C053003D0254 /* Other views */,
 				61E7985C24FAB16D009F914E /* WerWirdMillionaerApp.swift */,
 				61E7985E24FAB16D009F914E /* ContentView.swift */,
-				61E63BE7257AC00400620E28 /* GameIntroVideo.mp4 */,
 				6164E621250431A500DC57FC /* HomeView.swift */,
 				61D11F0824FAE4C30034CE11 /* GameView.swift */,
 				6175F842257AA1F0005B5EC8 /* GameIntroVideoView.swift */,
@@ -305,6 +305,14 @@
 				61E7987B24FAB16F009F914E /* Info.plist */,
 			);
 			path = WerWirdMillionaerUITests;
+			sourceTree = "<group>";
+		};
+		61F2F6D3257E13680088C4E8 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				61E63BE7257AC00400620E28 /* GameIntroVideo.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
