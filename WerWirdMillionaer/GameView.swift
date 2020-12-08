@@ -32,7 +32,7 @@ struct GameView: View {
                     Spacer()
                     Spacer()
 
-                    GameCenterView() // Includes: Joker buttons, timer, prizes view
+                    GameCenterView() // Includes: Joker buttons, joker results, timer, prizes view
                         
                     Spacer()
                         

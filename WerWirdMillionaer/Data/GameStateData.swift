@@ -47,7 +47,7 @@ class GameStateData: ObservableObject {
         self.audienceJokerActive = true
         self.fiftyfiftyJokerActive = true
         self.audienceJokerData = nil
-        self.softStop = false
+        self.softStop = nil
     }
     
     func nextPrizeLevel() {

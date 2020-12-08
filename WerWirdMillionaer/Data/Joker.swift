@@ -41,9 +41,9 @@ func telephoneJoker(gameStateData: GameStateData) {
 struct VotingVariant: Hashable {
     let name: String
     let height: CGFloat
-    let probability: NSNumber
+    let probability: Double
     
-    init(name: String, height: CGFloat, probability: NSNumber) {
+    init(name: String, height: CGFloat, probability: Double) {
         self.name = name
         self.height = height
         self.probability = probability
@@ -55,38 +55,78 @@ class AudiencePollCollection {
     let minHeight: CGFloat = 10
     let width: CGFloat = 50
     
-    var votingVariant = [VotingVariant(name: "", height: 0, probability: 0), VotingVariant(name: "", height: 0, probability: 0), VotingVariant(name: "", height: 0, probability: 0), VotingVariant(name: "", height: 0, probability: 0)]
+    var votingVariant = [VotingVariant]()
 }
 
 func audienceJoker(gameStateData: GameStateData) -> AudiencePollCollection {
+    let currentPrizeLevel = gameStateData.currentPrizeLevel - 1 // Subtract one to now include 0 Euro prize level
+    
     let audiencePollCollection = AudiencePollCollection()
-    let probability: CGFloat
 
-    if gameStateData.currentPrizeLevel < 2 {
-        probability = 1
-    } else {
-        probability = 0.5
+    var minimumAnswerProbability: Double = 0.60
+    var extraProbability: Double = 0
+    
+    if 0...4 ~= currentPrizeLevel {
+        minimumAnswerProbability = 0.85
+        extraProbability = Double.random(in: 0.01...0.06)
+    } else if 5...8 ~= currentPrizeLevel {
+        minimumAnswerProbability = 0.75
+        extraProbability = Double.random(in: 0.01...0.08)
+    } else if 9...12 ~= currentPrizeLevel {
+        minimumAnswerProbability = 0.70
+        extraProbability = Double.random(in: 0.01...0.06)
+    } else if 13...14 ~= currentPrizeLevel {
+        minimumAnswerProbability = 0.60
+        extraProbability = Double.random(in: 0.01...0.05)
     }
-
+    
+    let probabilityForNonCorrect = 1 - (minimumAnswerProbability + extraProbability)
+    
+    let firstOtherProbability = Double.random(in: 0...(probabilityForNonCorrect > 3 ? probabilityForNonCorrect - 3 : probabilityForNonCorrect))
+    let secondOtherProbability = Double.random(in: 0...(probabilityForNonCorrect - firstOtherProbability))
+    let thirdOtherProbability = probabilityForNonCorrect - firstOtherProbability - secondOtherProbability
+    
     var currentIndex = 0
-    for variant in [gameStateData.randomQuestion.answerA,
-                    gameStateData.randomQuestion.answerB,
-                    gameStateData.randomQuestion.answerC,
-                    gameStateData.randomQuestion.answerD] {
+    var probabilityIndex = 0
+    for answerPossibility in [gameStateData.randomQuestion.answerA,
+                              gameStateData.randomQuestion.answerB,
+                              gameStateData.randomQuestion.answerC,
+                              gameStateData.randomQuestion.answerD] {
         
-        let name: String = ((currentIndex == 0) ? "A" : ((currentIndex == 1) ? "B" : ((currentIndex == 2) ? "C" : ((currentIndex == 3) ? "D" : ""))))
-        let isCorrect = (gameStateData.randomQuestion.correctAnswer == variant)
+        var probability: Double = 0
+        if answerPossibility == gameStateData.randomQuestion.correctAnswer {
+            probability = (minimumAnswerProbability + extraProbability)
+        }
         
-        audiencePollCollection.votingVariant[currentIndex] =
+        if probability == 0 {
+            probability = (probabilityIndex == 0 ? firstOtherProbability :
+                            (probabilityIndex == 1 ? secondOtherProbability :
+                                thirdOtherProbability))
+            probabilityIndex += 1
+        }
+        
+        var height: CGFloat = 0
+        height = audiencePollCollection.maximalHeight * CGFloat(probability)
+        if height < audiencePollCollection.minHeight {
+            height = audiencePollCollection.minHeight
+        }
+        
+        var name = ""
+        if currentIndex == 0 {
+            name = "A"
+        } else if currentIndex == 1 {
+            name = "B"
+        } else if currentIndex == 2 {
+            name = "C"
+        } else if currentIndex == 3 {
+            name = "D"
+        }
+        
+        audiencePollCollection.votingVariant.append(
             VotingVariant(
                 name: name,
-                height: CGFloat(
-                    (isCorrect ? (audiencePollCollection.maximalHeight * probability) :
-                        audiencePollCollection.minHeight)
-                ),
-                probability: (isCorrect ? NSNumber(value: Float(probability)) : 0)
-            )
-        
+                height: height,
+                probability: probability))
         currentIndex += 1
     }
     
@@ -108,7 +148,7 @@ struct AudienceJokerResultView: View {
         HStack(alignment: .bottom, spacing: 20) {
             ForEach(gameStateData.audienceJokerData!.votingVariant, id: \.self) { pollSection in
                 VStack {
-                    Text((audienceJokerNumberFormatter.string(from: pollSection.probability) != nil) ? audienceJokerNumberFormatter.string(from: pollSection.probability)! : "")
+                    Text((audienceJokerNumberFormatter.string(from: NSNumber(value: pollSection.probability)) != nil) ? audienceJokerNumberFormatter.string(from: NSNumber(value: pollSection.probability))! : "")
                         .foregroundColor(Color.white)
 
                     RoundedRectangle(cornerRadius: 10)
