@@ -17,7 +17,7 @@ struct JokerButtonsView: View {
             ZStack {
                 Button (action: {
                     if gameStateData.fiftyfiftyJokerActive {
-                        fifthfiftyJoker(gameStateData: gameStateData)
+                        fiftyfiftyJoker(gameStateData: gameStateData)
                         gameStateData.fiftyfiftyJokerActive = false
                         let soundUrl = getJokerAudioUrl(jokerName: "50-50")
                         soundManager.playSoundEffect(soundUrl: soundUrl)
@@ -43,7 +43,7 @@ struct JokerButtonsView: View {
             ZStack {
                 Button (action: {
                     if gameStateData.audienceJokerActive {
-                        gameStateData.audienceJokerData =  audienceJoker(gameStateData: gameStateData)
+                        gameStateData.audienceJokerData = audienceJoker(gameStateData: gameStateData)
                         gameStateData.audienceJokerActive = false
                         let soundUrl = getJokerAudioUrl(jokerName: "audience")
                         soundManager.playSoundEffect(soundUrl: soundUrl)

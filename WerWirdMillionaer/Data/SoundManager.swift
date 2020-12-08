@@ -69,6 +69,14 @@ class SoundManager: NSObject, ObservableObject {
         }
     }
     
+    func stopPlayingSoundEffect(for soundUrl: URL) {
+        if soundEffectsPlayers[soundUrl] != nil {
+            if soundEffectsPlayers[soundUrl]!.timeControlStatus == .playing {
+                soundEffectsPlayers[soundUrl]!.pause()
+            }
+        }
+    }
+    
     func stopAllSounds() {
         if !backgroundMusicPlayer.items().isEmpty {
             backgroundMusicPlayer.pause()

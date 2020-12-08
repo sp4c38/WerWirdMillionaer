@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameCenterView: View {
     @EnvironmentObject var gameStateData: GameStateData
+    @EnvironmentObject var soundManager: SoundManager
     
     var body: some View {
         HStack {
@@ -54,6 +55,14 @@ struct GameCenterView: View {
         }
         .padding(.leading, 40)
         .padding(.trailing, 40)
+        .onReceive(gameStateData.$audienceJokerData) { newValue in
+            if newValue == nil {
+                let soundUrl = getJokerAudioUrl(jokerName: "audience")
+                if soundUrl != nil {
+                    soundManager.stopPlayingSoundEffect(for: soundUrl!)
+                }
+            }
+        }
     }
 }
 

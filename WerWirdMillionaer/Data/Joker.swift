@@ -145,32 +145,36 @@ struct AudienceJokerResultView: View {
     }
     
     var body: some View {
-        HStack(alignment: .bottom, spacing: 20) {
-            ForEach(gameStateData.audienceJokerData!.votingVariant, id: \.self) { pollSection in
-                VStack {
-                    Text((audienceJokerNumberFormatter.string(from: NSNumber(value: pollSection.probability)) != nil) ? audienceJokerNumberFormatter.string(from: NSNumber(value: pollSection.probability))! : "")
-                        .foregroundColor(Color.white)
+        if gameStateData.audienceJokerData != nil {
+            HStack(alignment: .bottom, spacing: 20) {
+                ForEach(gameStateData.audienceJokerData!.votingVariant, id: \.self) { pollSection in
+                    VStack {
+                        Text((audienceJokerNumberFormatter.string(from: NSNumber(value: pollSection.probability)) != nil) ? audienceJokerNumberFormatter.string(from: NSNumber(value: pollSection.probability))! : "")
+                            .foregroundColor(Color.white)
 
-                    RoundedRectangle(cornerRadius: 10)
-                        .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .bottom, endPoint: .top))
-                        .frame(width: gameStateData.audienceJokerData!.width, height: pollSection.height)
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .bottom, endPoint: .top))
+                            .frame(width: gameStateData.audienceJokerData!.width, height: pollSection.height)
 
-                    Text(pollSection.name)
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color(hue: 0.0764, saturation: 0.8571, brightness: 0.9882))
+                        Text(pollSection.name)
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(Color(hue: 0.0764, saturation: 0.8571, brightness: 0.9882))
+                    }
                 }
             }
+            .padding(10)
+            .background(Color.black.opacity(0.87))
+            .cornerRadius(10)
+            .padding(.leading, 10)
+            .padding(.trailing, 10)
+        } else {
+            VStack {}
         }
-        .padding(10)
-        .background(Color.black.opacity(0.87))
-        .cornerRadius(10)
-        .padding(.leading, 10)
-        .padding(.trailing, 10)
     }
 }
 
-func fifthfiftyJoker(gameStateData: GameStateData) {
+func fiftyfiftyJoker(gameStateData: GameStateData) {
     var answerOptions = [gameStateData.randomQuestion.answerA, gameStateData.randomQuestion.answerB,
                          gameStateData.randomQuestion.answerC, gameStateData.randomQuestion.answerD]
     guard let currentAnswerIndex = answerOptions.firstIndex(of: gameStateData.randomQuestion.correctAnswer) else {
