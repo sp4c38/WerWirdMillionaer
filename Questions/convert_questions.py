@@ -35,8 +35,9 @@ def main():
         if not current_prize_level == -1:
             question = {"question": "", "answerA": "", "answerB": "", "answerC": "", "answerD": "", "correctAnswer": ""}
             sections = line.split("<")
+            print(sections)
             for section in sections:
-                if section.replace(" ", ""):
+                if section.replace(" ", "") and section.replace("\xa0", ""):
                     if not question["question"] and not question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
                         question["question"] = section
 
@@ -56,12 +57,12 @@ def main():
                         section = section.split("^")
                         question = add_answer(section, "answerD", question)
 
-            if question["question"] and question["answerA"] and question["answerB"] and question["answerC"] and question["answerD"]:
+            if question["question"] and question["answerA"] and question["answerB"] and question["answerC"] and question["answerD"] and question["correctAnswer"]:
                 output_json["prizeLevels"][current_prize_level]["questions"].append(question)
             else:
                 line_empty = False
                 if len(sections) == 1:
-                    if sections[0].replace(" ", "") == "":
+                    if sections[0].replace(" ", "") == "" or sections[0].replace("\xa0", ""):
                         line_empty = True
                 if not line_empty:
                     print(f"Couldn't scan {sections}. This section wasn't added to output.")

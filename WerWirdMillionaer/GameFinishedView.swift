@@ -84,8 +84,8 @@ struct GameFinishedView: View {
                 .background(Color.white)
                 .cornerRadius(10)
                 .onTapGesture {
-                    gameStateData.resetForNextGame()
                     mainViewController.changeViewShowIndex(newViewNumber: 1)
+                    gameStateData.resetForNextGame()
                     gameStateData.updateRandomQuestion()
                 }
         }
