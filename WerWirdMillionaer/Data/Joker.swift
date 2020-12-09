@@ -70,19 +70,19 @@ func audienceJoker(gameStateData: GameStateData) -> AudiencePollCollection {
         minimumAnswerProbability = 0.85
         extraProbability = Double.random(in: 0.01...0.06)
     } else if 5...8 ~= currentPrizeLevel {
-        minimumAnswerProbability = 0.75
+        minimumAnswerProbability = 0.70
         extraProbability = Double.random(in: 0.01...0.08)
     } else if 9...12 ~= currentPrizeLevel {
-        minimumAnswerProbability = 0.70
+        minimumAnswerProbability = 0.60
         extraProbability = Double.random(in: 0.01...0.06)
     } else if 13...14 ~= currentPrizeLevel {
-        minimumAnswerProbability = 0.60
+        minimumAnswerProbability = 0.47
         extraProbability = Double.random(in: 0.01...0.05)
     }
     
     let probabilityForNonCorrect = 1 - (minimumAnswerProbability + extraProbability)
     
-    let firstOtherProbability = Double.random(in: 0...(probabilityForNonCorrect > 3 ? probabilityForNonCorrect - 3 : probabilityForNonCorrect))
+    let firstOtherProbability = Double.random(in: 0...probabilityForNonCorrect)
     let secondOtherProbability = Double.random(in: 0...(probabilityForNonCorrect - firstOtherProbability))
     let thirdOtherProbability = probabilityForNonCorrect - firstOtherProbability - secondOtherProbability
     

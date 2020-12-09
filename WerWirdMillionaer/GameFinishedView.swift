@@ -85,8 +85,6 @@ struct GameFinishedView: View {
                 .cornerRadius(10)
                 .onTapGesture {
                     mainViewController.changeViewShowIndex(newViewNumber: 1)
-                    gameStateData.resetForNextGame()
-                    gameStateData.updateRandomQuestion()
                 }
         }
         .shadow(radius: 10)

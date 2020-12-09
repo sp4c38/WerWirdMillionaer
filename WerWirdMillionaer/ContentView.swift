@@ -50,7 +50,15 @@ struct ContentView: View {
                     .zIndex(3)
             }
         }
-        .animation(.easeInOut)
+        .onChange(of: mainViewController.viewShowIndex) { newValue in
+            if newValue == 1 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    gameStateData.resetForNextGame()
+                    gameStateData.updateRandomQuestion()
+                }
+            }
+        }
+        .animation(.easeInOut(duration: 0.6))
     }
 }
 
