@@ -35,7 +35,6 @@ def main():
         if not current_prize_level == -1:
             question = {"question": "", "answerA": "", "answerB": "", "answerC": "", "answerD": "", "correctAnswer": ""}
             sections = line.split("<")
-
             for section in sections:
                 if section.replace(" ", ""):
                     if not question["question"] and not question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
@@ -60,7 +59,12 @@ def main():
             if question["question"] and question["answerA"] and question["answerB"] and question["answerC"] and question["answerD"]:
                 output_json["prizeLevels"][current_prize_level]["questions"].append(question)
             else:
-                print(f"Error scanning {section}.")
+                line_empty = False
+                if len(sections) == 1:
+                    if sections[0].replace(" ", "") == "":
+                        line_empty = True
+                if not line_empty:
+                    print(f"Couldn't scan {sections}. This section wasn't added to output.")
 
     output_file.write(json.dumps(output_json))
 
