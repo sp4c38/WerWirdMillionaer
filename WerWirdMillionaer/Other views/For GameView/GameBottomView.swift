@@ -25,11 +25,11 @@ struct GameBottomView: View {
                 HStack(spacing: 0) {
                     VStack(spacing: 40) {
                         AnswerButton(answerName: "A", 0)
-                        AnswerButton(answerName: "B", 1)
+                        AnswerButton(answerName: "C", 2)
                     }
 
                     VStack(spacing: 40) {
-                        AnswerButton(answerName: "C", 2)
+                        AnswerButton(answerName: "B", 1)
                         AnswerButton(answerName: "D", 3)
                     }
                 }
