@@ -35,7 +35,6 @@ def main():
         if not current_prize_level == -1:
             question = {"question": "", "answerA": "", "answerB": "", "answerC": "", "answerD": "", "correctAnswer": ""}
             sections = line.split("<")
-
             for section in sections:
                 if section.replace(" ", "") and section.replace("\xa0", ""):
                     if not question["question"] and not question["answerA"] and not question["answerB"] and not question["answerC"] and not question["answerD"]:
