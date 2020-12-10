@@ -50,7 +50,7 @@ struct CircleStatusView: View {
         self.wedgeNumber = wedgeNumber
         
         let singleWedgeDegree: Double = Double(360 / allWedgeNumber)
-        var lastWedgeDegree: Double = -108.5
+        var lastWedgeDegree: Double = -90//-108.5
         var lastWedgeColor = true // Switch between colors by turns
 
         for currentWedgeNumber in 0...allWedgeNumber {

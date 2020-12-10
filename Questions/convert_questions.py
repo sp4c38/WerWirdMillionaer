@@ -66,6 +66,17 @@ def main():
                 if not line_empty:
                     print(f"Couldn't scan {sections}. This section wasn't added to output.")
 
+    all_question_list = [] # list with all questions to check if a question appears multiple times
+
+    for prizeLevel in output_json["prizeLevels"]:
+        for question in prizeLevel["questions"]:
+            all_question_list.append(question["question"])
+
+    for question in all_question_list:
+        times_question_appears = all_question_list.count(question)
+        if times_question_appears != 1:
+            print(f"{question} appears {times_question_appears} time(s).")
+
     output_file.write(json.dumps(output_json))
 
     text_file.close()

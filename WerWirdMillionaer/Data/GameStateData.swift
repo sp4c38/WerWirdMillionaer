@@ -56,8 +56,6 @@ class GameStateData: ObservableObject {
 
         self.telephoneJokerText = nil
         self.audienceJokerData = nil
-
-        self.timeRemaining = self.timeAllAvailable
         
         if currentPrizeLevel + 1 <= questionData!.prizeLevels.count {
             self.currentPrizeLevel += 1
@@ -65,6 +63,13 @@ class GameStateData: ObservableObject {
         } else {
             print("Maximum prize level reached. Staying on \(currentPrizeLevel) prize level")
         }
+        
+        if self.currentPrizeLevel == 13 {
+            self.timeAllAvailable = 45
+            print("Reached a high prize level. Therefor changed total available time to \(self.timeAllAvailable)")
+        }
+        
+        self.timeRemaining = self.timeAllAvailable
     }
     
     func updateRandomQuestion() {

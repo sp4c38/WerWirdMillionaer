@@ -243,7 +243,7 @@
 <Welcher Fall wird in der Grammatik auch als “Wenfall“ bezeichnet?< <Nominativ< <^Akkusativ< <Dativ< <Genitiv<
 <Wie nennt man eine Quelle, aus der in rhythmischen Abständen eine Heißwasserfontäne schießt?< <Lawine< <Strudel< <Vulkan< <^Geysir<
 <Wie heißt die Landeshauptstadtvon Schleswig-Holstein?< <Flensburg< <^Kiel< <Oldenburg< <Cuxhaven<
-<“Vor der Kaserne, vor dem großen Tor …”< <^stand eine Laterne< <leuchten uns die Sterne< <ging der Weg nach Herne< <blick ich in die Ferne<
+<“Vor der Kaserne, vor dem großen Tor ...”< <^stand eine Laterne< <leuchten uns die Sterne< <ging der Weg nach Herne< <blick ich in die Ferne<
 <Wie nannten die Griechen der Antike den Ort, an dem man mit nacktem Körper Sport trieb?< <Sauna< <Brodellos< <^Gymnásion< <Sodom<
 <Auf welchem Gelände findet das Münchner Oktoberfest statt?< <^Theresienwiese< <Altermarkt< <Olympiastadion< <Englischer Garten<
 <Welches Wort benutzten die Alchemisten für Weingeist?< <Rizinus< <^Spiritus< <Terpentin< <Ammoniak<
@@ -475,3 +475,11 @@
 
 
 1000000€:
+<Aus welchem Goethe-Drama stammt die Redewendung “Himmelhoch jauchzend, zum Tode betrübt“?< <Faust< <Clavigo< <Stella< <^Egmont<
+<An welchem internationalen Kfz-Kennzeichen erkennt man Fahrzeugen aus Madagaskar?< <MA< <MD< <^RM< <KMA<
+<Welcher Quäker war mit 9 Jahren Vollwaise, wurde später Bauingenieur und schließlich US-Präsident?< <^Herbert Hoover< <Franklin D. Roosevelt< <Jimmy Carter< <Harry S. Truman<
+<Wer hat 1883 die Rheinische Gasmotorfabrik gegründet?< <^Carl Friedrich Benz< <Gottlieb Daimler< <Nikolaus August Otto< <Rudolf Diesel<
+<Um was für ein Tier handelt es sich bei dem Zwietracht säenden Ratatöskr aus der germanischen Mythologie?< <Drache< <^Eichhörnchen< <Rabe< <Schlange<
+<Welches Tier war nach der germanischen Mythologie das erste Lebewesen der Welt< <^Kuh< <Affe< <Schlange< <Kaninchen<
+<Zu welcher Pflanzenfamilie gehören Runkelrübe und Spinat?< <Wolfsmilchgewächse< <Sauergräser< <Liliengewächse< <^Gänsefußgewächse<
+<Wer flog am 16. Juni 1963 als erste Frau ins Weltall?< <^Walentina Tereschkowa< <Tatjana Vinnik< <Nancy Akers< <Jo-Berth Williams<
