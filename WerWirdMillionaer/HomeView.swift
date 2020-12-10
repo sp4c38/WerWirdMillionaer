@@ -100,8 +100,11 @@ struct HomeView: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            Rectangle()
-                .fill(Color(hue: 0.6429, saturation: 1.0000, brightness: 0.4118))
+            Image("LogoBackground")
+                .resizable()
+                .scaledToFill()
+//            Rectangle()
+//                .fill(Color(hue: 0.6429, saturation: 1.0000, brightness: 0.4118))
                 .modifier(QuestionmarkModifier(blurRadius: $backgroundShadowWidth))
                 .animation(Animation.easeInOut.speed(0.1).repeatForever())
                 .onAppear() {

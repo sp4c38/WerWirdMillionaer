@@ -36,7 +36,6 @@
 <Was ist laut den biblischen 10 Geboten nicht ausdrücklich verboten?< <Ehebrechen< <Töten<  <Stehlen< <^Rauchen<
 <Worauf radelt man zu zweit?< <Trabant< <Katamaran< <Zweierbob< <^Tandem< 
 <Wer zuletzt lacht, lacht am …?< <dümmsten< <dollsten< <wenigsten< <^besten<
-<Wie bezeichnet man eine Luftspiegelung in der Wüste?< <Mata Hari< <Orang Utan< <^Fata Morgana< <Ulan Bator<
 <Wie heißen die Sicherheitscontainer, in denen radioaktives Material befördert wird?< <ARCOR< <ERROR< <GREGOR< <^CASTOR<
 <Wie heißen die Zeichentrick-Wichte, die im ZDF-Werbefernsehen „Gu’n Abend!“ Wünschen?< <Heinzelmännchen< <^Mainzelmännchen< <Lerchenzwerge< <Fruchtzwerge< 
 <Was sucht man bei einem Pkw mit Automatik-Getriebe vergeblich?< <Zündschloss< <Gaspedal< <^Kupplungspedal< <Tank< 
@@ -57,7 +56,7 @@
 <Wie nennt der Spieler die Punkte auf einem Würfel?< <Beine< <Ohren< <^Augen< <Zehen< 
 <Was tauschen Brautleute bei einer kirchlichen Hochzeitszeremonie aus?< <^Ringe< <Lebensversicherungen< <Die ersten Zähne< <Bratkartoffeln< 
 <Wie heißt der Mitbewohner von Ernie in der Sesamstraße?< <Bart< <Brot< <Brett< <^Bert<
-<An welchem Tag ist Heiligabend?< <25.Dezember< <2.Juli< <1.April< <^24.Dezember<
+<An welchem Tag ist Heiligabend?< <25. Dezember< <2. Juli< <1. April< <^24. Dezember<
 <Welchem radioaktiv verseuchten Atoll hat eine zweiteilige Badebekleidung für Damen ihren Namen zu verdanken?< <Mamamia< <Eiapopeia< <Gregogisi< <^Bikini<
 <Was machen Geister in alten Gemäuern?< <spucken< <spintisieren< <^spuken< <spinnen< 
 <Wie nennt man den schriftlich fixierten letzten Willen?< <Firmament< <Posament< <Konsument< <^Testament<
@@ -99,11 +98,10 @@
 <Wie heißt die Nachrichtensendung, die um 20 Uhr in der ARD angestrahlt wird?< <^Tagesschau< <Heute< <Top News< <Aktuelle Kamera< 
 <Wie nennt man in der Leichtathletik einen Kurzstreckenlauf?< <Dribbling< <^Sprint< <Derby< <Rallye<
 
-
 300€:
 <Was steckt sich der Hausarzt bei Bedarf in die Ohren?< <^Stethoskop< <Horoskop< <Kaleidoskop< <Teleskop<
 <Welches dieser Tiere ist in Deutschland heimisch?< <Hängebauchschwein< <Warzenschwein< <^Wildschwein< <Wasserschwein<
-<Welcher Begriff wird vor Gericht für ein Beweisstück verwendet?< <Corporate Identity< <Cordon bleu< <^Corpus Delicti< <Con Carne< 
+<Woraus wird Rum hergestellt?< <Pflaumen< <Getreide< <Kartoffeln< <^Zuckerrohr<
 <Was du heute kannst besorgen, das …< <hat Zeit bis übermorgen< <sollst du klauen oder borgen< <^verschiebe nicht auf morgen< <ist am Abend längst verdorben<
 <Was sucht man in einer Cola Light vergeblich?< <Koffein <Wasser< <Kalorien< <^Kristallzucker<
 <Zu ihrem ganzen Glück brauchten die Comedian Harmonists nichts als “Wochenende und …“? <Apfelwein< <Dollarschein< <Herzilein< <^Sonnenschein<
@@ -181,7 +179,6 @@
 <Was ist grammatikalisch die zweite Person Singular?< <ich< <wir< <^du< <sie<
 <Was bedeutet auf Japanisch soviel wie “Zwergbäume“?< <Kamikaze< <Hirohito< <Ikebana< <^Bonsai<
 
-
 1000€:
 <Welche Stadt liegt am Ausgang des Jadebusens?< <^Wilhelmshaven< <Hongkong< <Sydney< <Kiew<
 <Was machte Judas, nachdem er Jesus verraten hatte?< <er wurde Gladiator< <^er erhängt sich< <er wurde Weinhändler< <er ging ins Kloster<
@@ -232,7 +229,7 @@
 <Welche Farbe nehmen Krebse, Garnelen und Hummer an, wenn man sie kocht?< <Gelb< <Grün< <^Rot< <Blau<
 
 2000€:
-<Was ist Voodoo?< <Kampfsport< <Videotechnik< <^afroamerikanische Religion< <Telefongesellschaft<
+<Was ist Voodoo?< <Kampfsport< <Videotechnik< <^Spieleentwicklungsfirma< <Telefongesellschaft<
 <Welche japanischen “Pocketmonster“ stehen bei Kindern hoch im Kurs?< <Potomac< <^Pokémon< <Posh Spice< <Pocahontas<
 <Was verarbeitet ein Kürschner?< <^Pelze< <Fallobst< <Edelhölzer< <Alteisen<
 <Was ist der Paso doble?< <Cocktail< <Doppelgänger< <Windhund< <^Gesellschaftstanz<
@@ -258,10 +255,10 @@
 <Welcher König ließ das Schloss Neuschwanstein errichten?< <^Ludwig II.< <Friedrich der Große< <Wilhelm II.< <Karl der Kühne< 
 <Wo residiert der britische Premierminister?< <Fleet Street< <^Downing Street< <Baker Street< <Coronation Street<
 <Wo lagert angeblich der größte Teil der US-Goldreserven?< <Fort Lauderdale< <West Point< <Huntsville< <^Fort Knox<
-<Wofür wurde in der Schifffahrt bis 1952 das Blaue BAnd verliehen?< <schnellste Überquerung des Pazifiks< <^schnellste Überquerung des Atlantiks< <schnellste Überquerung des Bodensees< <schnellste Überquerung der Nordsee<
+<Wofür wurde in der Schifffahrt bis 1952 das Blaue Band verliehen?< <schnellste Überquerung des Pazifiks< <^schnellste Überquerung des Atlantiks< <schnellste Überquerung des Bodensees< <schnellste Überquerung der Nordsee<
 <Wie heißt der Farbstoff der roten Blutkörperchen?< <Adrenalin< <^Hämoglobin< <Chlorophyll< <Acetylcystein< 
 <Wie heißt der höchste Vulkan Europas?< <Vesuv< <Pinatubo< <^Ätna< <Stromboli<
-
+<Was tranken die Deutschen 2019 am meisten?< <^Kaffee< <Tee< <Bier< <Wasser<
 
 4000€:
 <Die des Zaubers unkundigen Menschen in den Harry-Potter-Abendteuern heißen…?< <Rowlings< <Hogwarts< <^Muggels< <Askabans<
@@ -278,7 +275,8 @@
 <Wer siegte 333 bei der Keilerei bei Issos?< <Napoleon< <^Alexander< <Spartacus< <Hannibal<
 <Wie heißt das russische Parlament?< <Datscha< <Borschtsch< <^Duma< <Gulag<
 <Worin besteht der kleine genetische Unterschied zwischen Mann und Frau?< <Beta-Blocker< <Vitamin C< <^Y-Chromosom< <Gamma-Strahlen< 
-<Ein solventer Mensch ist …?< <pleite< <widerborstig< <redegewandt< <^zahlungsfähig<<Was sind Demoskopen?< <Kredithaie< <SPD-Politiker< <Fortnite Spieler< <^Meinungsforscher< 
+<Ein solventer Mensch ist …?< <pleite< <widerborstig< <redegewandt< <^zahlungsfähig<
+<Was sind Demoskopen?< <Kredithaie< <SPD-Politiker< <Fortnite Spieler< <^Meinungsforscher< 
 <Was sind Primaten?< <Erdsatelliten< <Camper< <^Herrentiere< <Oberschüler< 
 <Wie nennt der Biologe die farbgebenden Substanzen in den Zellen von Pflanzen und Tieren?< <^Pigmente< <Streptokokken< <Allergene< <Mikroskop< 
 <Welches gruselige Kostümfest feiern Amerikaner am Abend vor Allerheiligen?< <Geburtstag< <^Halloween< <Thanksgiving< <St. Patrick´s Day<
@@ -306,7 +304,6 @@
 <Woraus wird Biodiesel gewonnen?< <Ginster< <^Raps< <Mais< <Narzisse<
 <Zu welcher Vogelfamilie gehört die Elster?< <Drosseln< <Möwen< <Reiher< <^Rabenvögel<
 <Wie heißt die Landeshauptstadt Nordrhein-Westfalens?< <^Düsseldorf< <Köln< <Krefeld< <Wuppertal<
-
 
 8000€:
 <Wie viele Finger hat Micky Maus an einer Hand?< <2 Finger< <3 Finger< <^4 Finger< <5 Finger<
@@ -407,10 +404,9 @@
 <Was versteht man unter einem Piktogramm?< <Eilbrief< <^Bildsymbol< <Werbeplakat< <Sportzeitung<
 <Woher stammt die Friedensnobelpreisträgerin Mutter Teresa?< <Spanien< <Italien< <^Albanien< <Griechenland<
 <Wie heißt die Hauptstadt von Kanada?< <^Ottawa< <Toronto< <Quebec< <Montreal<
-<Wohin geht man, wenn man einen Termin beim Ökologen hat?< <Umweltbeauftragter< <Tierzüchter< <^Weinfachmann< <Schönheitschirurg<
+<Wohin geht man, wenn man einen Termin beim Ökologen hat?< <^Umweltbeauftragter< <Tierzüchter< <Weinfachmann< <Schönheitschirurg<
 <Was gehört zur Familie der Korbblütler?< <^Sonnenblume< <Tulpe< <Veilchen< <Rose<
 <Wie heißt die Hauptstadt von Pakistan?< <Neu-Delhi< <^Islamabad< <Karatschi< <Rangun<
-
 
 64000€:
 <Welches japanische Kugelfischgericht ist - unsachgemäß zubereitet - eine hochgiftige Speise?< <Takeshi< <Galma< <Surimi< <^Fugu<
@@ -453,7 +449,7 @@
 <Was ist eine Eloge?< <Ehrenplatz< <^Lobrede< <Hochsitz< <Spannungsprüfer<
 <Wie nennen die Jäger einen Tierkadaver?< <Morchel< <Losung< <Balg< <^Luder<
 <Welches Land hat eine Staatsflagge mit rotem Kreis auf grünem Grund?< <Griechenland< <Japan< <^Bangladesch< <Südkorea< 
-<Was ist der ursprünglichen Wortbedeutung nach der einzige Besitz von Proletariern?< <Kraft< <^Kinder< <Lohn< <Bett<
+<Was ist nach der ursprünglichen Wortbedeutung der einzige Besitz von Proletariern?< <Kraft< <^Kinder< <Lohn< <Bett<
 
 500000€:
 <Welcher der Großen Seen Nordamerikas gehört als einziger komplett zum Staatsgebiet der USA?< <Huronsee< <^Michigansee< <Ontariosee< <Eriesee<
@@ -472,7 +468,6 @@
 <Wer gewann 1950 die erste Formel-1 Weltmeisterschaft?< <Juan Manuel Fangio< <Alberto Ascari< <^Nino Farina< <Jack Brabham<
 <Wer gründete 1964 in Frankreich das politische engagierte Théâtre du Soleil?< <^Ariane Mnouchkine< <Jean-Baptiste Poquelin< <Dario Fo< <Eugène Ionesco< 
 <Wie heißt die Währung von Vietnam?< <Ding< <^Dong< <Dang< <Dung< 
-
 
 1000000€:
 <Aus welchem Goethe-Drama stammt die Redewendung “Himmelhoch jauchzend, zum Tode betrübt“?< <Faust< <Clavigo< <Stella< <^Egmont<

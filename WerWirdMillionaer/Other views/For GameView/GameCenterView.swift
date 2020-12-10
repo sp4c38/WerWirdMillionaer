@@ -33,6 +33,7 @@ struct GameCenterView: View {
                     .padding(.trailing, 10)
                     .transition(.opacity)
                     .animation(.easeInOut(duration: 4))
+                    .multilineTextAlignment(.center)
                 Spacer()
             }
             

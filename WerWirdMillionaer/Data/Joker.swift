@@ -15,11 +15,11 @@ func telephoneJoker(gameStateData: GameStateData) {
     if [1, 2, 3].contains(gameStateData.currentPrizeLevel) {
         outputSelection = ["Na, das ist doch einfach! \"%@\" natürlich!", "Ja, das weiß ich. Das ist \"%@\"", "Hmm. Nimm \"%@\". Da bin ich mir sicher!", "Ja... ok. Da ist \"%@\" auf jedenfall richtig!", "Easy: \"%@\" kann nur richtig sein.", "Mit \"%@\" kannst ich nur richtig liegen!"]
     } else if [4, 5, 6, 7, 8].contains(gameStateData.currentPrizeLevel) {
-        outputSelection = ["Das weiß ich noch aus meiner Schulzeit. Das ist \"%@\".", "\"%@\" sollte korrekt sein.", "Ich schätze \"%@\".", "Lass mich kurz überlegen... \"%@\" sollte stimmen.", "Ich tippe auf \"%@\"", "Da kann ich nur \"%@\" antworten."]
+        outputSelection = ["Das weiß ich noch aus meiner Schulzeit.\nDas ist \"%@\".", "\"%@\" sollte korrekt sein.", "Ich schätze \"%@\".", "Lass mich kurz überlegen... \"%@\" sollte stimmen.", "Ich tippe auf \"%@\"", "Da kann ich nur \"%@\" antworten."]
     } else if [9, 10, 11, 12, 13].contains(gameStateData.currentPrizeLevel) {
-        outputSelection = ["Ich vermute \"%@\". Bin mir aber nicht 100 prozentig sicher.", "\"%@\" sollte korrekt sein.", "Da hast du ja eine Frage erwischt! Vielleicht \"%@\"?", "Das passt ja gut. Darüber habe ich letztens ein Buch gelesen. Nimm \"%@\"!", "Nicht schlecht. Du hast es ja schon fast geschaft. \"%@\" müsste die Antwort sein."]
+        outputSelection = ["Ich vermute \"%@\". Bin mir aber nicht\n100 prozentig sicher.", "\"%@\" sollte korrekt sein.", "Da hast du ja eine Frage erwischt!\nVielleicht \"%@\"?", "Das passt ja gut. Darüber habe ich letztens\nein Buch gelesen. Nimm \"%@\"!", "Nicht schlecht. Du hast es ja schon fast geschaft.\n\"%@\" müsste die Antwort sein."]
     } else if [14, 15].contains(gameStateData.currentPrizeLevel) {
-        outputSelection = ["Wow soweit hast du es schon geschafft. Aber eine schwierige Frage. Probiere es mal mit \"%@\".", "Bei dieser Frage kann ich nur meine Vermutung abgeben: \"%@\"", "Herzlichen Glückwunsch schonmal! Gleich hast du es geschaft. Try \"%@\"!", "Ob ich dir da eine große Hilfe bin, weiß ich nicht. Aber ich würde die Antwort \"%@\" nehmen."]
+        outputSelection = ["Wow soweit hast du es schon geschafft.\nAber eine schwierige Frage.\nProbiere es mal mit \"%@\".", "Bei dieser Frage kann ich nur meine Vermutung abgeben: \"%@\"", "Herzlichen Glückwunsch schonmal!\nGleich hast du es geschaft. Try \"%@\"!", "Ob ich dir da eine große Hilfe bin, weiß ich nicht.\nAber ich würde die Antwort \"%@\" nehmen."]
     } else {
         outputSelection = ["Das ist \"%@\"!"]
     }
@@ -67,13 +67,13 @@ func audienceJoker(gameStateData: GameStateData) -> AudiencePollCollection {
     var extraProbability: Double = 0
     
     if 0...4 ~= currentPrizeLevel {
-        minimumAnswerProbability = 0.85
+        minimumAnswerProbability = 0.80
         extraProbability = Double.random(in: 0.01...0.06)
     } else if 5...8 ~= currentPrizeLevel {
-        minimumAnswerProbability = 0.70
+        minimumAnswerProbability = 0.63
         extraProbability = Double.random(in: 0.01...0.08)
     } else if 9...12 ~= currentPrizeLevel {
-        minimumAnswerProbability = 0.60
+        minimumAnswerProbability = 0.52
         extraProbability = Double.random(in: 0.01...0.06)
     } else if 13...14 ~= currentPrizeLevel {
         minimumAnswerProbability = 0.47

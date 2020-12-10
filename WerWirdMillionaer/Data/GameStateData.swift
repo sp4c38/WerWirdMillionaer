@@ -8,8 +8,8 @@
 import Foundation
 
 class GameStateData: ObservableObject {
-    @Published var currentPrizeLevel: Int = 14//1
-    @Published var oldCurrentPrizeLevel: Int = 13//0
+    @Published var currentPrizeLevel: Int = 1
+    @Published var oldCurrentPrizeLevel: Int = 0
     var maxPrizeLevel = 15
     
     @Published var questionAnsweredCorrectly: Bool? = nil
