@@ -8,8 +8,9 @@
 import Foundation
 
 class GameStateData: ObservableObject {
-    @Published var currentPrizeLevel: Int = 1
-    @Published var oldCurrentPrizeLevel: Int = 0
+    @Published var currentPrizeLevel: Int = 14//1
+    @Published var oldCurrentPrizeLevel: Int = 13//0
+    var maxPrizeLevel = 15
     
     @Published var questionAnsweredCorrectly: Bool? = nil
     @Published var answerSubmitted: String? = nil
@@ -30,6 +31,7 @@ class GameStateData: ObservableObject {
     
     @Published var softStop: Bool? = nil // Is set to true if player pressed the stop button
                                          // Is set to false if player selected a wrong answer or the time expired
+    @Published var gameWon: Bool = false
     
     func resetForNextGame() {
         self.currentPrizeLevel = 1
@@ -48,6 +50,7 @@ class GameStateData: ObservableObject {
         self.fiftyfiftyJokerActive = true
         self.audienceJokerData = nil
         self.softStop = nil
+        self.gameWon = false
     }
     
     func nextPrizeLevel() {

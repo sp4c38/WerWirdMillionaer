@@ -93,8 +93,14 @@ struct GameFinishedView: View {
         .background(LinearGradient(gradient: Gradient(colors: [Color(hue: 0.5393, saturation: 0.7863, brightness: 0.9725), Color(hue: 0.5871, saturation: 0.9888, brightness: 0.6980)]), startPoint: .topLeading, endPoint: .bottomTrailing))
         .ignoresSafeArea()
         .onAppear {
-            let soundUrl = getGeneralMusicAudioUrl(outro: true)
-            soundManager.playBackgroundMusic(soundUrl: soundUrl, playInfinite: false)
+            if !(gameStateData.oldCurrentPrizeLevel == 15) {
+                let soundUrl = getGeneralMusicAudioUrl(outro: true)
+                soundManager.playBackgroundMusic(soundUrl: soundUrl, playInfinite: false)
+            } else if gameStateData.oldCurrentPrizeLevel == 15 {
+                // Game was won
+                let soundEffectUrl = getGeneralMusicAudioUrl(gameWon: true)
+                soundManager.playSoundEffect(soundUrl: soundEffectUrl)
+            }
         }
     }
 }

@@ -76,20 +76,33 @@ struct GameHeaderView: View {
                         .foregroundColor(Color.white)
                         .frame(width: 40)
                         .onAppear {
-                            // Play the sound effect which indicates that the question was answered correctly
-                            let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: true)
-                            soundManager.playSoundEffect(soundUrl: soundEffectUrl)
+                            if !(gameStateData.currentPrizeLevel == 15) {
+                                // Play the sound effect which indicates that the question was answered correctly
+                                let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: true)
+                                soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
-                                // Reset all data for next round
-                                gameStateData.nextPrizeLevel()
-                                gameStateData.updateRandomQuestion()
-                                
-                                let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
-                                soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
-                                
-                                gameStateData.timeOver = false
-                                gameStateData.timeKeepCounting = true
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+                                    // Reset all data for next round
+                                    gameStateData.nextPrizeLevel()
+                                    gameStateData.updateRandomQuestion()
+                                    
+                                    let backgroundSoundUrl = getBackgroundAudioUrl(currentPrizesLevel: gameStateData.currentPrizeLevel, previousPrizeLevel: gameStateData.oldCurrentPrizeLevel)
+                                    soundManager.playBackgroundMusic(soundUrl: backgroundSoundUrl)
+                                    
+                                    gameStateData.timeOver = false
+                                    gameStateData.timeKeepCounting = true
+                                }
+                            } else if gameStateData.currentPrizeLevel == 15 {
+                                // Game won
+                                print("Game won!")
+                                let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: true)
+                                soundManager.playSoundEffect(soundUrl: soundEffectUrl)
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                                    soundManager.stopAllSounds()
+                                    gameStateData.oldCurrentPrizeLevel = gameStateData.currentPrizeLevel
+                                    gameStateData.softStop = true
+                                    mainViewController.changeViewShowIndex(newViewNumber: 3)
+                                }
                             }
                         }
                 } else if gameStateData.timeOver == true || gameStateData.questionAnsweredCorrectly == false {
@@ -102,11 +115,20 @@ struct GameHeaderView: View {
                             let soundEffectUrl = getQuestionAudioUrl(prizeLevel: gameStateData.currentPrizeLevel, isCorrect: false)
                             soundManager.playSoundEffect(soundUrl: soundEffectUrl)
 
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                                soundManager.stopAllSounds()
+                            if !(gameStateData.currentPrizeLevel == 15) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                                    soundManager.stopAllSounds()
 
-                                gameStateData.softStop = false
-                                mainViewController.changeViewShowIndex(newViewNumber: 3)
+                                    gameStateData.softStop = false
+                                    mainViewController.changeViewShowIndex(newViewNumber: 3)
+                                }
+                            } else if gameStateData.currentPrizeLevel == 15 {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
+                                    soundManager.stopAllSounds()
+
+                                    gameStateData.softStop = false
+                                    mainViewController.changeViewShowIndex(newViewNumber: 3)
+                                }
                             }
                         }
                 }

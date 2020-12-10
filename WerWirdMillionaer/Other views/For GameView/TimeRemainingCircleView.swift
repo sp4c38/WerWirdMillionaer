@@ -31,7 +31,6 @@ struct WedgeOfCircle: Shape {
 }
 
 struct Wedge: Hashable {
-    var isActive: Bool
     var startAngle: Angle
     var endAngle: Angle
     var color: Color
@@ -50,18 +49,20 @@ struct CircleStatusView: View {
         self.wedgeNumber = wedgeNumber
         
         let singleWedgeDegree: Double = Double(360 / allWedgeNumber)
-        var lastWedgeDegree: Double = -90//-108.5
-        var lastWedgeColor = true // Switch between colors by turns
-
-        for currentWedgeNumber in 0...allWedgeNumber {
+        var lastWedgeDegree: Double = -90
+        
+        for currentWedgeNumber in 1...allWedgeNumber {
+            var color = Color.orange
+            if !(currentWedgeNumber <= wedgeNumber) {
+                color = Color.gray
+            }
+        
             let newWedge = Wedge(
-                                isActive: ((currentWedgeNumber <= wedgeNumber) ? true : false),
                                 startAngle: .degrees(lastWedgeDegree),
                                 endAngle: .degrees(lastWedgeDegree + singleWedgeDegree - 1),
-                                color: ((currentWedgeNumber <= wedgeNumber) ? Color.orange : Color.gray))
+                                color: color)
             
             self.wedges.append(newWedge)
-            lastWedgeColor.toggle()
             lastWedgeDegree = lastWedgeDegree + singleWedgeDegree
         }
     }

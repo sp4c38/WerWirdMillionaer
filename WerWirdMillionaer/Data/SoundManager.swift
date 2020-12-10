@@ -52,8 +52,8 @@ class SoundManager: NSObject, ObservableObject {
             let firstSecond = CMTimeRangeMake(start: CMTimeMake(value: 0, timescale: 1), duration: CMTimeMake(value: 1, timescale: 1))
             let lastSecond = CMTimeRangeMake(start: CMTimeMake(value: Int64(duration - 1), timescale: 1), duration: CMTimeMake(value: 1, timescale: 1))
             
-            params.setVolumeRamp(fromStartVolume: 0, toEndVolume: 0.8, timeRange: firstSecond)
-            params.setVolumeRamp(fromStartVolume: 0.8, toEndVolume: 0, timeRange: lastSecond)
+            params.setVolumeRamp(fromStartVolume: 0, toEndVolume: 0.9, timeRange: firstSecond)
+            params.setVolumeRamp(fromStartVolume: 0.9, toEndVolume: 0, timeRange: lastSecond)
             
             let mix = AVMutableAudioMix()
             

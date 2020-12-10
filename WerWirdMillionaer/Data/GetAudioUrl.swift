@@ -8,12 +8,15 @@
 import AVFoundation
 import Foundation
 
-func getGeneralMusicAudioUrl(intro: Bool = false, outro: Bool = false) -> URL? {
+func getGeneralMusicAudioUrl(intro: Bool = false, outro: Bool = false, gameWon: Bool = false) -> URL? {
     if intro {
         return Bundle.main.url(forResource: "general_intro_sound", withExtension: "mp3")
     } else if outro {
         return Bundle.main.url(forResource: "outro_sound", withExtension: "mp3")
-    } else {
+    } else if gameWon {
+        return Bundle.main.url(forResource: "game_won_sound", withExtension: "mp3")
+    }
+    else {
         return nil
     }
 }
