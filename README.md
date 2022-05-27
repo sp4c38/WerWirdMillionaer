@@ -1,4 +1,4 @@
-# Wer Wird Millionär? 
+# Wer Wird Millionär?
 
 **Wer Wird Millionär** is a popular german quiz show from the tv station RTL moderated by Günter Jauch.
 
@@ -8,7 +8,12 @@ This is a game to play this quiz show on your iPad. 📱🎮
 - Only available in the German language
 - Only works on iPad
 
-#### How it works
+### Screenshots
+
+<img src="https://github.com/sp4c38/WerWirdMillionaer/raw/master/Assets/Demo%20Picture%201.png" width="700">
+<img src="https://github.com/sp4c38/WerWirdMillionaer/raw/master/Assets/Demo%20Picture%202.png" width="700">
+
+### How it works
 There are commonly 15 different prize 🏅 levels:
 
 |Prize level    |    Prize       |
@@ -29,14 +34,14 @@ There are commonly 15 different prize 🏅 levels:
 | 14 🏅         | **500.000 €**. |
 | 15 🏅         | **1.000.000 €**|
 
-Participants of the show start with the first prize category. They get a question and 4 options. 
+Participants of the show start with the first prize category. They get a question and 4 options.
 
 For example:
 
 | What do you call coffee with a shot of whiskey and whipped cream? |
 |-----------|
-| A: Scottish Delight | 
-| B: Irish Coffee | 
+| A: Scottish Delight |
+| B: Irish Coffee |
 | C: English Cream |
 | D: Nessies Dream |
 
@@ -47,4 +52,3 @@ If the participant answers the question correctly he/she goes to the next questi
 If your answer to a question is false than you either get the prize money from the last security level (security levels are 5th and 10th level) or if you haven't reached a security level yet you get nothing.
 
 You also have the option to stop the quiz game at any time. In that case you will get the prize money from the last prize level for which you successfully answered the question.
-
